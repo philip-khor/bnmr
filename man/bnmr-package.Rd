@@ -4,7 +4,7 @@
 \name{bnmr-package}
 \alias{bnmr}
 \alias{bnmr-package}
-\title{bnmr: What the Package Does (Title Case)}
+\title{bnmr: Wrapper Functions for the Open API of the Central Bank of Malaysia}
 \description{
 More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.

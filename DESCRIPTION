@@ -1,6 +1,6 @@
 Package: bnmr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Wrapper Functions for the Open API of the Central Bank of Malaysia
 Version: 0.1.0
 Author: Philip Khor
 Maintainer: Philip Khor <pk.qa@outlook.com>
@@ -9,5 +9,5 @@ Description: More about what it does (maybe more than one line)
 License: CC0
 Encoding: UTF-8
 LazyData: true
-Imports: httr, glue, jsonlite
+Imports: httr, glue, jsonlite, purrr
 RoxygenNote: 6.1.1

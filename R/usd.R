@@ -9,6 +9,7 @@
 #' @source https://api.bnm.gov.my/
 #'
 #'
+
 usd <- function(type = "interbank"){
   paths <- c(interbank = "/usd-interbank-intraday-rate",
              kl = "/kl-usd-reference-rate")

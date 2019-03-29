@@ -7,7 +7,14 @@
 https://api.bnm.gov.my/
 }
 \usage{
-interest_volume()
+interest_volume(date, year, month)
+}
+\arguments{
+\item{date}{Character string or ... in ISO-8601 format (YYYY-MM-DD).
+If specified, return interest volume for the
+specified date. If left blank, return today's interest volume.}
+
+\item{year, month}{Year and month as integers.}
 }
 \description{
 This function allows you to ... from the BNM API.
