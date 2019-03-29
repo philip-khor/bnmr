@@ -10,10 +10,9 @@ bnm_api <- function(path) {
   GET("https://api.bnm.gov.my",
       path = glue("public{path}"),
       accept("application/vnd.BNM.API.v1+json"),
-      user_agent('http://github.com/philip-khor/bnmr'),
-      encoding = "UTF-8") -> resp
+      user_agent('http://github.com/philip-khor/bnmr')) -> resp
 
-  parsed <- fromJSON(content(resp, "text"))
+  parsed <- fromJSON(content(resp, "text", encoding = "UTF-8"))
 
   if (http_type(resp) != "application/json") {
     stop("API did not return json", call. = FALSE)
