@@ -1,0 +1,4 @@
+exportPattern("^[[:alpha:]]+")
+import(jsonlite)
+import(httr)
+import(glue)
