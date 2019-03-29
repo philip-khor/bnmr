@@ -2,7 +2,6 @@
 #'
 #' This function allows you to obtain data from the BNM API.
 #' @param path Specifies the API path per https://api.bnm.gov.my/
-#' @keywords
 #' @examples
 #' bnm_api("/welcome")
 #' @source https://api.bnm.gov.my/
