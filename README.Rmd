@@ -1,0 +1,42 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+# bnmr
+
+The goal of bnmr is to ...
+
+## Installation
+
+You can install the released version of bnmr from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("bnmr")
+```
+
+For now, to install `bnmr`, do the following:
+
+```{r, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("philip-khor/bnmr")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r, message = FALSE}
+library(bnmr)
+current_base_rates <- base_rate()
+head(current_base_rates)
+```

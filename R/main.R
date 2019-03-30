@@ -53,3 +53,6 @@ bnm_api <- function(path) {
 get_bnm_data <- function(path) {
   bnm_api(path)[["content"]][["data"]]
 }
+
+# potentially print metadata when returning get_bnm_data?
+
