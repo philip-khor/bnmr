@@ -12,7 +12,8 @@ LazyData: true
 Imports: httr, 
   glue, 
   jsonlite, 
-  purrr
+  purrr, 
+  ISOcodes
 RoxygenNote: 6.1.1
 Suggests: 
     testthat
