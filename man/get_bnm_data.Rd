@@ -7,10 +7,12 @@
 https://api.bnm.gov.my/
 }
 \usage{
-get_bnm_data(path)
+get_bnm_data(path, ...)
 }
 \arguments{
 \item{path}{Specifies the API path per https://api.bnm.gov.my/}
+
+\item{...}{Additional arguments to be passed to bnm_api}
 }
 \description{
 This function allows you to obtain data from the BNM API.

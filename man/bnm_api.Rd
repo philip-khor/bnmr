@@ -7,10 +7,12 @@
 https://api.bnm.gov.my/, https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
 }
 \usage{
-bnm_api(path)
+bnm_api(path, ...)
 }
 \arguments{
 \item{path}{Specifies the API path per https://api.bnm.gov.my/}
+
+\item{...}{Additional arguments to httr::GET()}
 }
 \description{
 This function allows you to obtain data from the BNM API.

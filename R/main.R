@@ -2,7 +2,7 @@
 #'
 #' This function allows you to obtain data from the BNM API.
 #' @param path Specifies the API path per https://api.bnm.gov.my/
-#' @param ... ...
+#' @param ... Additional arguments to httr::GET()
 #' @examples
 #' bnm_api("/welcome")
 #' @source https://api.bnm.gov.my/, https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
