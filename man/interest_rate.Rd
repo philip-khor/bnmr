@@ -10,11 +10,15 @@ https://api.bnm.gov.my/
 interest_rate(product = "money_market_operations", date, year, month)
 }
 \arguments{
-\item{product}{...}
+\item{product}{Either "money_market_operations", "interbank" or "overall"}
 
-\item{date}{...}
+\item{date}{Character string or ... in ISO-8601 format (YYYY-MM-DD).
+If specified, return interest volume for the
+specified date. If left blank, return today's interest volume.}
 
-\item{year, month}{...}
+\item{year}{Year and month as integers.}
+
+\item{month}{Year and month as integers.}
 }
 \description{
 This function allows you to ... from the BNM API.

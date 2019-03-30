@@ -27,11 +27,11 @@ exchange_rate <- function(currency,
   path <- "/exchange-rate"
 
   if (!missing(currency)) {
-    if (! toupper(currency) %in% ISO_4217$Letter){
+    if (! toupper(currency) %in% ISOcodes::ISO_4217[["Letter"]]){
       stop("Invalid currency code.")
     }
-    path <- paste0(path, currency)
+    path <- paste0(path, "/", currency)
   }
 
-  .er("/exchange-rate", session = session, quote = quote)
+  .er(path = path, session = session, quote = quote)
 }
