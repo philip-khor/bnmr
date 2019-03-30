@@ -1,7 +1,6 @@
 .interest <- function(type,
                       product = "money_market_operations",
                       date, year, month){
-
   if (missing(date)){
     if (missing(month)){
       if (missing(year)){
@@ -27,7 +26,14 @@
 #' Interest Volume
 #'
 #' This function allows you to ... from the BNM API.
+<<<<<<< HEAD
 #' @param product Either "money_market_operations", "interbank" or "overall"
+=======
+<<<<<<< HEAD
+#' @param product Either "money_market_operations", "interbank" or "overall"
+=======
+>>>>>>> 9c2a8f58084035f5393c4c6738b90f95a1f5b592
+>>>>>>> 8ee0c132d6293bb0fa325babbdc6b99cbc50d65a
 #' @param date Character string or ... in ISO-8601 format (YYYY-MM-DD).
 #' If specified, return interest volume for the
 #' specified date. If left blank, return today's interest volume.
@@ -43,7 +49,7 @@ interest_volume <- function(product = "money_market_operations",
   .interest(type = "volume",
             product = product,
             date = date, year = year, month = month)
-  }
+}
 
 #' Interest Rate
 #'
@@ -58,12 +64,13 @@ interest_volume <- function(product = "money_market_operations",
 #'
 #'
 #'
+
 interest_rate <- function(product = "money_market_operations",
                           date, year, month){
   .interest(type = "rate",
             product = product,
             date = date, year = year, month = month)
-}
+
 #
 # interest_volume <- function(date, year, month){
 #
