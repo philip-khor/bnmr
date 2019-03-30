@@ -4,7 +4,7 @@
 \alias{bnm_api}
 \title{Access BNM API}
 \source{
-https://api.bnm.gov.my/
+https://api.bnm.gov.my/, https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
 }
 \usage{
 bnm_api(path)

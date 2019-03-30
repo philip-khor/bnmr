@@ -7,9 +7,11 @@
 https://api.bnm.gov.my/
 }
 \usage{
-interest_volume(date, year, month)
+interest_volume(product = "money_market_operations", date, year, month)
 }
 \arguments{
+\item{product}{Either "money_market_operations", "interbank" or "overall"}
+
 \item{date}{Character string or ... in ISO-8601 format (YYYY-MM-DD).
 If specified, return interest volume for the
 specified date. If left blank, return today's interest volume.}

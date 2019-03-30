@@ -1,24 +1,26 @@
-.interest <- function(type, product = "money_market_operations", date, year, month){
+.interest <- function(type,
+                      product = "money_market_operations",
+                      date, year, month){
 
   if (missing(date)){
     if (missing(month)){
       if (missing(year)){
-        get_bnm_data(glue("/interest-{type}?{product}"))
+        get_bnm_data(glue("/interest-{type}?product={product}"))
       } else {
         map_dfr(1:12,
-                ~ get_bnm_data(glue("/interest-{type}/year/{year}/month/{.}?{product}")))
+                ~ get_bnm_data(glue("/interest-{type}/year/{year}/month/{.}?product={product}")))
       }
     } else if (!missing(year)){
       stopifnot(is.numeric(year))
-      get_bnm_data(glue("/interest-{type}/year/{year}/month/{month}?{product}"))
+      get_bnm_data(glue("/interest-{type}/year/{year}/month/{month}?product={product}"))
     } else {
       stop("Please provide the year")
     }
   } else if (!missing(year) || !missing(month)){
     warning("Date and year/month combination provided; querying based on date")
-    get_bnm_data(glue("/interest-{type}/date/{date}?{product}?{product}"))
+    get_bnm_data(glue("/interest-{type}/date/{date}?product={product}"))
   } else {
-    get_bnm_data(glue("/interest-{type}/date/{date}?{product}"))
+    get_bnm_data(glue("/interest-{type}/date/{date}?product={product}"))
   }
 }
 
@@ -41,11 +43,12 @@ interest_volume <- function(product = "money_market_operations",
   .interest(type = "volume",
             product = product,
             date = date, year = year, month = month)
-}
+  }
 
 #' Interest Rate
 #'
 #' This function allows you to ... from the BNM API.
+#' @param product ...
 #' @param date ...
 #' @param year,month ...
 #' @keywords ...

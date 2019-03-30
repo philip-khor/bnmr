@@ -7,9 +7,11 @@
 https://api.bnm.gov.my/
 }
 \usage{
-interest_rate(date, year, month)
+interest_rate(product = "money_market_operations", date, year, month)
 }
 \arguments{
+\item{product}{...}
+
 \item{date}{...}
 
 \item{year, month}{...}
