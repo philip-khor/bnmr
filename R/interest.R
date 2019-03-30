@@ -4,22 +4,27 @@
   if (missing(date)){
     if (missing(month)){
       if (missing(year)){
-        get_bnm_data(glue("/interest-{type}?product={product}"))
+        get_bnm_data(glue("/interest-{type}"),
+                     query = list(product = product))
       } else {
         map_dfr(1:12,
-                ~ get_bnm_data(glue("/interest-{type}/year/{year}/month/{.}?product={product}")))
+                ~ get_bnm_data(glue("/interest-{type}/year/{year}/month/{.}"),
+                               query = list(product = product)))
       }
     } else if (!missing(year)){
       stopifnot(is.numeric(year))
-      get_bnm_data(glue("/interest-{type}/year/{year}/month/{month}?product={product}"))
+      get_bnm_data(glue("/interest-{type}/year/{year}/month/{month}"),
+                   query = list(product = product))
     } else {
       stop("Please provide the year")
     }
   } else if (!missing(year) || !missing(month)){
     warning("Date and year/month combination provided; querying based on date")
-    get_bnm_data(glue("/interest-{type}/date/{date}?product={product}"))
+    get_bnm_data(glue("/interest-{type}/date/{date}"),
+                 query = list(product = product))
   } else {
-    get_bnm_data(glue("/interest-{type}/date/{date}?product={product}"))
+    get_bnm_data(glue("/interest-{type}/date/{date}"),
+                 query = list(product = product))
   }
 }
 
