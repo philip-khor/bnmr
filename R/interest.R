@@ -26,14 +26,7 @@
 #' Interest Volume
 #'
 #' This function allows you to ... from the BNM API.
-<<<<<<< HEAD
 #' @param product Either "money_market_operations", "interbank" or "overall"
-=======
-<<<<<<< HEAD
-#' @param product Either "money_market_operations", "interbank" or "overall"
-=======
->>>>>>> 9c2a8f58084035f5393c4c6738b90f95a1f5b592
->>>>>>> 8ee0c132d6293bb0fa325babbdc6b99cbc50d65a
 #' @param date Character string or ... in ISO-8601 format (YYYY-MM-DD).
 #' If specified, return interest volume for the
 #' specified date. If left blank, return today's interest volume.
@@ -71,41 +64,4 @@ interest_rate <- function(product = "money_market_operations",
             product = product,
             date = date, year = year, month = month)
 
-#
-# interest_volume <- function(date, year, month){
-#
-#   stopifnot(is.numeric(year), is.numeric(month), month <= 12)
-#
-#   if (missing(date)){
-#     if (missing(month)){
-#       if (missing(year)){
-#         get_bnm_data("/interest-volume")
-#       } else {
-#         map_dfr(1:12, ~ get_bnm_data(glue("/interest-volume/year/{year}/month/{.}")))
-#       }
-#     } else if (!missing(year)){
-#       get_bnm_data(glue("/interest-volume/year/{year}/month/{month}"))
-#     } else {
-#       warning("Please provide the year")
-#     }
-#   } else if (!missing(year) || !missing(month)){
-#     warning("Date and year/month combination provided; querying based on date")
-#     get_bnm_data(glue("/interest-volume/date/{date}"))
-#   } else {
-#     get_bnm_data(glue("/interest-volume/date/{date}"))
-#   }
-# }
-
-# interest_volume <- function(date, year, month) {
-#   if (missing(date) & missing(year) & missing(month)){
-#     get_bnm_data("/interest-volume")
-#   } else if (missing(month) & !missing(year)){
-#     # obtain for entire year
-#     map_dfr(1:12, ~ get_bnm_data(glue("/interest-volume/year/{year}/month/{.}")))
-#   } else if(!(missing(year) & missing(month))){
-#     get_bnm_data(glue("/interest-volume/year/{year}/month/{month}"))
-#   } else {
-#     # add check to ensure in ISO-8601 format
-#     get_bnm_data(glue("/interest-volume/date/{date}"))
-#   }
-# }
+}
