@@ -4,8 +4,9 @@
 #' @param path Specifies the API path per https://api.bnm.gov.my/
 #' @examples
 #' bnm_api("/welcome")
-#' @source https://api.bnm.gov.my/
+#' @source https://api.bnm.gov.my/, https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
 #'
+
 bnm_api <- function(path) {
   GET("https://api.bnm.gov.my",
       path = glue("public{path}"),
