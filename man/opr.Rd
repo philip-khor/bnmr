@@ -7,7 +7,10 @@
 https://api.bnm.gov.my/
 }
 \usage{
-opr()
+opr(year)
+}
+\arguments{
+\item{year}{Optional. ...}
 }
 \description{
 This function allows you to ... from the BNM API.
