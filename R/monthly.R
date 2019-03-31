@@ -1,3 +1,6 @@
+# .get_monthly_data <- function(stub, date, year, month, ...) {
+#
+#}
 .interest <- function(type,
                       product = "money_market_operations",
                       date, year, month){
