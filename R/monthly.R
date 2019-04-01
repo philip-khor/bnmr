@@ -8,6 +8,7 @@
 
   path <- get_path[[stub]]
 
+  # function should consider length 1 for arguments?
   if (missing(date)){
     if (missing(month)){
       if (missing(year)){
