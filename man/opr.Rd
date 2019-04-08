@@ -18,4 +18,4 @@ This function allows you to ... from the BNM API.
 \examples{
 opr()
 }
-\keyword{...}
+\keyword{opr}

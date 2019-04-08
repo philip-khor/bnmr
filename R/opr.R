@@ -2,7 +2,7 @@
 #'
 #' This function allows you to ... from the BNM API.
 #' @param year Optional. ...
-#' @keywords ...
+#' @keywords opr
 #' @examples
 #' opr()
 #' @source https://api.bnm.gov.my/
