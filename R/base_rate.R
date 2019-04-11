@@ -9,7 +9,17 @@
 #'
 
 base_rate <- function(bank_code = ""){
-  get_bnm_data(glue("/base-rate/{bank_code}"))
+  # Checking if any argument provided to the function
+  if (is.character(bank_code)){
+    # Handle the exception for invalid params value
+    tryCatch(get_bnm_data(glue("/base-rate/{bank_code}")),
+             error = function(e){
+               print("Invalid SWIFT code")})
+  }
+  # If no argument provided, return all the base rate
+  else{
+    get_bnm_data("/base-rate/")
+  }
 }
 
 # write a print method that shows meta?
