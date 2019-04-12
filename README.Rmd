@@ -13,7 +13,10 @@ knitr::opts_chunk$set(
 )
 ```
 # bnmr
-
+  <!-- badges: start -->
+  [![Travis build status](https://travis-ci.org/philip-khor/bnmr.svg?branch=master)](https://travis-ci.org/philip-khor/bnmr)
+  <!-- badges: end -->
+  
 The goal of bnmr is to ...
 
 ## Installation
