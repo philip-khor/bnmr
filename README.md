@@ -9,7 +9,8 @@
 status](https://travis-ci.org/philip-khor/bnmr.svg?branch=master)](https://travis-ci.org/philip-khor/bnmr)
 <!-- badges: end -->
 
-The goal of bnmr is to …
+The goal of bnmr is to provide a set of convenient wrapper functions for
+the Central Bank of Malaysia’s API.
 
 ## Installation
 
