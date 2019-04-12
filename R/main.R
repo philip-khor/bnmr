@@ -57,6 +57,18 @@ bnm_api <- function(path, ...) {
 get_bnm_data <- function(path, ...) {
   bnm_api(path, ...)[["content"]][["data"]]
 }
+#' Get BNM Data
+#'
+#' This function allows you to obtain data from the BNM API.
+#' @inheritParams get_bnm_data
+#' @keywords cats
+#' @examples
+#' get_bnm_data("/welcome")
+#' @source https://api.bnm.gov.my/
+
+get_bnm_tibble <- function(path, ...){
+  as_tibble(get_bnm_data(path, ...))
+}
 
 # potentially print metadata when returning get_bnm_data?
 

@@ -13,7 +13,9 @@ Imports: httr,
   glue, 
   jsonlite, 
   purrr, 
-  ISOcodes
+  ISOcodes, 
+  tibble, 
+  tidyr
 RoxygenNote: 6.1.1
 Suggests: 
     testthat
