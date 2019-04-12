@@ -10,11 +10,14 @@
 
 base_rate <- function(bank_code = ""){
   # Checking if any argument provided to the function
-  if (is.character(bank_code)){
+  if (!missing(bank_code)){
     # Handle the exception for invalid params value
     tryCatch(get_bnm_data(glue("/base-rate/{bank_code}")),
              error = function(e){
-               print("Invalid SWIFT code")})
+             e$message <- 
+               paste0(e$message, bank_code, " is not a valid SWIFT code.")
+               stop(e)
+             })
   }
   # If no argument provided, return all the base rate
   else{
