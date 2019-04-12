@@ -1,10 +1,15 @@
-.er <- function(path, session = session, quote = quote){
-  stopifnot(session %in% c("0900", "1130", "1200", "1700"),
-            quote %in% c("rm", "fx"))
+.er <- function(path, session = session, quote = quote) {
+  stopifnot(
+    session %in% c("0900", "1130", "1200", "1700"),
+    quote %in% c("rm", "fx")
+  )
 
   get_bnm_data(path,
-               query = list(session = session,
-                            quote = quote))
+    query = list(
+      session = session,
+      quote = quote
+    )
+  )
 }
 
 #' Exchange Rate
@@ -23,11 +28,11 @@
 #'
 exchange_rate <- function(currency,
                           session = "1130",
-                          quote = "rm"){
+                          quote = "rm") {
   path <- "/exchange-rate"
 
   if (!missing(currency)) {
-    if (! toupper(currency) %in% ISOcodes::ISO_4217[["Letter"]]){
+    if (!toupper(currency) %in% ISOcodes::ISO_4217[["Letter"]]) {
       stop("Invalid currency code.")
     }
     path <- paste0(path, "/", currency)

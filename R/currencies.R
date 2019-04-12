@@ -13,10 +13,12 @@
 #'
 #'
 #'
-renminbi <- function(type = "dar"){
+renminbi <- function(type = "dar") {
   stopifnot(type %in% c("dar", "fx_forward"))
-  paths <- c(dar = "/renminbi-deposit-acceptance-rate",
-             fx_forward = "/renminbi-fx-forward-price")
+  paths <- c(
+    dar = "/renminbi-deposit-acceptance-rate",
+    fx_forward = "/renminbi-fx-forward-price"
+  )
   get_bnm_data(paths[[type]])
 }
 
@@ -34,17 +36,19 @@ renminbi <- function(type = "dar"){
 #' @source https://api.bnm.gov.my/
 #'
 
-renminbi_tbl <- function(type = "dar"){
+renminbi_tbl <- function(type = "dar") {
   stopifnot(type %in% c("dar", "fx_forward"))
-  paths <- c(dar = "/renminbi-deposit-acceptance-rate",
-             fx_forward = "/renminbi-fx-forward-price")
+  paths <- c(
+    dar = "/renminbi-deposit-acceptance-rate",
+    fx_forward = "/renminbi-fx-forward-price"
+  )
   rmb_tibble <- get_bnm_tibble(paths[[type]])
 
   if (missing(type) | type == "dar") {
     rmb_tibble[["term"]] <- names(rmb_tibble[["deposit"]])
     spread(unnest(rmb_tibble), "term", "deposit")
-    }
-  else{
+  }
+  else {
     warning("terms will not be returned: work in progress")
     # still trying to figure out how best to preserve terms here
     rmb_tibble <- gather(rmb_tibble, "key", "val", -date)

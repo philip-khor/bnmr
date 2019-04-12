@@ -1,38 +1,47 @@
 .get_monthly_data <- function(stub, date, year, month, ...) {
-  get_path <- c(ir = "/interest-rate",
-                iv = "/interest-volume",
-                iir = "/islamic-interbank-rate",
-                ke = "/kijang-emas",
-                usdiir = "/usd-interbank-intraday-rate",
-                usdkl = "/kl-usd-reference-rate")
+  get_path <- c(
+    ir = "/interest-rate",
+    iv = "/interest-volume",
+    iir = "/islamic-interbank-rate",
+    ke = "/kijang-emas",
+    usdiir = "/usd-interbank-intraday-rate",
+    usdkl = "/kl-usd-reference-rate"
+  )
 
   path <- get_path[[stub]]
 
   # function should consider length 1 for arguments?
-  if (missing(date)){
-    if (missing(month)){
-      if (missing(year)){
+  if (missing(date)) {
+    if (missing(month)) {
+      if (missing(year)) {
         get_bnm_data(glue("{path}"),
-                     query = list(...))
+          query = list(...)
+        )
       } else {
-        map_dfr(1:12,
-                ~ get_bnm_data(glue("{path}/year/{year}/month/{.}"),
-                               query = list(...)))
+        map_dfr(
+          1:12,
+          ~ get_bnm_data(glue("{path}/year/{year}/month/{.}"),
+            query = list(...)
+          )
+        )
       }
-    } else if (!missing(year)){
+    } else if (!missing(year)) {
       stopifnot(is.numeric(year))
       get_bnm_data(glue("{path}/year/{year}/month/{month}"),
-                   query = list(...))
+        query = list(...)
+      )
     } else {
       stop("Please provide the year")
     }
-  } else if (!missing(year) || !missing(month)){
+  } else if (!missing(year) || !missing(month)) {
     warning("Date and year/month combination provided; querying based on date")
     get_bnm_data(glue("{path}/date/{date}"),
-                 query = list(...))
+      query = list(...)
+    )
   } else {
     get_bnm_data(glue("{path}/date/{date}"),
-                 query = list(...))
+      query = list(...)
+    )
   }
 }
 
@@ -81,13 +90,17 @@
 #'
 #'
 islamic_interbank_rate <- function(date, year, month) {
-  .get_monthly_data(stub = "iir",
-                    date = date, year = year, month = month)
+  .get_monthly_data(
+    stub = "iir",
+    date = date, year = year, month = month
+  )
 }
 
-.products <- c("money_market_operations",
-              "interbank",
-              "overall")
+.products <- c(
+  "money_market_operations",
+  "interbank",
+  "overall"
+)
 
 #' Interest Volume
 #'
@@ -101,15 +114,16 @@ islamic_interbank_rate <- function(date, year, month) {
 #'
 
 interest_volume <- function(product = "money_market_operations",
-                            date, year, month){
-
+                            date, year, month) {
   stopifnot(product %in% .products)
 
-  .get_monthly_data(stub = "ir",
-                    date = date,
-                    year = year,
-                    month = month,
-                    product = product)
+  .get_monthly_data(
+    stub = "ir",
+    date = date,
+    year = year,
+    month = month,
+    product = product
+  )
   # .interest(type = "volume",
   #           product = product,
   #           date = date, year = year, month = month)
@@ -128,18 +142,18 @@ interest_volume <- function(product = "money_market_operations",
 #'
 
 interest_rate <- function(product = "money_market_operations",
-                          date, year, month){
-
+                          date, year, month) {
   stopifnot(product %in% .products)
-  .get_monthly_data(stub = "iv",
-                    date = date,
-                    year = year,
-                    month = month,
-                    product = product)
+  .get_monthly_data(
+    stub = "iv",
+    date = date,
+    year = year,
+    month = month,
+    product = product
+  )
   # .interest(type = "rate",
   #           product = product,
   #           date = date, year = year, month = month)
-
 }
 
 
@@ -154,11 +168,13 @@ interest_rate <- function(product = "money_market_operations",
 #' @source https://api.bnm.gov.my/
 #'
 #'
-kijang_emas <- function(date, year, month){
-  .get_monthly_data(stub = "ke",
-                    date = date,
-                    year = year,
-                    month = month)
+kijang_emas <- function(date, year, month) {
+  .get_monthly_data(
+    stub = "ke",
+    date = date,
+    year = year,
+    month = month
+  )
 }
 
 #' USD Interbank Intraday Rate
@@ -172,11 +188,13 @@ kijang_emas <- function(date, year, month){
 #' @source https://api.bnm.gov.my/
 #'
 #'
-usd_interbank_intraday_rate <- function(date, year, month){
-  .get_monthly_data(stub = "usdiir",
-                    date = date,
-                    year = year,
-                    month = month)
+usd_interbank_intraday_rate <- function(date, year, month) {
+  .get_monthly_data(
+    stub = "usdiir",
+    date = date,
+    year = year,
+    month = month
+  )
 }
 
 
@@ -192,9 +210,11 @@ usd_interbank_intraday_rate <- function(date, year, month){
 #'
 #'
 
-kl_usd_reference_rate <- function(date, year, month){
-  .get_monthly_data(stub = "klusd",
-                    date = date,
-                    year = year,
-                    month = month)
+kl_usd_reference_rate <- function(date, year, month) {
+  .get_monthly_data(
+    stub = "klusd",
+    date = date,
+    year = year,
+    month = month
+  )
 }

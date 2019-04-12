@@ -10,10 +10,11 @@
 
 bnm_api <- function(path, ...) {
   GET("https://api.bnm.gov.my",
-      path = glue("public{path}"),
-      ...,
-      accept("application/vnd.BNM.API.v1+json"),
-      user_agent('http://github.com/philip-khor/bnmr')) -> resp
+    path = glue("public{path}"),
+    ...,
+    accept("application/vnd.BNM.API.v1+json"),
+    user_agent("http://github.com/philip-khor/bnmr")
+  ) -> resp
 
   parsed <- fromJSON(content(resp, "text", encoding = "UTF-8"))
 
@@ -41,7 +42,6 @@ bnm_api <- function(path, ...) {
     ),
     class = "bnm_api"
   )
-
 }
 
 #' Get BNM Data
@@ -66,9 +66,8 @@ get_bnm_data <- function(path, ...) {
 #' get_bnm_data("/welcome")
 #' @source https://api.bnm.gov.my/
 
-get_bnm_tibble <- function(path, ...){
+get_bnm_tibble <- function(path, ...) {
   as_tibble(get_bnm_data(path, ...))
 }
 
 # potentially print metadata when returning get_bnm_data?
-
