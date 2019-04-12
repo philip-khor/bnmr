@@ -3,7 +3,8 @@
 
 # bnmr
 
-<!-- badges: start --> [![Travis build
+<!-- badges: start --> 
+[![Travis build
 status](https://travis-ci.org/philip-khor/bnmr.svg?branch=master)](https://travis-ci.org/philip-khor/bnmr)
 <!-- badges: end -->
 
