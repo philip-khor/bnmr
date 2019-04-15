@@ -17,5 +17,7 @@ This function allows you to ... from the BNM API.
 }
 \examples{
 opr()
+opr(2019)
+opr(2000:2019)
 }
 \keyword{opr}
