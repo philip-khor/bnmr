@@ -7,7 +7,7 @@
 https://api.bnm.gov.my/
 }
 \usage{
-base_rate(bank_code = "")
+base_rate(bank_code)
 }
 \arguments{
 \item{bank_code}{... per https://api.bnm.gov.my/}

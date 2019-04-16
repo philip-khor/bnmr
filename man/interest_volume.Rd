@@ -25,5 +25,8 @@ This function allows you to ... from the BNM API.
 }
 \examples{
 interest_volume()
+interest_volume(date = "2018-01-01")
+interest_volume(year = 2016, month = 2)
+interest_volume(product = "overall", year = 2016, month = 2)
 }
 \keyword{...}

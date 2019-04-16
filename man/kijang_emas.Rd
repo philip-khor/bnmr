@@ -23,5 +23,7 @@ This function allows you to ... from the BNM API.
 }
 \examples{
 kijang_emas()
+kijang_emas(date = "2018-01-03")
+kijang_emas(year = 2016, month = 2)
 }
 \keyword{...}

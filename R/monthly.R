@@ -5,7 +5,7 @@
     iir = "/islamic-interbank-rate",
     ke = "/kijang-emas",
     usdiir = "/usd-interbank-intraday-rate",
-    usdkl = "/kl-usd-reference-rate"
+    klusd = "/kl-usd-reference-rate"
   )
 
   path <- get_path[[stub]]
@@ -86,6 +86,8 @@
 #' @keywords ...
 #' @examples
 #' islamic_interbank_rate()
+#' islamic_interbank_rate(date = "2018-01-01")
+#' islamic_interbank_rate(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 #'
@@ -110,6 +112,9 @@ islamic_interbank_rate <- function(date, year, month) {
 #' @keywords ...
 #' @examples
 #' interest_volume()
+#' interest_volume(date = "2018-01-01")
+#' interest_volume(year = 2016, month = 2)
+#' interest_volume(product = "overall", year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 
@@ -118,7 +123,7 @@ interest_volume <- function(product = "money_market_operations",
   stopifnot(product %in% .products)
 
   .get_monthly_data(
-    stub = "ir",
+    stub = "iv",
     date = date,
     year = year,
     month = month,
@@ -136,6 +141,9 @@ interest_volume <- function(product = "money_market_operations",
 #' @keywords ...
 #' @examples
 #' interest_rate()
+#' interest_rate(date = "2018-01-01")
+#' interest_rate(year = 2016, month = 2)
+#' interest_rate(product = "overall", year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 #'
@@ -145,7 +153,7 @@ interest_rate <- function(product = "money_market_operations",
                           date, year, month) {
   stopifnot(product %in% .products)
   .get_monthly_data(
-    stub = "iv",
+    stub = "ir",
     date = date,
     year = year,
     month = month,
@@ -165,10 +173,14 @@ interest_rate <- function(product = "money_market_operations",
 #' @keywords ...
 #' @examples
 #' kijang_emas()
+#' kijang_emas(date = "2018-01-03")
+#' kijang_emas(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 #'
 kijang_emas <- function(date, year, month) {
+  # if date does not work most likely there's
+  # just no records for that date. write tryCatch here.
   .get_monthly_data(
     stub = "ke",
     date = date,
@@ -185,6 +197,8 @@ kijang_emas <- function(date, year, month) {
 #' @keywords ...
 #' @examples
 #' usd_interbank_intraday_rate()
+#' usd_interbank_intraday_rate(date = "2018-01-03")
+#' usd_interbank_intraday_rate(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 #'
@@ -205,7 +219,9 @@ usd_interbank_intraday_rate <- function(date, year, month) {
 
 #' @keywords ...
 #' @examples
-#' usd_interbank_intraday_rate()
+#' kl_usd_reference_rate()
+#' kl_usd_reference_rate(date = "2018-01-03")
+#' kl_usd_reference_rate(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 #'

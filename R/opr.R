@@ -5,8 +5,7 @@
 #' @keywords opr
 #' @examples
 #' opr()
-#' opr(2019)
-#' opr(2000:2019)
+#' opr(2018:2019)
 #' @source https://api.bnm.gov.my/
 #'
 #'
@@ -17,6 +16,12 @@ opr <- function(year) {
     if (!(is.numeric(year) && all(year >= 2000))) {
       stop("Only integer values above 2000 accepted for year")
     }
-    map_dfr(year, ~ get_bnm_data(glue("/opr/year/{.x}")))
+    if (length(year) == 1) get_bnm_data(glue("/opr/year/{year}"))
+    else {
+      map_dfr(year, function(x) {
+        Sys.sleep(2)
+        get_bnm_data(glue("/opr/year/{x}"))
+      })
+      }
   }
 }

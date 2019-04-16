@@ -21,5 +21,7 @@ This function allows you to ... from the BNM API.
 }
 \examples{
 islamic_interbank_rate()
+islamic_interbank_rate(date = "2018-01-01")
+islamic_interbank_rate(year = 2016, month = 2)
 }
 \keyword{...}

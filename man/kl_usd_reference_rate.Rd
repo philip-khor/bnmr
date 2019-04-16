@@ -22,6 +22,8 @@ specified date. If left blank, return today's interest volume.}
 This function allows you to ... from the BNM API.
 }
 \examples{
-usd_interbank_intraday_rate()
+kl_usd_reference_rate()
+kl_usd_reference_rate(date = "2018-01-03")
+kl_usd_reference_rate(year = 2016, month = 2)
 }
 \keyword{...}
