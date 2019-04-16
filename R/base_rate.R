@@ -10,11 +10,9 @@
 
 base_rate <- function(bank_code){
 
-  # consider using assertthat::assert_that in future?
-  stopifnot(missing(bank_code) | length(bank_code) == 1)
-
   # Checking if any argument provided to the function
   if (!missing(bank_code)) {
+    stopifnot(length(bank_code) == 1)
     # Handle the exception for invalid params value
     tryCatch(get_bnm_data(glue("/base-rate/{bank_code}")),
              error = function(e){
