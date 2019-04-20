@@ -12,16 +12,18 @@ interest_volume(product = "money_market_operations", date, year, month)
 \arguments{
 \item{product}{Either "money_market_operations", "interbank" or "overall"}
 
-\item{date}{Character string or ... in ISO-8601 format (YYYY-MM-DD).
-If specified, return interest volume for the
-specified date. If left blank, return today's interest volume.}
+\item{date}{Character string of date with format as defined by RFC 3339, section 5.6
+(YYYY-MM-DD).
+If specified, return values for the specified date.}
 
-\item{year}{Year and month as integers.}
+\item{year}{Year and month as integers. If date, year and month left blank, return today's values.}
 
-\item{month}{Year and month as integers.}
+\item{month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
-This function allows you to ... from the BNM API.
+This function allows you to obtain daily interbank money
+market rates and volumes of transactions according to tenure.
+(2015 - present) from the BNM API.
 }
 \examples{
 interest_volume()

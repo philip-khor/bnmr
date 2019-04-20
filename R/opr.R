@@ -18,12 +18,13 @@ opr <- function(year) {
     if (!(is.numeric(year) && all(year >= 2000))) {
       stop("Only integer values above 2000 accepted for year")
     }
-    if (length(year) == 1) get_bnm_data(glue("/opr/year/{year}"))
-    else {
+    if (length(year) == 1) {
+      get_bnm_data(glue("/opr/year/{year}"))
+    } else {
       map_dfr(year, function(x) {
         Sys.sleep(1)
         get_bnm_data(glue("/opr/year/{x}"))
       })
-      }
+    }
   }
 }

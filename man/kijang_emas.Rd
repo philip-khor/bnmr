@@ -10,16 +10,17 @@ https://api.bnm.gov.my/
 kijang_emas(date, year, month)
 }
 \arguments{
-\item{date}{Character string or ... in ISO-8601 format (YYYY-MM-DD).
-If specified, return interest volume for the
-specified date. If left blank, return today's interest volume.}
+\item{date}{Character string of date with format as defined by RFC 3339, section 5.6
+(YYYY-MM-DD).
+If specified, return values for the specified date.}
 
-\item{year}{Year and month as integers.}
+\item{year}{Year and month as integers. If date, year and month left blank, return today's values.}
 
-\item{month}{Year and month as integers.}
+\item{month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
-This function allows you to ... from the BNM API.
+This function allows you to obtain daily trading prices
+of Malaysia gold bullion coin from the BNM API.
 }
 \examples{
 kijang_emas()

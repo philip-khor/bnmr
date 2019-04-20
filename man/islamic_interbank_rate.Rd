@@ -10,14 +10,16 @@ https://api.bnm.gov.my/
 islamic_interbank_rate(date, year, month)
 }
 \arguments{
-\item{date}{Character string or ... in ISO-8601 format (YYYY-MM-DD).
-If specified, return interest volume for the
-specified date. If left blank, return today's interest volume.}
+\item{date}{Character string of date with format as defined by RFC 3339, section 5.6
+(YYYY-MM-DD).
+If specified, return values for the specified date.}
 
-\item{year, month}{Year and month as integers.}
+\item{year, month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
-This function allows you to ... from the BNM API.
+This function allows you to obtain daily weighted average of Islamic
+interbank deposit rates for various tenures. (Jan 2015-present)
+from the BNM API.
 }
 \examples{
 islamic_interbank_rate()

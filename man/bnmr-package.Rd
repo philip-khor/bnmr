@@ -13,4 +13,12 @@ More about what it does (maybe more than one line)
 bnmr
 ...
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/philip-khor/bnmr}
+  \item Report bugs at \url{https://github.com/philip-khor/bnmr/issues}
+}
+
+}
 \keyword{internal}

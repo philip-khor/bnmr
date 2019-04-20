@@ -13,9 +13,9 @@ renminbi_tbl(type = "dar")
 \item{type}{"dar" for Deposit Acceptance Rate and "fx_forward" for FX Forward Prices}
 }
 \description{
-This function allows you to extract indicative CNY/MYR
+(WORK IN PROGRESS) This function allows you to extract indicative CNY/MYR
 forward prices for trade settlement and RMB deposit acceptance rates
-from the BNM API as a tibble.
+from the BNM API as a tidy tibble.
 }
 \examples{
 renminbi_tbl()

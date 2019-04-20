@@ -10,7 +10,8 @@ https://api.bnm.gov.my/
 interbank_swap()
 }
 \description{
-This function allows you to ... from the BNM API.
+This function allows you to obtain daily interbank swap
+volume by tenure from the BNM API.
 }
 \examples{
 interbank_swap()

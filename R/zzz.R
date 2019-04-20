@@ -5,6 +5,6 @@
     packageStartupMessage(bnm_api("/welcome")$content$api),
     error = function(e) {
       "Cannot access API. Please check your internet connection"
-      }
-    )
-  }
+    }
+  )
+}

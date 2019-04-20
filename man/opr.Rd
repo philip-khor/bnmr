@@ -10,10 +10,12 @@ https://api.bnm.gov.my/
 opr(year)
 }
 \arguments{
-\item{year}{Optional. ...}
+\item{year}{Optional. Integer value above 2000. Series of
+integer values also supported (experimental).}
 }
 \description{
-This function allows you to ... from the BNM API.
+This function allows you to obtain data on Overnight Policy Rate (OPR)
+decided by the Monetary Policy Committee from the BNM API.
 }
 \examples{
 opr()

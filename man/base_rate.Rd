@@ -10,10 +10,14 @@ https://api.bnm.gov.my/
 base_rate(bank_code)
 }
 \arguments{
-\item{bank_code}{... per https://api.bnm.gov.my/}
+\item{bank_code}{8 characters of SWIFT code per https://api.bnm.gov.my/}
 }
 \description{
-This function allows you to obtain base rate data from the BNM API.
+This function allows you to obtain current Base Rates and
+Base Lending Rates for retail loans or financing facilities
+and Indicative Effective Lending Rates for a standard housing
+loan/home financing offered by financial institutions
+from the BNM API.
 }
 \examples{
 base_rate()

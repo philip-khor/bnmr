@@ -10,7 +10,9 @@ https://api.bnm.gov.my/
 daily_fx_turnover()
 }
 \description{
-This function allows you to ... from the BNM API.
+This function allows you to obtain daily foreign exchange
+turnover for all currencies including interbank and customer deals
+from the BNM API.
 }
 \examples{
 daily_fx_turnover()
