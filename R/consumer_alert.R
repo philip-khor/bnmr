@@ -1,6 +1,9 @@
 #' Consumer Alert
 #'
-#' This function allows you to ... from the BNM API.
+#' This function allows you to obtain a list of known companies
+#' and websites which are neither authorised nor approved
+#' under the relevant laws and regulations administered by BNM
+#' from the BNM API.
 #' @keywords ...
 #' @examples
 #' consumer_alert()

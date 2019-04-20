@@ -78,11 +78,13 @@
 
 #' Islamic Interbank Rate
 #'
-#' This function allows you to ... from the BNM API.
-#' @param date Character string or ... in ISO-8601 format (YYYY-MM-DD).
-#' If specified, return interest volume for the
-#' specified date. If left blank, return today's interest volume.
-#' @param year,month Year and month as integers.
+#' This function allows you to obtain daily weighted average of Islamic
+#' interbank deposit rates for various tenures. (Jan 2015-present)
+#' from the BNM API.
+#' @param date Character string of date with format as defined by RFC 3339, section 5.6
+#' (YYYY-MM-DD).
+#' If specified, return values for the specified date.
+#' @param year,month Year and month as integers. If date, year and month left blank, return today's values.
 #' @keywords ...
 #' @examples
 #' islamic_interbank_rate()
@@ -106,7 +108,9 @@ islamic_interbank_rate <- function(date, year, month) {
 
 #' Interest Volume
 #'
-#' This function allows you to ... from the BNM API.
+#' This function allows you to obtain daily interbank money
+#' market rates and volumes of transactions according to tenure.
+#' (2015 - present) from the BNM API.
 #' @inheritParams islamic_interbank_rate
 #' @param product Either "money_market_operations", "interbank" or "overall"
 #' @keywords ...
@@ -136,7 +140,9 @@ interest_volume <- function(product = "money_market_operations",
 
 #' Interest Rate
 #'
-#' This function allows you to ... from the BNM API.
+#' This function allows you to obtain daily interbank money
+#' market rates and volumes of transactions according to
+#' tenure. (2015 - present) from the BNM API.
 #' @inheritParams interest_volume
 #' @keywords ...
 #' @examples
@@ -167,7 +173,8 @@ interest_rate <- function(product = "money_market_operations",
 
 #' Kijang Emas
 #'
-#' This function allows you to ... from the BNM API.
+#' This function allows you to obtain daily trading prices
+#' of Malaysia gold bullion coin from the BNM API.
 #' @inheritParams islamic_interbank_rate
 
 #' @keywords ...
@@ -191,9 +198,12 @@ kijang_emas <- function(date, year, month) {
 
 #' USD Interbank Intraday Rate
 #'
-#' This function allows you to ... from the BNM API.
+#' This function allows you to obtain USD/MYR
+#' interbank intraday highest and lowest rate from the BNM API.
+#' Rates are obtained from the best U.S. dollar
+#' against Malaysian ringgit interbank highest
+#' and lowest dealt rates by commercial banks on the specific date.
 #' @inheritParams islamic_interbank_rate
-
 #' @keywords ...
 #' @examples
 #' usd_interbank_intraday_rate()
@@ -214,9 +224,12 @@ usd_interbank_intraday_rate <- function(date, year, month) {
 
 #' KL USD Reference Rate
 #'
-#' This function allows you to ... from the BNM API.
+#' This function allows you to obtain a reference rate
+#' that is computed based on weighted average volume
+#' of the interbank USD/MYR FX spot rate transacted by
+#' the domestic financial institutions and published
+#' daily at 3:30 p.m from the BNM API.
 #' @inheritParams islamic_interbank_rate
-
 #' @keywords ...
 #' @examples
 #' kl_usd_reference_rate()

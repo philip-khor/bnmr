@@ -57,6 +57,7 @@ bnm_api <- function(path, ...) {
 get_bnm_data <- function(path, ...) {
   bnm_api(path, ...)[["content"]][["data"]]
 }
+
 #' Get BNM Data
 #'
 #' This function allows you to obtain data from the BNM API.

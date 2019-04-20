@@ -24,9 +24,9 @@ renminbi <- function(type = "dar") {
 
 #' Renminbi tibbles
 #'
-#' This function allows you to extract indicative CNY/MYR
+#' (WORK IN PROGRESS) This function allows you to extract indicative CNY/MYR
 #' forward prices for trade settlement and RMB deposit acceptance rates
-#' from the BNM API as a tibble.
+#' from the BNM API as a tidy tibble.
 #' @inheritParams renminbi
 #' @keywords ...
 #' @examples

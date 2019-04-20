@@ -1,7 +1,9 @@
 #' Overnight Policy Rate (OPR)
 #'
-#' This function allows you to ... from the BNM API.
-#' @param year Optional. ...
+#' This function allows you to obtain data on Overnight Policy Rate (OPR)
+#' decided by the Monetary Policy Committee from the BNM API.
+#' @param year Optional. Integer value above 2000. Series of
+#' integer values also supported (experimental).
 #' @keywords opr
 #' @examples
 #' opr()
@@ -19,7 +21,7 @@ opr <- function(year) {
     if (length(year) == 1) get_bnm_data(glue("/opr/year/{year}"))
     else {
       map_dfr(year, function(x) {
-        Sys.sleep(2)
+        Sys.sleep(1)
         get_bnm_data(glue("/opr/year/{x}"))
       })
       }

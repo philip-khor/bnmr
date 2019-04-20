@@ -14,7 +14,10 @@
 
 #' Exchange Rate
 #'
-#' This function allows you to ... from the BNM API.
+#' This function allows you to obtain currency exchange rates
+#' from the Interbank Foreign Exchange Market in Kuala Lumpur
+#' from the BNM API. The price of selected countries currency
+#' in relation to Ringgit.
 #' @param currency 3-characters currency code based on ISO4217 standard
 #' @param session Character string "0900", "1130", "1200" or "1700".
 #' A snapshot of the exchange rate daily at 0900, 1130, 1200 and 1700 intervals

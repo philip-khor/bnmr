@@ -1,3 +1,3 @@
-test_that("can access API", {
+test_that("welcome returns unexpected name", {
   expect_equal(bnm_api("/welcome")$content$contact$name, "BNM.API")
 })
