@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Authors • bnmr</title>
+<title>Overnight Policy Rate (OPR) — opr • bnmr</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -25,12 +25,16 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
-<link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script>
+<link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script>
 
 
 
-<meta property="og:title" content="Authors" />
+<meta property="og:title" content="Overnight Policy Rate (OPR) — opr" />
+
+<meta property="og:description" content="This function allows you to obtain data on Overnight Policy Rate (OPR)
+decided by the Monetary Policy Committee from the BNM API." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -47,7 +51,7 @@
   </head>
 
   <body>
-    <div class="container template-authors">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -59,7 +63,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">bnmr</a>
+        <a class="navbar-link" href="../index.html">bnmr</a>
         <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9001</span>
       </span>
     </div>
@@ -67,13 +71,13 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="../reference/index.html">Reference</a>
 </li>
       </ul>
       
@@ -94,22 +98,71 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Authors</h1>
+    <h1>Overnight Policy Rate (OPR)</h1>
+    <small class="dont-index">Source: <a href='https://github.com/philip-khor/bnmr/blob/master/R/opr.R'><code>R/opr.R</code></a></small>
+    <div class="hidden name"><code>opr.Rd</code></div>
     </div>
 
-    <ul class="list-unstyled">
-      <li>
-        <p><strong>Philip Khor</strong>. Author, maintainer. 
-        </p>
-      </li>
+    <div class="ref-description">
+    
+    <p>This function allows you to obtain data on Overnight Policy Rate (OPR)
+decided by the Monetary Policy Committee from the BNM API.</p>
+    
+    </div>
+
+    <pre class="usage"><span class='fu'>opr</span>(<span class='no'>year</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>year</th>
+      <td><p>Optional. Integer value above 2000. Series of
+integer values also supported (experimental).</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>https://api.bnm.gov.my/</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>opr</span>()</div><div class='output co'>#&gt; $year
+#&gt; [1] 2019
+#&gt; 
+#&gt; $date
+#&gt; [1] "2019-03-05"
+#&gt; 
+#&gt; $change_in_opr
+#&gt; NULL
+#&gt; 
+#&gt; $new_opr_level
+#&gt; [1] 3.25
+#&gt; </div><div class='input'><span class='fu'>opr</span>(<span class='fl'>2018</span>:<span class='fl'>2019</span>)</div><div class='output co'>#&gt;   year       date change_in_opr new_opr_level
+#&gt; 1 2018 2018-11-08            NA          3.25
+#&gt; 2 2018 2018-09-05            NA          3.25
+#&gt; 3 2018 2018-07-11            NA          3.25
+#&gt; 4 2018 2018-05-10            NA          3.25
+#&gt; 5 2018 2018-03-07            NA          3.25
+#&gt; 6 2018 2018-01-25          0.25          3.25
+#&gt; 7 2019 2019-03-05            NA          3.25
+#&gt; 8 2019 2019-01-24            NA          3.25</div></pre>
+  </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#source">Source</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>
-
 </div>
-
 
       <footer>
       <div class="copyright">

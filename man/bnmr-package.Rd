@@ -21,4 +21,8 @@ Useful links:
 }
 
 }
+\author{
+\strong{Maintainer}: Philip Khor \email{pk.qa@outlook.com}
+
+}
 \keyword{internal}
