@@ -6,6 +6,7 @@
 #' @keywords ...
 #' @examples
 #' daily_fx_turnover()
+#' @export
 #' @source https://api.bnm.gov.my/
 #'
 #'

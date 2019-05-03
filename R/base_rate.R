@@ -9,13 +9,15 @@
 #' @keywords ...
 #' @examples
 #' base_rate()
+#' @export
+#' @importFrom glue glue
 #' @source https://api.bnm.gov.my/
 #'
 
-base_rate <- function(bank_code) {
+base_rate <- function(bank_code = NULL) {
 
   # Checking if any argument provided to the function
-  if (!missing(bank_code)) {
+  if (!is.null(bank_code)) {
     stopifnot(length(bank_code) == 1)
     # Handle the exception for invalid params value
     tryCatch(get_bnm_data(glue("/base-rate/{bank_code}")),

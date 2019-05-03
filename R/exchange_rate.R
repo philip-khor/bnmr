@@ -25,6 +25,7 @@
 #' @keywords ...
 #' @examples
 #' exchange_rate()
+#' @export
 #' @source https://api.bnm.gov.my/
 #'
 #'

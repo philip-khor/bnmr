@@ -5,6 +5,8 @@
 #' @param year Optional. Integer value above 2000. Series of
 #' integer values also supported (experimental).
 #' @keywords opr
+#' @importFrom purrr map_dfr
+#' @export
 #' @examples
 #' opr()
 #' opr(2018:2019)

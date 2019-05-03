@@ -7,6 +7,7 @@
 #' @keywords ...
 #' @examples
 #' consumer_alert()
+#' @export
 #' @source https://api.bnm.gov.my/
 #'
 #'

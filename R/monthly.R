@@ -1,3 +1,5 @@
+#' @importFrom purrr map_dfr
+
 .get_monthly_data <- function(stub, date, year, month, ...) {
   get_path <- c(
     ir = "/interest-rate",
@@ -86,6 +88,7 @@
 #' If specified, return values for the specified date.
 #' @param year,month Year and month as integers. If date, year and month left blank, return today's values.
 #' @keywords ...
+#' @export
 #' @examples
 #' islamic_interbank_rate()
 #' islamic_interbank_rate(date = "2018-01-01")
@@ -114,6 +117,7 @@ islamic_interbank_rate <- function(date, year, month) {
 #' @inheritParams islamic_interbank_rate
 #' @param product Either "money_market_operations", "interbank" or "overall"
 #' @keywords ...
+#' @export
 #' @examples
 #' interest_volume()
 #' interest_volume(date = "2018-01-01")
@@ -145,6 +149,7 @@ interest_volume <- function(product = "money_market_operations",
 #' tenure. (2015 - present) from the BNM API.
 #' @inheritParams interest_volume
 #' @keywords ...
+#' @export
 #' @examples
 #' interest_rate()
 #' interest_rate(date = "2018-01-01")
@@ -178,6 +183,7 @@ interest_rate <- function(product = "money_market_operations",
 #' @inheritParams islamic_interbank_rate
 
 #' @keywords ...
+#' @export
 #' @examples
 #' kijang_emas()
 #' kijang_emas(date = "2018-01-03")
@@ -205,6 +211,7 @@ kijang_emas <- function(date, year, month) {
 #' and lowest dealt rates by commercial banks on the specific date.
 #' @inheritParams islamic_interbank_rate
 #' @keywords ...
+#' @export
 #' @examples
 #' usd_interbank_intraday_rate()
 #' usd_interbank_intraday_rate(date = "2018-01-03")
@@ -231,6 +238,7 @@ usd_interbank_intraday_rate <- function(date, year, month) {
 #' daily at 3:30 p.m from the BNM API.
 #' @inheritParams islamic_interbank_rate
 #' @keywords ...
+#' @export
 #' @examples
 #' kl_usd_reference_rate()
 #' kl_usd_reference_rate(date = "2018-01-03")

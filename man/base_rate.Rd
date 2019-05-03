@@ -7,7 +7,7 @@
 https://api.bnm.gov.my/
 }
 \usage{
-base_rate(bank_code)
+base_rate(bank_code = NULL)
 }
 \arguments{
 \item{bank_code}{8 characters of SWIFT code per https://api.bnm.gov.my/}

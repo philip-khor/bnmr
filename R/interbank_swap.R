@@ -5,6 +5,7 @@
 #' @keywords ...
 #' @examples
 #' interbank_swap()
+#' @export
 #' @source https://api.bnm.gov.my/
 #'
 #'

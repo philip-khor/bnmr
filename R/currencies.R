@@ -9,6 +9,7 @@
 #' renminbi()
 #' renminbi(type = "dar")
 #' renminbi(type = "fx_forward")
+#' @export
 #' @source https://api.bnm.gov.my/
 #'
 #'
@@ -29,12 +30,13 @@ renminbi <- function(type = "dar") {
 #' from the BNM API as a tidy tibble.
 #' @inheritParams renminbi
 #' @keywords ...
+#' @importFrom tidyr spread gather unnest
 #' @examples
 #' renminbi_tbl()
 #' renminbi_tbl(type = "dar")
 #' renminbi_tbl(type = "fx_forward")
 #' @source https://api.bnm.gov.my/
-#'
+#' @export
 
 renminbi_tbl <- function(type = "dar") {
   stopifnot(type %in% c("dar", "fx_forward"))
@@ -58,3 +60,4 @@ renminbi_tbl <- function(type = "dar") {
     unnest(rmb_tibble)
   }
 }
+
