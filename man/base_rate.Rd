@@ -2,7 +2,7 @@
 % Please edit documentation in R/base_rate.R
 \name{base_rate}
 \alias{base_rate}
-\title{Base rate}
+\title{Base Rate}
 \source{
 https://api.bnm.gov.my/
 }

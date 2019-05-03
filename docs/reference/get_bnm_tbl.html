@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Access BNM API — bnm_api • bnmr</title>
+<title>Get BNM Data — get_bnm_tbl • bnmr</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,7 +30,7 @@
 
 
 
-<meta property="og:title" content="Access BNM API — bnm_api" />
+<meta property="og:title" content="Get BNM Data — get_bnm_tbl" />
 
 <meta property="og:description" content="This function allows you to obtain data from the BNM API." />
 <meta name="twitter:card" content="summary" />
@@ -99,9 +99,9 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Access BNM API</h1>
+    <h1>Get BNM Data</h1>
     <small class="dont-index">Source: <a href='https://github.com/philip-khor/bnmr/blob/master/R/main.R'><code>R/main.R</code></a></small>
-    <div class="hidden name"><code>bnm_api.Rd</code></div>
+    <div class="hidden name"><code>get_bnm_tbl.Rd</code></div>
     </div>
 
     <div class="ref-description">
@@ -110,7 +110,7 @@
     
     </div>
 
-    <pre class="usage"><span class='fu'>bnm_api</span>(<span class='no'>path</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>get_bnm_tbl</span>(<span class='no'>path</span>, <span class='no'>...</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -121,51 +121,17 @@
     </tr>
     <tr>
       <th>...</th>
-      <td><p>Additional arguments to httr::GET()</p></td>
+      <td><p>Additional arguments to be passed to bnm_api</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>https://api.bnm.gov.my/, https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html</p>
+    <p>https://api.bnm.gov.my/</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>bnm_api</span>(<span class='st'>"/welcome"</span>)</div><div class='output co'>#&gt; $content
-#&gt; $content$name
-#&gt; [1] "BNM.API"
-#&gt; 
-#&gt; $content$api
-#&gt; [1] "v1"
-#&gt; 
-#&gt; $content$description
-#&gt; [1] "The APIs enable you to extract the relevant datasets on the BNM website for your applications and systems in a seamless manner. BNM will progressively release more datasets as APIs. If you are interested in a particular dataset or if you wish to provide feedback on the site, you may write to us."
-#&gt; 
-#&gt; $content$contact
-#&gt; $content$contact$name
-#&gt; [1] "BNM.API"
-#&gt; 
-#&gt; $content$contact$email
-#&gt; [1] "oapi@bnm.gov.my"
-#&gt; 
-#&gt; 
-#&gt; $content$disclaimer
-#&gt; [1] "https://api.bnm.gov.my/disclaimer"
-#&gt; 
-#&gt; 
-#&gt; $path
-#&gt; [1] "/welcome"
-#&gt; 
-#&gt; $response
-#&gt; Response [https://api.bnm.gov.my/public/welcome]
-#&gt;   Date: 2019-05-03 05:26
-#&gt;   Status: 200
-#&gt;   Content-Type: application/json
-#&gt;   Size: 451 B
-#&gt; 
-#&gt; 
-#&gt; attr(,"class")
-#&gt; [1] "bnm_api"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>get_bnm_tbl</span>(<span class='st'>"/welcome"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 0 x 0</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

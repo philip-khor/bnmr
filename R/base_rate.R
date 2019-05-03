@@ -1,4 +1,4 @@
-#' Base rate
+#' Base Rate
 #'
 #' This function allows you to obtain current Base Rates and
 #' Base Lending Rates for retail loans or financing facilities
