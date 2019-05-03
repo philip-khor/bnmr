@@ -6,8 +6,7 @@ Authors@R: person("Philip", "Khor", email = "pk.qa@outlook.com",
                   role = c("aut", "cre"), 
                   comment = c(ORCID = "0000-0002-8333-1256"))
 Maintainer: Philip Khor <pk.qa@outlook.com>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: A set of wrapper functions for the Open API of the Central Bank of Malaysia.
 URL: https://github.com/philip-khor/bnmr
 BugReports: https://github.com/philip-khor/bnmr/issues
 License: CC0

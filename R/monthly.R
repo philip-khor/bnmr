@@ -20,7 +20,7 @@
     if (is.null(month)) {
       if (is.null(year)) {
         get_bnm_data(glue("{path}"),
-          query = list(...)
+                     query = list(...)
         )
       } else {
         map_dfr(

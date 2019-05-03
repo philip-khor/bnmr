@@ -6,8 +6,7 @@
 \alias{bnmr-package}
 \title{bnmr: Wrapper Functions for the Open API of the Central Bank of Malaysia}
 \description{
-More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+A set of wrapper functions for the Open API of the Central Bank of Malaysia.
 }
 \details{
 bnmr
