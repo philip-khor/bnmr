@@ -7,6 +7,8 @@
 
 [![Travis build
 status](https://travis-ci.org/philip-khor/bnmr.svg?branch=master)](https://travis-ci.org/philip-khor/bnmr)
+[![Codecov test
+coverage](https://codecov.io/gh/philip-khor/bnmr/branch/master/graph/badge.svg)](https://codecov.io/gh/philip-khor/bnmr?branch=master)
 <!-- badges: end -->
 
 The goal of bnmr is to provide a set of convenient wrapper functions for
