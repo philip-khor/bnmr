@@ -79,40 +79,38 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install the released version of bnmr from <a href="https://CRAN.R-project.org">CRAN</a> with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"bnmr"</span>)</a></code></pre></div>
-<p>For now, to install <code>bnmr</code>, do the following:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="co"># install.packages("devtools")</span></a>
-<a class="sourceLine" id="cb2-2" title="2">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"philip-khor/bnmr"</span>)</a></code></pre></div>
+<p>To install <code>bnmr</code>, run the following code (requires devtools):</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="co"># install.packages("devtools")</span></a>
+<a class="sourceLine" id="cb1-2" title="2">devtools<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">install_github</a></span>(<span class="st">"philip-khor/bnmr"</span>)</a></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>This is a basic example which shows you how to solve a common problem:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(bnmr)</a>
-<a class="sourceLine" id="cb3-2" title="2">current_base_rates &lt;-<span class="st"> </span><span class="kw"><a href="reference/base_rate.html">base_rate</a></span>()</a>
-<a class="sourceLine" id="cb3-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(current_base_rates)</a>
-<a class="sourceLine" id="cb3-4" title="4"><span class="co">#&gt;   bank_code                                                 bank_name</span></a>
-<a class="sourceLine" id="cb3-5" title="5"><span class="co">#&gt; 1  BKKBMYKL                                       Bangkok Bank Berhad</span></a>
-<a class="sourceLine" id="cb3-6" title="6"><span class="co">#&gt; 2  CIBBMYKL                                          CIMB Bank Berhad</span></a>
-<a class="sourceLine" id="cb3-7" title="7"><span class="co">#&gt; 3  CITIMYKL                                           Citibank Berhad</span></a>
-<a class="sourceLine" id="cb3-8" title="8"><span class="co">#&gt; 4  HLBBMYKL                           Hong Leong Bank Malaysia Berhad</span></a>
-<a class="sourceLine" id="cb3-9" title="9"><span class="co">#&gt; 5  HBMBMYKL                                 HSBC Bank Malaysia Berhad</span></a>
-<a class="sourceLine" id="cb3-10" title="10"><span class="co">#&gt; 6  ICBKMYKL Industrial and Commercial Bank of China (Malaysia) Berhad</span></a>
-<a class="sourceLine" id="cb3-11" title="11"><span class="co">#&gt;   base_rate base_lending_rate indicative_eff_lending_rate</span></a>
-<a class="sourceLine" id="cb3-12" title="12"><span class="co">#&gt; 1      4.72              7.37                        5.92</span></a>
-<a class="sourceLine" id="cb3-13" title="13"><span class="co">#&gt; 2      4.25              7.10                        5.00</span></a>
-<a class="sourceLine" id="cb3-14" title="14"><span class="co">#&gt; 3      3.90              7.05                        4.70</span></a>
-<a class="sourceLine" id="cb3-15" title="15"><span class="co">#&gt; 4      4.13              7.14                        5.00</span></a>
-<a class="sourceLine" id="cb3-16" title="16"><span class="co">#&gt; 5      3.89              6.99                        5.00</span></a>
-<a class="sourceLine" id="cb3-17" title="17"><span class="co">#&gt; 6      4.02              6.95                        4.75</span></a>
-<a class="sourceLine" id="cb3-18" title="18"><span class="co">#&gt;   base_financing_rate</span></a>
-<a class="sourceLine" id="cb3-19" title="19"><span class="co">#&gt; 1                  NA</span></a>
-<a class="sourceLine" id="cb3-20" title="20"><span class="co">#&gt; 2                  NA</span></a>
-<a class="sourceLine" id="cb3-21" title="21"><span class="co">#&gt; 3                  NA</span></a>
-<a class="sourceLine" id="cb3-22" title="22"><span class="co">#&gt; 4                  NA</span></a>
-<a class="sourceLine" id="cb3-23" title="23"><span class="co">#&gt; 5                  NA</span></a>
-<a class="sourceLine" id="cb3-24" title="24"><span class="co">#&gt; 6                  NA</span></a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(bnmr)</a>
+<a class="sourceLine" id="cb2-2" title="2">current_base_rates &lt;-<span class="st"> </span><span class="kw"><a href="reference/base_rate.html">base_rate</a></span>()</a>
+<a class="sourceLine" id="cb2-3" title="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(current_base_rates)</a>
+<a class="sourceLine" id="cb2-4" title="4"><span class="co">#&gt;   bank_code                                                 bank_name</span></a>
+<a class="sourceLine" id="cb2-5" title="5"><span class="co">#&gt; 1  BKKBMYKL                                       Bangkok Bank Berhad</span></a>
+<a class="sourceLine" id="cb2-6" title="6"><span class="co">#&gt; 2  CIBBMYKL                                          CIMB Bank Berhad</span></a>
+<a class="sourceLine" id="cb2-7" title="7"><span class="co">#&gt; 3  CITIMYKL                                           Citibank Berhad</span></a>
+<a class="sourceLine" id="cb2-8" title="8"><span class="co">#&gt; 4  HLBBMYKL                           Hong Leong Bank Malaysia Berhad</span></a>
+<a class="sourceLine" id="cb2-9" title="9"><span class="co">#&gt; 5  HBMBMYKL                                 HSBC Bank Malaysia Berhad</span></a>
+<a class="sourceLine" id="cb2-10" title="10"><span class="co">#&gt; 6  ICBKMYKL Industrial and Commercial Bank of China (Malaysia) Berhad</span></a>
+<a class="sourceLine" id="cb2-11" title="11"><span class="co">#&gt;   base_rate base_lending_rate indicative_eff_lending_rate</span></a>
+<a class="sourceLine" id="cb2-12" title="12"><span class="co">#&gt; 1      4.72              7.37                        5.92</span></a>
+<a class="sourceLine" id="cb2-13" title="13"><span class="co">#&gt; 2      4.25              7.10                        5.00</span></a>
+<a class="sourceLine" id="cb2-14" title="14"><span class="co">#&gt; 3      3.90              7.05                        4.70</span></a>
+<a class="sourceLine" id="cb2-15" title="15"><span class="co">#&gt; 4      4.13              7.14                        5.00</span></a>
+<a class="sourceLine" id="cb2-16" title="16"><span class="co">#&gt; 5      3.89              6.99                        5.00</span></a>
+<a class="sourceLine" id="cb2-17" title="17"><span class="co">#&gt; 6      4.02              6.95                        4.75</span></a>
+<a class="sourceLine" id="cb2-18" title="18"><span class="co">#&gt;   base_financing_rate</span></a>
+<a class="sourceLine" id="cb2-19" title="19"><span class="co">#&gt; 1                  NA</span></a>
+<a class="sourceLine" id="cb2-20" title="20"><span class="co">#&gt; 2                  NA</span></a>
+<a class="sourceLine" id="cb2-21" title="21"><span class="co">#&gt; 3                  NA</span></a>
+<a class="sourceLine" id="cb2-22" title="22"><span class="co">#&gt; 4                  NA</span></a>
+<a class="sourceLine" id="cb2-23" title="23"><span class="co">#&gt; 5                  NA</span></a>
+<a class="sourceLine" id="cb2-24" title="24"><span class="co">#&gt; 6                  NA</span></a></code></pre></div>
 </div>
 </div>
   </div>
@@ -144,6 +142,7 @@
 <h2>Dev status</h2>
 <ul class="list-unstyled">
 <li><a href="https://travis-ci.org/philip-khor/bnmr"><img src="https://travis-ci.org/philip-khor/bnmr.svg?branch=master" alt="Travis build status"></a></li>
+<li><a href="https://codecov.io/gh/philip-khor/bnmr?branch=master"><img src="https://codecov.io/gh/philip-khor/bnmr/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 </ul>
 </div>
 </div>
