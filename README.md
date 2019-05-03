@@ -14,14 +14,7 @@ the Central Bank of Malaysia’s API.
 
 ## Installation
 
-You can install the released version of bnmr from
-[CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("bnmr")
-```
-
-For now, to install `bnmr`, do the following:
+To install `bnmr`, run the following code (requires devtools):
 
 ``` r
 # install.packages("devtools")
@@ -36,14 +29,25 @@ This is a basic example which shows you how to solve a common problem:
 library(bnmr)
 current_base_rates <- base_rate()
 head(current_base_rates)
-#> # A tibble: 6 x 6
-#>   bank_code bank_name base_rate base_lending_ra… indicative_eff_…
-#>   <chr>     <chr>         <dbl>            <dbl>            <dbl>
-#> 1 BKKBMYKL  Bangkok …      4.72             7.37             5.92
-#> 2 CIBBMYKL  CIMB Ban…      4.25             7.1              5   
-#> 3 CITIMYKL  Citibank…      3.9              7.05             4.7 
-#> 4 HLBBMYKL  Hong Leo…      4.13             7.14             5   
-#> 5 HBMBMYKL  HSBC Ban…      3.89             6.99             5   
-#> 6 ICBKMYKL  Industri…      4.02             6.95             4.75
-#> # … with 1 more variable: base_financing_rate <dbl>
+#>   bank_code                                                 bank_name
+#> 1  BKKBMYKL                                       Bangkok Bank Berhad
+#> 2  CIBBMYKL                                          CIMB Bank Berhad
+#> 3  CITIMYKL                                           Citibank Berhad
+#> 4  HLBBMYKL                           Hong Leong Bank Malaysia Berhad
+#> 5  HBMBMYKL                                 HSBC Bank Malaysia Berhad
+#> 6  ICBKMYKL Industrial and Commercial Bank of China (Malaysia) Berhad
+#>   base_rate base_lending_rate indicative_eff_lending_rate
+#> 1      4.72              7.37                        5.92
+#> 2      4.25              7.10                        5.00
+#> 3      3.90              7.05                        4.70
+#> 4      4.13              7.14                        5.00
+#> 5      3.89              6.99                        5.00
+#> 6      4.02              6.95                        4.75
+#>   base_financing_rate
+#> 1                  NA
+#> 2                  NA
+#> 3                  NA
+#> 4                  NA
+#> 5                  NA
+#> 6                  NA
 ```

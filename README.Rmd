@@ -21,13 +21,8 @@ The goal of bnmr is to provide a set of convenient wrapper functions for the Cen
 
 ## Installation
 
-You can install the released version of bnmr from [CRAN](https://CRAN.R-project.org) with:
 
-``` r
-install.packages("bnmr")
-```
-
-For now, to install `bnmr`, do the following:
+To install `bnmr`, run the following code (requires devtools):
 
 ```{r, eval = FALSE}
 # install.packages("devtools")
