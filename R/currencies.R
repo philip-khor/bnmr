@@ -44,7 +44,7 @@ renminbi_tbl <- function(type = "dar") {
     dar = "/renminbi-deposit-acceptance-rate",
     fx_forward = "/renminbi-fx-forward-price"
   )
-  rmb_tibble <- get_bnm_tibble(paths[[type]])
+  rmb_tibble <- get_bnm_tbl(paths[[type]])
 
   if (missing(type) | type == "dar") {
     rmb_tibble[["term"]] <- names(rmb_tibble[["deposit"]])

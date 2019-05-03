@@ -22,7 +22,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Philip Khor \email{pk.qa@outlook.com}
+\strong{Maintainer}: Philip Khor \email{pk.qa@outlook.com} (0000-0002-8333-1256)
 
 }
 \keyword{internal}

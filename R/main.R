@@ -69,11 +69,11 @@ get_bnm_data <- function(path, ...) {
 #' @keywords cats
 #' @importFrom tibble as_tibble
 #' @examples
-#' get_bnm_tibble("/welcome")
+#' get_bnm_tbl("/welcome")
 #' @export
 #' @source https://api.bnm.gov.my/
 
-get_bnm_tibble <- function(path, ...) {
+get_bnm_tbl <- function(path, ...) {
   as_tibble(get_bnm_data(path, ...))
 }
 

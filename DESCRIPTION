@@ -3,7 +3,8 @@ Type: Package
 Title: Wrapper Functions for the Open API of the Central Bank of Malaysia
 Version: 0.0.0.9001
 Authors@R: person("Philip", "Khor", email = "pk.qa@outlook.com",
-                  role = c("aut", "cre"))
+                  role = c("aut", "cre"), 
+                  comment = c(ORCID = "0000-0002-8333-1256"))
 Maintainer: Philip Khor <pk.qa@outlook.com>
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
