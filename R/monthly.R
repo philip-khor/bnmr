@@ -1,6 +1,9 @@
 #' @importFrom purrr map_dfr
 
-.get_monthly_data <- function(stub, date, year, month, ...) {
+.get_monthly_data <- function(stub,
+                              date = NULL,
+                              year = NULL,
+                              month = NULL, ...) {
   get_path <- c(
     ir = "/interest-rate",
     iv = "/interest-volume",
@@ -13,9 +16,9 @@
   path <- get_path[[stub]]
 
   # function should consider length 1 for arguments?
-  if (missing(date)) {
-    if (missing(month)) {
-      if (missing(year)) {
+  if (is.null(date)) {
+    if (is.null(month)) {
+      if (is.null(year)) {
         get_bnm_data(glue("{path}"),
           query = list(...)
         )
@@ -27,7 +30,7 @@
           )
         )
       }
-    } else if (!missing(year)) {
+    } else if (!is.null(year)) {
       stopifnot(is.numeric(year))
       get_bnm_data(glue("{path}/year/{year}/month/{month}"),
         query = list(...)
@@ -35,7 +38,7 @@
     } else {
       stop("Please provide the year")
     }
-  } else if (!missing(year) || !missing(month)) {
+  } else if (!is.null(year) || !is.null(month)) {
     warning("Date and year/month combination provided; querying based on date")
     get_bnm_data(glue("{path}/date/{date}"),
       query = list(...)
@@ -96,7 +99,9 @@
 #' @source https://api.bnm.gov.my/
 #'
 #'
-islamic_interbank_rate <- function(date, year, month) {
+islamic_interbank_rate <- function(date = NULL,
+                                   year = NULL,
+                                   month = NULL) {
   .get_monthly_data(
     stub = "iir",
     date = date, year = year, month = month
@@ -127,7 +132,9 @@ islamic_interbank_rate <- function(date, year, month) {
 #'
 
 interest_volume <- function(product = "money_market_operations",
-                            date, year, month) {
+                            date = NULL,
+                            year = NULL,
+                            month = NULL) {
   stopifnot(product %in% .products)
 
   .get_monthly_data(
@@ -161,7 +168,9 @@ interest_volume <- function(product = "money_market_operations",
 #'
 
 interest_rate <- function(product = "money_market_operations",
-                          date, year, month) {
+                          date = NULL,
+                          year = NULL,
+                          month = NULL) {
   stopifnot(product %in% .products)
   .get_monthly_data(
     stub = "ir",
@@ -191,7 +200,9 @@ interest_rate <- function(product = "money_market_operations",
 #' @source https://api.bnm.gov.my/
 #'
 #'
-kijang_emas <- function(date, year, month) {
+kijang_emas <- function(date = NULL,
+                        year = NULL,
+                        month = NULL) {
   # if date does not work most likely there's
   # just no records for that date. write tryCatch here.
   .get_monthly_data(
@@ -219,7 +230,9 @@ kijang_emas <- function(date, year, month) {
 #' @source https://api.bnm.gov.my/
 #'
 #'
-usd_interbank_intraday_rate <- function(date, year, month) {
+usd_interbank_intraday_rate <- function(date = NULL,
+                                        year = NULL,
+                                        month = NULL) {
   .get_monthly_data(
     stub = "usdiir",
     date = date,
@@ -247,7 +260,9 @@ usd_interbank_intraday_rate <- function(date, year, month) {
 #'
 #'
 
-kl_usd_reference_rate <- function(date, year, month) {
+kl_usd_reference_rate <- function(date = NULL,
+                                  year = NULL,
+                                  month = NULL) {
   .get_monthly_data(
     stub = "klusd",
     date = date,

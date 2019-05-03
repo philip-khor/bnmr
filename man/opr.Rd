@@ -7,7 +7,7 @@
 https://api.bnm.gov.my/
 }
 \usage{
-opr(year)
+opr(year = NULL)
 }
 \arguments{
 \item{year}{Optional. Integer value above 2000. Series of

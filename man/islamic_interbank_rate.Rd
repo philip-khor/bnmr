@@ -7,7 +7,7 @@
 https://api.bnm.gov.my/
 }
 \usage{
-islamic_interbank_rate(date, year, month)
+islamic_interbank_rate(date = NULL, year = NULL, month = NULL)
 }
 \arguments{
 \item{date}{Character string of date with format as defined by RFC 3339, section 5.6

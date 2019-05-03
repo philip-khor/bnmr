@@ -7,7 +7,7 @@
 https://api.bnm.gov.my/
 }
 \usage{
-kl_usd_reference_rate(date, year, month)
+kl_usd_reference_rate(date = NULL, year = NULL, month = NULL)
 }
 \arguments{
 \item{date}{Character string of date with format as defined by RFC 3339, section 5.6

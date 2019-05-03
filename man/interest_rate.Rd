@@ -7,7 +7,8 @@
 https://api.bnm.gov.my/
 }
 \usage{
-interest_rate(product = "money_market_operations", date, year, month)
+interest_rate(product = "money_market_operations", date = NULL,
+  year = NULL, month = NULL)
 }
 \arguments{
 \item{product}{Either "money_market_operations", "interbank" or "overall"}

@@ -18,6 +18,6 @@ get_bnm_tibble(path, ...)
 This function allows you to obtain data from the BNM API.
 }
 \examples{
-get_bnm_data("/welcome")
+get_bnm_tibble("/welcome")
 }
 \keyword{cats}

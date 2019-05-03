@@ -13,8 +13,8 @@
 #' @source https://api.bnm.gov.my/
 #'
 #'
-opr <- function(year) {
-  if (missing(year)) {
+opr <- function(year = NULL) {
+  if (is.null(year)) {
     get_bnm_data("/opr")
   } else {
     if (!(is.numeric(year) && all(year >= 2000))) {
