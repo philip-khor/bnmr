@@ -5,7 +5,7 @@
 #' @param ... Additional arguments to httr::GET()
 #' @examples
 #' bnm_api("/welcome")
-#' @export
+#' @noRd
 #' @importFrom httr GET accept user_agent content http_type http_error status_code
 #' @importFrom jsonlite fromJSON
 #' @source https://api.bnm.gov.my/, https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
@@ -55,7 +55,7 @@ bnm_api <- function(path, ...) {
 #' @keywords cats
 #' @examples
 #' get_bnm_data("/welcome")
-#' @export
+#' @noRd
 #' @source https://api.bnm.gov.my/
 
 get_bnm_data <- function(path, ...) {
@@ -70,7 +70,7 @@ get_bnm_data <- function(path, ...) {
 #' @importFrom tibble as_tibble
 #' @examples
 #' get_bnm_tbl("/welcome")
-#' @export
+#' @noRd
 #' @source https://api.bnm.gov.my/
 
 get_bnm_tbl <- function(path, ...) {
