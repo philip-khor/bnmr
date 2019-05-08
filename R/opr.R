@@ -23,9 +23,9 @@ opr <- function(year = NULL) {
     if (length(year) == 1) {
       get_bnm_data(glue("/opr/year/{year}"))
     } else {
-      map_dfr(year, function(x) {
+      map_dfr(glue("/opr/year/{year}"), function(x) {
         Sys.sleep(1)
-        get_bnm_data(glue("/opr/year/{x}"))
+        get_bnm_data(x)
       })
     }
   }

@@ -18,7 +18,8 @@ Imports: httr,
   purrr, 
   ISOcodes, 
   tibble, 
-  tidyr
+  tidyr, 
+  rlang
 RoxygenNote: 6.1.1
 Suggests: 
     testthat,

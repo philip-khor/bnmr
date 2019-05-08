@@ -1,4 +1,5 @@
 #' @importFrom purrr map_dfr
+#' @importFrom rlang list2
 
 .get_monthly_data <- function(stub,
                               date = NULL,
@@ -23,12 +24,12 @@
                      query = list(...)
         )
       } else {
-        map_dfr(
-          1:12,
-          ~ get_bnm_data(glue("{path}/year/{year}/month/{.}"),
-            query = list(...)
+        args <- list2(...)
+        map_dfr(1:12, function(x) {
+            get_bnm_data(glue("{path}/year/{year}/month/{x}"),
+                         query = list(!!!args))
+            }
           )
-        )
       }
     } else if (!is.null(year)) {
       stopifnot(is.numeric(year))
