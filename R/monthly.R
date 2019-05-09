@@ -1,5 +1,5 @@
 #' @importFrom purrr map_dfr
-#' @importFrom rlang list2
+#' @importFrom rlang list2 qq_show
 
 .get_monthly_data <- function(stub,
                               date = NULL,
@@ -24,12 +24,15 @@
                      query = list(...)
         )
       } else {
-        args <- list2(...)
+        args <- list(...)
+        # qq_show(list(!!args))
         map_dfr(1:12, function(x) {
-            get_bnm_data(glue("{path}/year/{year}/month/{x}"),
-                         query = list(!!!args))
+          Sys.sleep(1)
+          get_bnm_data(glue("{path}/year/{year}/month/{x}"),
+                       query = args)
             }
           )
+        # TO-DO: doesn't work for kijang_emas()
       }
     } else if (!is.null(year)) {
       stopifnot(is.numeric(year))

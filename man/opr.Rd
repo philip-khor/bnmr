@@ -17,6 +17,10 @@ integer values also supported (experimental).}
 This function allows you to obtain data on Overnight Policy Rate (OPR)
 decided by the Monetary Policy Committee from the BNM API.
 }
+\details{
+This function has initial support for vectorisation, i.e. returning a
+single tibble given a vector of years as arguments.
+}
 \examples{
 opr()
 opr(2018:2019)

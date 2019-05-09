@@ -2,6 +2,10 @@
 #'
 #' This function allows you to obtain data on Overnight Policy Rate (OPR)
 #' decided by the Monetary Policy Committee from the BNM API.
+#'
+#' This function has initial support for vectorisation, i.e. returning a
+#' single tibble given a vector of years as arguments.
+#'
 #' @param year Optional. Integer value above 2000. Series of
 #' integer values also supported (experimental).
 #' @keywords opr
