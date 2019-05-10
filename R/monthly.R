@@ -1,89 +1,73 @@
 #' @importFrom purrr map_dfr
+#' @importFrom jsonlite flatten
 #' @importFrom rlang list2 qq_show
 
 .get_monthly_data <- function(stub,
                               date = NULL,
                               year = NULL,
                               month = NULL, ...) {
-  get_path <- c(
-    ir = "/interest-rate",
-    iv = "/interest-volume",
-    iir = "/islamic-interbank-rate",
-    ke = "/kijang-emas",
-    usdiir = "/usd-interbank-intraday-rate",
-    klusd = "/kl-usd-reference-rate"
-  )
-
-  path <- get_path[[stub]]
 
   # function should consider length 1 for arguments?
+  args <- list(...)
+
+  # if (is.null(date) & is.null(month) & is.null(year)){
+  #   return(get_bnm_data(glue("{stub}"), query = args))
+  # }
+  #
+  # if (is.null(date) & is.null(month) & !is.null(year)) {
+  #   return(
+  #     map_dfr(1:12,
+  #             function(x) {
+  #               Sys.sleep(1)
+  #               flatten(get_bnm_tbl(glue("{stub}/year/{year}/month/{x}"),
+  #                                   query = args))
+  #               }
+  #             )
+  #   )
+  # }
+  # if (is.null(year)) {
+  #   stop("Please provide the year")
+  # }
+  #
+  # if (!is.null(year)) {
+  #   stopifnot(is.numeric(year))
+  #   return(
+  #     get_bnm_data(glue("{stub}/year/{year}/month/{month}"),
+  #                  query = args
+  #   ))
+  # }
+
+
   if (is.null(date)) {
     if (is.null(month)) {
       if (is.null(year)) {
-        get_bnm_data(glue("{path}"),
-                     query = list(...)
-        )
+        get_bnm_data(glue("{stub}"), query = args)
       } else {
-        args <- list(...)
-        # qq_show(list(!!args))
         map_dfr(1:12, function(x) {
           Sys.sleep(1)
-          get_bnm_data(glue("{path}/year/{year}/month/{x}"),
-                       query = args)
+          flatten(get_bnm_tbl(glue("{stub}/year/{year}/month/{x}"),
+                              query = args))
             }
           )
-        # TO-DO: doesn't work for kijang_emas()
       }
+
     } else if (!is.null(year)) {
       stopifnot(is.numeric(year))
-      get_bnm_data(glue("{path}/year/{year}/month/{month}"),
-        query = list(...)
+      get_bnm_data(glue("{stub}/year/{year}/month/{month}"),
+                   query = args
       )
     } else {
       stop("Please provide the year")
     }
-  } else if (!is.null(year) || !is.null(month)) {
-    warning("Date and year/month combination provided; querying based on date")
-    get_bnm_data(glue("{path}/date/{date}"),
-      query = list(...)
-    )
   } else {
-    get_bnm_data(glue("{path}/date/{date}"),
-      query = list(...)
-    )
+    if (!is.null(year) || !is.null(month)) {
+      warning("Date and year/month combination provided; querying based on date")
+      }
+    get_bnm_data(glue("{stub}/date/{date}"), query = args)
   }
 }
 
-#
-# .interest <- function(type,
-#                       product = "money_market_operations",
-#                       date, year, month){
-#   if (missing(date)){
-#     if (missing(month)){
-#       if (missing(year)){
-#         get_bnm_data(glue("/interest-{type}"),
-#                      query = list(product = product))
-#       } else {
-#         map_dfr(1:12,
-#                 ~ get_bnm_data(glue("/interest-{type}/year/{year}/month/{.}"),
-#                                query = list(product = product)))
-#       }
-#     } else if (!missing(year)){
-#       stopifnot(is.numeric(year))
-#       get_bnm_data(glue("/interest-{type}/year/{year}/month/{month}"),
-#                    query = list(product = product))
-#     } else {
-#       stop("Please provide the year")
-#     }
-#   } else if (!missing(year) || !missing(month)){
-#     warning("Date and year/month combination provided; querying based on date")
-#     get_bnm_data(glue("/interest-{type}/date/{date}"),
-#                  query = list(product = product))
-#   } else {
-#     get_bnm_data(glue("/interest-{type}/date/{date}"),
-#                  query = list(product = product))
-#   }
-# }
+
 
 #' Islamic Interbank Rate
 #'
@@ -107,7 +91,7 @@ islamic_interbank_rate <- function(date = NULL,
                                    year = NULL,
                                    month = NULL) {
   .get_monthly_data(
-    stub = "iir",
+    stub = "/islamic-interbank-rate",
     date = date, year = year, month = month
   )
 }
@@ -142,7 +126,7 @@ interest_volume <- function(product = "money_market_operations",
   stopifnot(product %in% .products)
 
   .get_monthly_data(
-    stub = "iv",
+    stub = "/interest-volume",
     date = date,
     year = year,
     month = month,
@@ -177,7 +161,7 @@ interest_rate <- function(product = "money_market_operations",
                           month = NULL) {
   stopifnot(product %in% .products)
   .get_monthly_data(
-    stub = "ir",
+    stub = "/interest-rate",
     date = date,
     year = year,
     month = month,
@@ -210,7 +194,7 @@ kijang_emas <- function(date = NULL,
   # if date does not work most likely there's
   # just no records for that date. write tryCatch here.
   .get_monthly_data(
-    stub = "ke",
+    stub = "/kijang-emas",
     date = date,
     year = year,
     month = month
@@ -238,7 +222,7 @@ usd_interbank_intraday_rate <- function(date = NULL,
                                         year = NULL,
                                         month = NULL) {
   .get_monthly_data(
-    stub = "usdiir",
+    stub = "/usd-interbank-intraday-rate",
     date = date,
     year = year,
     month = month
@@ -268,7 +252,7 @@ kl_usd_reference_rate <- function(date = NULL,
                                   year = NULL,
                                   month = NULL) {
   .get_monthly_data(
-    stub = "klusd",
+    stub = "/kl-usd-reference-rate",
     date = date,
     year = year,
     month = month

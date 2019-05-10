@@ -33,7 +33,7 @@ bnm_api <- function(path, ...) {
         parsed$message,
         parsed$documentation_url
       ),
-      call. = FALSE
+      call. = TRUE
     )
   }
 
