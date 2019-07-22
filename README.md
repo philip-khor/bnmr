@@ -53,3 +53,8 @@ head(current_base_rates)
 #> 5                  NA
 #> 6                  NA
 ```
+
+## See also 
+[![PyPI version](https://badge.fury.io/py/openbnmapi.svg)](https://badge.fury.io/py/openbnmapi)
+
+[knazran/python-openbnmapi](knazran/python-openbnmapi) for a Python wrapper of the Open BNM API. 
