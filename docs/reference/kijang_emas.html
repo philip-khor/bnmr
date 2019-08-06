@@ -82,6 +82,18 @@ of Malaysia gold bullion coin from the BNM API." />
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/using-bnmr.html">Using bnmr</a>
+    </li>
+  </ul>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
@@ -143,94 +155,7 @@ If specified, return values for the specified date.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>kijang_emas</span>()</div><div class='output co'>#&gt; $effective_date
-#&gt; [1] "2019-08-06"
-#&gt; 
-#&gt; $one_oz
-#&gt; $one_oz$buying
-#&gt; [1] 6290
-#&gt; 
-#&gt; $one_oz$selling
-#&gt; [1] 6544
-#&gt; 
-#&gt; 
-#&gt; $half_oz
-#&gt; $half_oz$buying
-#&gt; [1] 3145
-#&gt; 
-#&gt; $half_oz$selling
-#&gt; [1] 3334
-#&gt; 
-#&gt; 
-#&gt; $quarter_oz
-#&gt; $quarter_oz$buying
-#&gt; [1] 1572
-#&gt; 
-#&gt; $quarter_oz$selling
-#&gt; [1] 1698
-#&gt; 
-#&gt; </div><div class='input'><span class='fu'>kijang_emas</span>(<span class='kw'>date</span> <span class='kw'>=</span> <span class='st'>"2018-01-03"</span>)</div><div class='output co'>#&gt; $effective_date
-#&gt; [1] "2018-01-03"
-#&gt; 
-#&gt; $one_oz
-#&gt; $one_oz$buying
-#&gt; [1] 5415
-#&gt; 
-#&gt; $one_oz$selling
-#&gt; [1] 5632
-#&gt; 
-#&gt; 
-#&gt; $half_oz
-#&gt; $half_oz$buying
-#&gt; [1] 2708
-#&gt; 
-#&gt; $half_oz$selling
-#&gt; [1] 2869
-#&gt; 
-#&gt; 
-#&gt; $quarter_oz
-#&gt; $quarter_oz$buying
-#&gt; [1] 1354
-#&gt; 
-#&gt; $quarter_oz$selling
-#&gt; [1] 1461
-#&gt; 
-#&gt; </div><div class='input'><span class='fu'>kijang_emas</span>(<span class='kw'>year</span> <span class='kw'>=</span> <span class='fl'>2016</span>, <span class='kw'>month</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt;    effective_date one_oz.buying one_oz.selling half_oz.buying half_oz.selling
-#&gt; 1      2016-02-02          4790           4999           2395            2547
-#&gt; 2      2016-02-04          4836           5044           2418            2570
-#&gt; 3      2016-02-05          4843           5054           2422            2575
-#&gt; 4      2016-02-10          5052           5271           2526            2685
-#&gt; 5      2016-02-11          5060           5283           2530            2691
-#&gt; 6      2016-02-12          5243           5473           2622            2788
-#&gt; 7      2016-02-15          5215           5441           2607            2772
-#&gt; 8      2016-02-16          5079           5302           2540            2701
-#&gt; 9      2016-02-17          5130           5353           2565            2727
-#&gt; 10     2016-02-18          5132           5356           2566            2728
-#&gt; 11     2016-02-19          5235           5463           2618            2783
-#&gt; 12     2016-02-22          5257           5484           2629            2794
-#&gt; 13     2016-02-23          5148           5371           2574            2736
-#&gt; 14     2016-02-24          5279           5514           2640            2809
-#&gt; 15     2016-02-25          5265           5496           2633            2800
-#&gt; 16     2016-02-26          5270           5509           2635            2807
-#&gt; 17     2016-02-29          5255           5485           2627            2794
-#&gt;    quarter_oz.buying quarter_oz.selling
-#&gt; 1               1198               1297
-#&gt; 2               1209               1309
-#&gt; 3               1211               1311
-#&gt; 4               1263               1367
-#&gt; 5               1265               1371
-#&gt; 6               1311               1420
-#&gt; 7               1304               1412
-#&gt; 8               1270               1376
-#&gt; 9               1282               1389
-#&gt; 10              1283               1389
-#&gt; 11              1309               1417
-#&gt; 12              1314               1423
-#&gt; 13              1287               1394
-#&gt; 14              1320               1431
-#&gt; 15              1316               1426
-#&gt; 16              1318               1429
-#&gt; 17              1314               1423</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>kijang_emas</span>()</div><div class='output co'>#&gt; <span class='error'>Error in bnm_api(path, ...): </span></div><div class='input'><span class='fu'>kijang_emas</span>(<span class='kw'>date</span> <span class='kw'>=</span> <span class='st'>"2018-01-03"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in bnm_api(path, ...): </span></div><div class='input'><span class='fu'>kijang_emas</span>(<span class='kw'>year</span> <span class='kw'>=</span> <span class='fl'>2016</span>, <span class='kw'>month</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; <span class='error'>Error in bnm_api(path, ...): </span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

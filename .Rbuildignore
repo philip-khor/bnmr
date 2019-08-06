@@ -6,3 +6,4 @@
 ^docs$
 ^pkgdown$
 ^codecov\.yml$
+^vignettes/using-bnmr\.Rmd$

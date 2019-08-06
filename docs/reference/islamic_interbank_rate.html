@@ -83,6 +83,18 @@ from the BNM API." />
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/using-bnmr.html">Using bnmr</a>
+    </li>
+  </ul>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
@@ -141,73 +153,7 @@ If specified, return values for the specified date.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>islamic_interbank_rate</span>()</div><div class='output co'>#&gt; $date
-#&gt; [1] "2019-07-30"
-#&gt; 
-#&gt; $overnight
-#&gt; [1] 2.97
-#&gt; 
-#&gt; $`1_week`
-#&gt; NULL
-#&gt; 
-#&gt; $`1_month`
-#&gt; NULL
-#&gt; 
-#&gt; $`3_month`
-#&gt; NULL
-#&gt; 
-#&gt; $`6_month`
-#&gt; NULL
-#&gt; 
-#&gt; $`1_year`
-#&gt; NULL
-#&gt; </div><div class='input'><span class='fu'>islamic_interbank_rate</span>(<span class='kw'>date</span> <span class='kw'>=</span> <span class='st'>"2018-01-01"</span>)</div><div class='output co'>#&gt; $date
-#&gt; [1] "2018-01-01"
-#&gt; 
-#&gt; $overnight
-#&gt; [1] 2.99
-#&gt; 
-#&gt; $`1_week`
-#&gt; NULL
-#&gt; 
-#&gt; $`1_month`
-#&gt; NULL
-#&gt; 
-#&gt; $`3_month`
-#&gt; NULL
-#&gt; 
-#&gt; $`6_month`
-#&gt; NULL
-#&gt; 
-#&gt; $`1_year`
-#&gt; NULL
-#&gt; </div><div class='input'><span class='fu'>islamic_interbank_rate</span>(<span class='kw'>year</span> <span class='kw'>=</span> <span class='fl'>2016</span>, <span class='kw'>month</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt;          date overnight 1_week 1_month 3_month 6_month 1_year
-#&gt; 1  2016-02-01      3.20     NA      NA    3.88      NA     NA
-#&gt; 2  2016-02-03      3.19     NA      NA    3.87      NA     NA
-#&gt; 3  2016-02-04      3.19     NA      NA      NA      NA     NA
-#&gt; 4  2016-02-05      3.19     NA      NA      NA      NA     NA
-#&gt; 5  2016-02-06      3.19     NA      NA      NA      NA     NA
-#&gt; 6  2016-02-07      3.19     NA      NA      NA      NA     NA
-#&gt; 7  2016-02-08      3.19     NA      NA      NA      NA     NA
-#&gt; 8  2016-02-10      3.20     NA      NA      NA      NA     NA
-#&gt; 9  2016-02-11      3.19     NA      NA      NA      NA     NA
-#&gt; 10 2016-02-12      3.19     NA      NA    3.76      NA     NA
-#&gt; 11 2016-02-13      3.19     NA      NA    3.76      NA     NA
-#&gt; 12 2016-02-14      3.19     NA      NA    3.76      NA     NA
-#&gt; 13 2016-02-15      3.19     NA      NA      NA      NA     NA
-#&gt; 14 2016-02-17      3.19     NA      NA    3.72      NA     NA
-#&gt; 15 2016-02-18      3.19     NA      NA      NA      NA     NA
-#&gt; 16 2016-02-19      3.19     NA      NA      NA      NA     NA
-#&gt; 17 2016-02-20      3.19     NA      NA      NA      NA     NA
-#&gt; 18 2016-02-21      3.19     NA      NA      NA      NA     NA
-#&gt; 19 2016-02-22      3.19     NA      NA    3.72      NA     NA
-#&gt; 20 2016-02-23      3.20     NA      NA      NA      NA     NA
-#&gt; 21 2016-02-24      3.19     NA      NA    3.71      NA     NA
-#&gt; 22 2016-02-25      3.20     NA      NA    3.71      NA     NA
-#&gt; 23 2016-02-26      3.20     NA      NA    3.72      NA     NA
-#&gt; 24 2016-02-27      3.20     NA      NA    3.72      NA     NA
-#&gt; 25 2016-02-28      3.20     NA      NA    3.72      NA     NA
-#&gt; 26 2016-02-29      3.21     NA      NA      NA      NA     NA</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>islamic_interbank_rate</span>()</div><div class='output co'>#&gt; <span class='error'>Error in bnm_api(path, ...): </span></div><div class='input'><span class='fu'>islamic_interbank_rate</span>(<span class='kw'>date</span> <span class='kw'>=</span> <span class='st'>"2018-01-01"</span>)</div><div class='output co'>#&gt; <span class='error'>Error in bnm_api(path, ...): </span></div><div class='input'><span class='fu'>islamic_interbank_rate</span>(<span class='kw'>year</span> <span class='kw'>=</span> <span class='fl'>2016</span>, <span class='kw'>month</span> <span class='kw'>=</span> <span class='fl'>2</span>)</div><div class='output co'>#&gt; <span class='error'>Error in bnm_api(path, ...): </span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

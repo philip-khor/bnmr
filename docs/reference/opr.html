@@ -82,6 +82,18 @@ decided by the Monetary Policy Committee from the BNM API." />
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/using-bnmr.html">Using bnmr</a>
+    </li>
+  </ul>
+</li>
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
@@ -139,26 +151,7 @@ single tibble given a vector of years as arguments.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>opr</span>()</div><div class='output co'>#&gt; $year
-#&gt; [1] 2019
-#&gt; 
-#&gt; $date
-#&gt; [1] "2019-03-05"
-#&gt; 
-#&gt; $change_in_opr
-#&gt; NULL
-#&gt; 
-#&gt; $new_opr_level
-#&gt; [1] 3.25
-#&gt; </div><div class='input'><span class='fu'>opr</span>(<span class='fl'>2018</span>:<span class='fl'>2019</span>)</div><div class='output co'>#&gt;   year       date change_in_opr new_opr_level
-#&gt; 1 2018 2018-11-08            NA          3.25
-#&gt; 2 2018 2018-09-05            NA          3.25
-#&gt; 3 2018 2018-07-11            NA          3.25
-#&gt; 4 2018 2018-05-10            NA          3.25
-#&gt; 5 2018 2018-03-07            NA          3.25
-#&gt; 6 2018 2018-01-25          0.25          3.25
-#&gt; 7 2019 2019-03-05            NA          3.25
-#&gt; 8 2019 2019-01-24            NA          3.25</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>opr</span>()</div><div class='output co'>#&gt; <span class='error'>Error in bnm_api(path, ...): </span></div><div class='input'><span class='fu'>opr</span>(<span class='fl'>2018</span>:<span class='fl'>2019</span>)</div><div class='output co'>#&gt; <span class='error'>Error in bnm_api(path, ...): </span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>

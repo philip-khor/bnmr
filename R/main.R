@@ -16,7 +16,7 @@ bnm_api <- function(path, ...) {
     path = glue("public{path}"),
     ...,
     accept("application/vnd.BNM.API.v1+json"),
-    user_agent("http://github.com/philip-khor/bnmr")
+    user_agent("http://github.com/philip-khor/bnmr/")
   ) -> resp
 
   parsed <- fromJSON(content(resp, "text", encoding = "UTF-8"))

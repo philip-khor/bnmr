@@ -1,0 +1,51 @@
+---
+title: "Using bnmr"
+---
+
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+# Base rate
+
+```{r setup}
+library(bnmr)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+library(ggbeeswarm)
+library(lubridate)
+```
+
+```{r}
+base_rate() %>% 
+  gather(key, val, -bank_code, -bank_name) %>% 
+  mutate(key = factor(key, 
+                      levels = c("base_rate", 
+                                 "indicative_eff_lending_rate", 
+                                 "base_lending_rate", 
+                                 "base_financing_rate"))) %>% 
+  ggplot() + 
+    geom_beeswarm(aes(x = key, y = val / 100, color = key)) + 
+    scale_color_discrete(guide = FALSE) + 
+    scale_y_continuous(labels = scales::percent) + 
+    labs(x = "", y = "")
+```
+
+## Consumer alerts
+
+
+```{r}
+# TODO: make sure output from added_date column is date
+consumer_alert() %>% 
+  mutate(added_date = ymd(added_date)) %>% 
+  ggplot(aes(x = added_date)) + geom_histogram()
+```
+
+
