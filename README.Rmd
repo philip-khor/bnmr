@@ -23,11 +23,11 @@ The goal of bnmr is to provide a set of convenient wrapper functions for the Cen
 ## Installation
 
 
-To install `bnmr`, run the following code (requires devtools):
+To install `bnmr`, run the following code (requires remotes):
 
 ```{r, eval = FALSE}
-# install.packages("devtools")
-devtools::install_github("philip-khor/bnmr")
+# install.packages("remotes")
+remotes::install_github("philip-khor/bnmr")
 ```
 
 ## Example

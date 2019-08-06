@@ -10,21 +10,26 @@
   # function should consider length 1 for arguments?
   args <- list(...)
 
-  # if (is.null(date) & is.null(month) & is.null(year)){
-  #   return(get_bnm_data(glue("{stub}"), query = args))
+  # if (is.null(date) & is.null(month)) {
+  #   if (is.null(year)){
+  #     return(get_bnm_data(glue("{stub}"),
+  #                         query = args))
+  #   } else {
+  #     return(
+  #       map_dfr(1:12,
+  #               function(x) {
+  #                 Sys.sleep(1)
+  #                 flatten(
+  #                   get_bnm_tbl(
+  #                     glue("{stub}/year/{year}/month/{x}"),
+  #                     query = args)
+  #                 )
+  #                 }
+  #               )
+  #     )
+  #     }
   # }
-  #
-  # if (is.null(date) & is.null(month) & !is.null(year)) {
-  #   return(
-  #     map_dfr(1:12,
-  #             function(x) {
-  #               Sys.sleep(1)
-  #               flatten(get_bnm_tbl(glue("{stub}/year/{year}/month/{x}"),
-  #                                   query = args))
-  #               }
-  #             )
-  #   )
-  # }
+
   # if (is.null(year)) {
   #   stop("Please provide the year")
   # }
@@ -50,6 +55,7 @@
             }
           )
       }
+
 
     } else if (!is.null(year)) {
       stopifnot(is.numeric(year))
