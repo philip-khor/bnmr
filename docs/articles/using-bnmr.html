@@ -107,7 +107,13 @@
 <a class="sourceLine" id="cb1-13" title="13"><span class="co">#&gt; The following objects are masked from 'package:base':</span></a>
 <a class="sourceLine" id="cb1-14" title="14"><span class="co">#&gt; </span></a>
 <a class="sourceLine" id="cb1-15" title="15"><span class="co">#&gt;     intersect, setdiff, setequal, union</span></a>
-<a class="sourceLine" id="cb1-16" title="16"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(ggbeeswarm)</a></code></pre></div>
+<a class="sourceLine" id="cb1-16" title="16"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(ggbeeswarm)</a>
+<a class="sourceLine" id="cb1-17" title="17"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(lubridate)</a>
+<a class="sourceLine" id="cb1-18" title="18"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb1-19" title="19"><span class="co">#&gt; Attaching package: 'lubridate'</span></a>
+<a class="sourceLine" id="cb1-20" title="20"><span class="co">#&gt; The following object is masked from 'package:base':</span></a>
+<a class="sourceLine" id="cb1-21" title="21"><span class="co">#&gt; </span></a>
+<a class="sourceLine" id="cb1-22" title="22"><span class="co">#&gt;     date</span></a></code></pre></div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="../reference/base_rate.html">base_rate</a></span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb2-2" title="2"><span class="st">  </span><span class="kw">gather</span>(key, val, <span class="op">-</span>bank_code, <span class="op">-</span>bank_name) <span class="op">%&gt;%</span><span class="st"> </span></a>
 <a class="sourceLine" id="cb2-3" title="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">key =</span> <span class="kw"><a href="https://rdrr.io/r/base/factor.html">factor</a></span>(key, </a>
@@ -122,6 +128,16 @@
 <a class="sourceLine" id="cb2-12" title="12"><span class="st">    </span><span class="kw">labs</span>(<span class="dt">x =</span> <span class="st">""</span>, <span class="dt">y =</span> <span class="st">""</span>)</a>
 <a class="sourceLine" id="cb2-13" title="13"><span class="co">#&gt; Warning: Removed 36 rows containing missing values (position_beeswarm).</span></a></code></pre></div>
 <p><img src="using-bnmr_files/figure-html/unnamed-chunk-2-1.png" width="700"></p>
+<div id="consumer-alerts" class="section level2">
+<h2 class="hasAnchor">
+<a href="#consumer-alerts" class="anchor"></a>Consumer alerts</h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="co"># </span><span class="al">TODO</span><span class="co">: make sure output from added_date column is date</span></a>
+<a class="sourceLine" id="cb3-2" title="2"><span class="kw"><a href="../reference/consumer_alert.html">consumer_alert</a></span>() <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb3-3" title="3"><span class="st">  </span><span class="kw">mutate</span>(<span class="dt">added_date =</span> <span class="kw">ymd</span>(added_date)) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb3-4" title="4"><span class="st">  </span><span class="kw">ggplot</span>(<span class="kw">aes</span>(<span class="dt">x =</span> added_date)) <span class="op">+</span><span class="st"> </span><span class="kw">geom_histogram</span>()</a>
+<a class="sourceLine" id="cb3-5" title="5"><span class="co">#&gt; `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</span></a></code></pre></div>
+<p><img src="using-bnmr_files/figure-html/unnamed-chunk-3-1.png" width="700"></p>
+</div>
 </div>
   </div>
 
@@ -130,7 +146,11 @@
       <h2 class="hasAnchor">
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
-<li><a href="#base-rate">Base rate</a></li>
+<li>
+<a href="#base-rate">Base rate</a><ul class="nav nav-pills nav-stacked">
+<li><a href="#consumer-alerts">Consumer alerts</a></li>
+      </ul>
+</li>
       </ul>
 </div>
       </div>
