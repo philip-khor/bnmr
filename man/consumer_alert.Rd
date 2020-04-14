@@ -18,4 +18,4 @@ from the BNM API.
 \examples{
 consumer_alert()
 }
-\keyword{...}
+\keyword{api}

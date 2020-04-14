@@ -36,4 +36,4 @@ interest_rate(date = "2018-01-01")
 interest_rate(year = 2016, month = 2)
 interest_rate(product = "overall", year = 2016, month = 2)
 }
-\keyword{...}
+\keyword{api}

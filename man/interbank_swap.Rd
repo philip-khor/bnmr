@@ -16,4 +16,4 @@ volume by tenure from the BNM API.
 \examples{
 interbank_swap()
 }
-\keyword{...}
+\keyword{api}

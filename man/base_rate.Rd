@@ -22,4 +22,4 @@ from the BNM API.
 \examples{
 base_rate()
 }
-\keyword{...}
+\keyword{api}

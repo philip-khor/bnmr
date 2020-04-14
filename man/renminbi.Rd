@@ -9,16 +9,13 @@ https://api.bnm.gov.my/
 \usage{
 renminbi(type = "dar")
 }
-\arguments{
-\item{type}{"dar" for Deposit Acceptance Rate and "fx_forward" for FX Forward Prices}
-}
 \description{
 This function allows you to extract indicative CNY/MYR
 forward prices for trade settlement and RMB deposit acceptance rates
-from the BNM API.
+from the BNM API as a tidy tibble.
 }
 \examples{
 renminbi(type = "dar")
 renminbi(type = "fx_forward")
 }
-\keyword{...}
+\keyword{api}

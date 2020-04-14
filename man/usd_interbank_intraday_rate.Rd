@@ -30,4 +30,4 @@ usd_interbank_intraday_rate()
 usd_interbank_intraday_rate(date = "2018-01-03")
 usd_interbank_intraday_rate(year = 2016, month = 2)
 }
-\keyword{...}
+\keyword{api}

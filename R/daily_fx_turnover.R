@@ -3,7 +3,7 @@
 #' This function allows you to obtain daily foreign exchange
 #' turnover for all currencies including interbank and customer deals
 #' from the BNM API.
-#' @keywords ...
+#' @keywords api
 #' @examples
 #' daily_fx_turnover()
 #' @export

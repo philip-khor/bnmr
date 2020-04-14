@@ -2,7 +2,7 @@
 #'
 #' This function allows you to obtain daily interbank swap
 #' volume by tenure from the BNM API.
-#' @keywords ...
+#' @keywords api
 #' @examples
 #' interbank_swap()
 #' @export

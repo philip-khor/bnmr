@@ -4,7 +4,7 @@
 #' and websites which are neither authorised nor approved
 #' under the relevant laws and regulations administered by BNM
 #' from the BNM API.
-#' @keywords ...
+#' @keywords api
 #' @examples
 #' consumer_alert()
 #' @export

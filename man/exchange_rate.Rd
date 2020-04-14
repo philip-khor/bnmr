@@ -26,4 +26,4 @@ in relation to Ringgit.
 \examples{
 exchange_rate()
 }
-\keyword{...}
+\keyword{api}

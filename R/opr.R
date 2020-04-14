@@ -8,7 +8,7 @@
 #'
 #' @param year Optional. Integer value above 2000. Series of
 #' integer values also supported (experimental).
-#' @keywords opr
+#' @keywords api opr
 #' @importFrom purrr map_dfr
 #' @export
 #' @examples

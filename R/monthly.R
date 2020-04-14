@@ -10,38 +10,6 @@
   # function should consider length 1 for arguments?
   args <- list(...)
 
-  # if (is.null(date) & is.null(month)) {
-  #   if (is.null(year)){
-  #     return(get_bnm_data(glue("{stub}"),
-  #                         query = args))
-  #   } else {
-  #     return(
-  #       map_dfr(1:12,
-  #               function(x) {
-  #                 Sys.sleep(1)
-  #                 flatten(
-  #                   get_bnm_tbl(
-  #                     glue("{stub}/year/{year}/month/{x}"),
-  #                     query = args)
-  #                 )
-  #                 }
-  #               )
-  #     )
-  #     }
-  # }
-
-  # if (is.null(year)) {
-  #   stop("Please provide the year")
-  # }
-  #
-  # if (!is.null(year)) {
-  #   stopifnot(is.numeric(year))
-  #   return(
-  #     get_bnm_data(glue("{stub}/year/{year}/month/{month}"),
-  #                  query = args
-  #   ))
-  # }
-
 
   if (is.null(date)) {
     if (is.null(month)) {
@@ -84,7 +52,7 @@
 #' (YYYY-MM-DD).
 #' If specified, return values for the specified date.
 #' @param year,month Year and month as integers. If date, year and month left blank, return today's values.
-#' @keywords ...
+#' @keywords api
 #' @export
 #' @examples
 #' islamic_interbank_rate()
@@ -115,7 +83,7 @@ islamic_interbank_rate <- function(date = NULL,
 #' (2015 - present) from the BNM API.
 #' @inheritParams islamic_interbank_rate
 #' @param product Either "money_market_operations", "interbank" or "overall"
-#' @keywords ...
+#' @keywords api
 #' @export
 #' @examples
 #' interest_volume()
@@ -149,7 +117,7 @@ interest_volume <- function(product = "money_market_operations",
 #' market rates and volumes of transactions according to
 #' tenure. (2015 - present) from the BNM API.
 #' @inheritParams interest_volume
-#' @keywords ...
+#' @keywords api
 #' @export
 #' @examples
 #' interest_rate()
@@ -185,7 +153,7 @@ interest_rate <- function(product = "money_market_operations",
 #' of Malaysia gold bullion coin from the BNM API.
 #' @inheritParams islamic_interbank_rate
 
-#' @keywords ...
+#' @keywords api
 #' @export
 #' @examples
 #' kijang_emas()
@@ -215,7 +183,7 @@ kijang_emas <- function(date = NULL,
 #' against Malaysian ringgit interbank highest
 #' and lowest dealt rates by commercial banks on the specific date.
 #' @inheritParams islamic_interbank_rate
-#' @keywords ...
+#' @keywords api
 #' @export
 #' @examples
 #' usd_interbank_intraday_rate()
@@ -244,7 +212,7 @@ usd_interbank_intraday_rate <- function(date = NULL,
 #' the domestic financial institutions and published
 #' daily at 3:30 p.m from the BNM API.
 #' @inheritParams islamic_interbank_rate
-#' @keywords ...
+#' @keywords api
 #' @export
 #' @examples
 #' kl_usd_reference_rate()

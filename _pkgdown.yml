@@ -3,11 +3,7 @@ development:
 
 reference:
 - title: All functions
-  contents:
-  - -ends_with("_tbl")
-- title: Experimental tidy functions
-  contents:
-  - ends_with("_tbl")
+  contents: has_keyword("api")
 
 template:
   params:

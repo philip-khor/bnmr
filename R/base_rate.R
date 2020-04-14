@@ -6,7 +6,7 @@
 #' loan/home financing offered by financial institutions
 #' from the BNM API.
 #' @param bank_code 8 characters of SWIFT code per https://api.bnm.gov.my/
-#' @keywords ...
+#' @keywords api
 #' @examples
 #' base_rate()
 #' @export

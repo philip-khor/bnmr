@@ -13,12 +13,12 @@ coverage](https://codecov.io/gh/philip-khor/bnmr/branch/master/graph/badge.svg)]
 status](https://github.com/philip-khor/bnmr/workflows/R-CMD-check/badge.svg)](https://github.com/philip-khor/bnmr/actions)
 <!-- badges: end -->
 
-The goal of bnmr is to provide a set of convenient wrapper functions for
-the Central Bank of Malaysia’s API.
+The goal of **bnmr** is to provide a set of convenient wrapper functions
+for the Central Bank of Malaysia’s API.
 
 ## Installation
 
-To install `bnmr`, run the following code (requires remotes):
+To install **bnmr**, run the following code (requires remotes):
 
 ``` r
 # install.packages("remotes")

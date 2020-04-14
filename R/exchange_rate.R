@@ -22,7 +22,7 @@
 #' @param session Character string "0900", "1130", "1200" or "1700".
 #' A snapshot of the exchange rate daily at 0900, 1130, 1200 and 1700 intervals
 #' @param quote Base currency (Ringgit ("rm") or foreign currency ("fx")) as the denominator for the exchange rate
-#' @keywords ...
+#' @keywords api
 #' @examples
 #' exchange_rate()
 #' @export

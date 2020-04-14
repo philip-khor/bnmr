@@ -17,4 +17,4 @@ from the BNM API.
 \examples{
 daily_fx_turnover()
 }
-\keyword{...}
+\keyword{api}

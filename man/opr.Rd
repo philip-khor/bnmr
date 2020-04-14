@@ -25,4 +25,5 @@ single tibble given a vector of years as arguments.
 opr()
 opr(2018:2019)
 }
+\keyword{api}
 \keyword{opr}

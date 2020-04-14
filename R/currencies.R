@@ -2,44 +2,19 @@
 #'
 #' This function allows you to extract indicative CNY/MYR
 #' forward prices for trade settlement and RMB deposit acceptance rates
-#' from the BNM API.
-#' @param type "dar" for Deposit Acceptance Rate and "fx_forward" for FX Forward Prices
-#' @keywords ...
-#' @examples
-#' renminbi(type = "dar")
-#' renminbi(type = "fx_forward")
-#' @export
-#' @source https://api.bnm.gov.my/
-#'
-#'
-#'
-renminbi <- function(type = "dar") {
-  stopifnot(type %in% c("dar", "fx_forward"))
-  paths <- c(
-    dar = "/renminbi-deposit-acceptance-rate",
-    fx_forward = "/renminbi-fx-forward-price"
-  )
-  get_bnm_tbl(paths[[type]])
-}
-
-#' Renminbi tibbles
-#'
-#' (WORK IN PROGRESS) This function allows you to extract indicative CNY/MYR
-#' forward prices for trade settlement and RMB deposit acceptance rates
 #' from the BNM API as a tidy tibble.
 #' @inheritParams renminbi
-#' @keywords ...
+#' @keywords api
 #' @importFrom tidyr spread unnest
 #' @importFrom tibble tibble
 #' @importFrom purrr map_dbl
 #' @examples
-#' renminbi_tbl()
-#' renminbi_tbl(type = "dar")
-#' renminbi_tbl(type = "fx_forward")
+#' renminbi(type = "dar")
+#' renminbi(type = "fx_forward")
 #' @source https://api.bnm.gov.my/
 #' @export
 
-renminbi_tbl <- function(type = "dar") {
+renminbi <- function(type = "dar") {
   stopifnot(type %in% c("dar", "fx_forward"))
   paths <- c(
     dar = "/renminbi-deposit-acceptance-rate",
