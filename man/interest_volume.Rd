@@ -7,8 +7,12 @@
 https://api.bnm.gov.my/
 }
 \usage{
-interest_volume(product = "money_market_operations", date = NULL,
-  year = NULL, month = NULL)
+interest_volume(
+  product = "money_market_operations",
+  date = NULL,
+  year = NULL,
+  month = NULL
+)
 }
 \arguments{
 \item{product}{Either "money_market_operations", "interbank" or "overall"}

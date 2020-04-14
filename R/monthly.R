@@ -59,7 +59,7 @@
 
     } else if (!is.null(year)) {
       stopifnot(is.numeric(year))
-      get_bnm_data(glue("{stub}/year/{year}/month/{month}"),
+      get_bnm_tbl(glue("{stub}/year/{year}/month/{month}"),
                    query = args
       )
     } else {
@@ -69,7 +69,7 @@
     if (!is.null(year) || !is.null(month)) {
       warning("Date and year/month combination provided; querying based on date")
       }
-    get_bnm_data(glue("{stub}/date/{date}"), query = args)
+    get_bnm_tbl(glue("{stub}/date/{date}"), query = args)
   }
 }
 

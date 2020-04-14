@@ -47,12 +47,21 @@ bnm_api <- function(path, ...) {
   )
 }
 
+#' Get BNM Data as tibble
+#'
+#' @param path Specifies the API path per https://api.bnm.gov.my/
+#' @importFrom tibble as_tibble
+#' @noRd
+get_bnm_tbl <- function(path, ...) {
+  as_tibble(get_bnm_data(path, ...))
+}
+
 #' Get BNM Data
 #'
 #' This function allows you to obtain data from the BNM API.
 #' @param path Specifies the API path per https://api.bnm.gov.my/
 #' @param ... Additional arguments to be passed to bnm_api
-#' @keywords cats
+#' @keywords internal cats
 #' @examples
 #' get_bnm_data("/welcome")
 #' @noRd
@@ -61,20 +70,3 @@ bnm_api <- function(path, ...) {
 get_bnm_data <- function(path, ...) {
   bnm_api(path, ...)[["content"]][["data"]]
 }
-
-#' Get BNM Data
-#'
-#' This function allows you to obtain data from the BNM API.
-#' @inheritParams get_bnm_data
-#' @keywords cats
-#' @importFrom tibble as_tibble
-#' @examples
-#' get_bnm_tbl("/welcome")
-#' @noRd
-#' @source https://api.bnm.gov.my/
-
-get_bnm_tbl <- function(path, ...) {
-  as_tibble(get_bnm_data(path, ...))
-}
-
-# potentially print metadata when returning get_bnm_data?

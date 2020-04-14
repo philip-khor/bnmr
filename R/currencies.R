@@ -20,7 +20,7 @@ renminbi <- function(type = "dar") {
     dar = "/renminbi-deposit-acceptance-rate",
     fx_forward = "/renminbi-fx-forward-price"
   )
-  get_bnm_data(paths[[type]])
+  get_bnm_tbl(paths[[type]])
 }
 
 #' Renminbi tibbles
@@ -48,7 +48,7 @@ renminbi_tbl <- function(type = "dar") {
 
   if (missing(type) | type == "dar") {
     rmb_tibble[["term"]] <- names(rmb_tibble[["deposit"]])
-    spread(unnest(rmb_tibble), "term", "deposit")
+    spread(unnest(rmb_tibble, cols = c(deposit)), "term", "deposit")
   }
   else {
     warning("terms will not be returned: work in progress")
@@ -57,7 +57,7 @@ renminbi_tbl <- function(type = "dar") {
     rmb_tibble[["term"]] <- names(rmb_tibble[["val"]])
     # problem with this line of code: gather strips away
     # list names
-    unnest(rmb_tibble)
+    unnest(rmb_tibble, cols = c(deposit))
   }
 }
 

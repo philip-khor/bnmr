@@ -11,4 +11,4 @@
 #' @source https://api.bnm.gov.my/
 #'
 #'
-consumer_alert <- function() get_bnm_data("/consumer-alert")
+consumer_alert <- function() get_bnm_tbl("/consumer-alert")

@@ -9,4 +9,4 @@
 #' @source https://api.bnm.gov.my/
 #'
 #'
-interbank_swap <- function() get_bnm_data("/interbank-swap")
+interbank_swap <- function() get_bnm_tbl("/interbank-swap")
