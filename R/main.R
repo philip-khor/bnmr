@@ -51,9 +51,10 @@ bnm_api <- function(path, ...) {
 #'
 #' @param path Specifies the API path per https://api.bnm.gov.my/
 #' @importFrom tibble as_tibble
+#' @importFrom purrr discard
 #' @noRd
 get_bnm_tbl <- function(path, ...) {
-  as_tibble(get_bnm_data(path, ...))
+  as_tibble(discard(get_bnm_data(path, ...), is.null))
 }
 
 #' Get BNM Data

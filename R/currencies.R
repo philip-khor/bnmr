@@ -57,7 +57,7 @@ renminbi_tbl <- function(type = "dar") {
     rmb_tibble[["term"]] <- names(rmb_tibble[["val"]])
     # problem with this line of code: gather strips away
     # list names
-    unnest(rmb_tibble, cols = c(deposit))
+    unnest(rmb_tibble, cols = c(selling, buying))
   }
 }
 
