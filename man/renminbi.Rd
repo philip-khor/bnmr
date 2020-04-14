@@ -18,7 +18,6 @@ forward prices for trade settlement and RMB deposit acceptance rates
 from the BNM API.
 }
 \examples{
-renminbi()
 renminbi(type = "dar")
 renminbi(type = "fx_forward")
 }

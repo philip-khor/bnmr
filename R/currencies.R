@@ -6,7 +6,6 @@
 #' @param type "dar" for Deposit Acceptance Rate and "fx_forward" for FX Forward Prices
 #' @keywords ...
 #' @examples
-#' renminbi()
 #' renminbi(type = "dar")
 #' renminbi(type = "fx_forward")
 #' @export
