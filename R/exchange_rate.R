@@ -4,7 +4,7 @@
     quote %in% c("rm", "fx")
   )
 
-  get_bnm_data(path,
+  get_bnm_tbl(path,
     query = list(
       session = session,
       quote = quote

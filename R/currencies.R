@@ -19,7 +19,7 @@ renminbi <- function(type = "dar") {
     dar = "/renminbi-deposit-acceptance-rate",
     fx_forward = "/renminbi-fx-forward-price"
   )
-  get_bnm_data(paths[[type]])
+  get_bnm_tbl(paths[[type]])
 }
 
 #' Renminbi tibbles
@@ -29,7 +29,9 @@ renminbi <- function(type = "dar") {
 #' from the BNM API as a tidy tibble.
 #' @inheritParams renminbi
 #' @keywords ...
-#' @importFrom tidyr spread gather unnest
+#' @importFrom tidyr spread unnest
+#' @importFrom tibble tibble
+#' @importFrom purrr map_dbl
 #' @examples
 #' renminbi_tbl()
 #' renminbi_tbl(type = "dar")
@@ -43,20 +45,21 @@ renminbi_tbl <- function(type = "dar") {
     dar = "/renminbi-deposit-acceptance-rate",
     fx_forward = "/renminbi-fx-forward-price"
   )
-  rmb_tibble <- get_bnm_tbl(paths[[type]])
+
 
   if (missing(type) | type == "dar") {
+    rmb_tibble <- get_bnm_tbl(paths[[type]])
     rmb_tibble[["term"]] <- names(rmb_tibble[["deposit"]])
-    spread(unnest(rmb_tibble), "term", "deposit")
+    spread(unnest(rmb_tibble, cols = c(deposit)), "term", "deposit")
   }
   else {
-    warning("terms will not be returned: work in progress")
-    # still trying to figure out how best to preserve terms here
-    rmb_tibble <- gather(rmb_tibble, "key", "val", -date)
-    rmb_tibble[["term"]] <- names(rmb_tibble[["val"]])
-    # problem with this line of code: gather strips away
-    # list names
-    unnest(rmb_tibble)
+    fx_forward_list <- bnm_api(paths[[type]])[["content"]][["data"]]
+    tibble(
+      date = fx_forward_list[["date"]],
+      period = c("spot", "2_weeks", "1_month", "2_months", "3_months", "4_months", "5_months", "6_months"),
+      buying = map_dbl(period, ~ fx_forward_list[["buying"]][[.]]),
+      selling = map_dbl(period, ~ fx_forward_list[["selling"]][[.]])
+    )
   }
 }
 

@@ -25,11 +25,11 @@ opr <- function(year = NULL) {
       stop("Only integer values above 2000 accepted for year")
     }
     if (length(year) == 1) {
-      get_bnm_data(glue("/opr/year/{year}"))
+      get_bnm_tbl(glue("/opr/year/{year}"))
     } else {
       map_dfr(glue("/opr/year/{year}"), function(x) {
         Sys.sleep(1)
-        get_bnm_data(x)
+        get_bnm_tbl(x)
       })
     }
   }

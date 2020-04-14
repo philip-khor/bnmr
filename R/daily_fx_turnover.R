@@ -10,4 +10,4 @@
 #' @source https://api.bnm.gov.my/
 #'
 #'
-daily_fx_turnover <- function() get_bnm_data("/fx-turn-over")
+daily_fx_turnover <- function() get_bnm_tbl("/fx-turn-over")

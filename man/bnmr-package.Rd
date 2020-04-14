@@ -21,7 +21,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Philip Khor \email{pk.qa@outlook.com} (0000-0002-8333-1256)
+\strong{Maintainer}: Philip Khor \email{pk.qa@outlook.com} (\href{https://orcid.org/0000-0002-8333-1256}{ORCID})
 
 }
 \keyword{internal}
