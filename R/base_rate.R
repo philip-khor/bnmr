@@ -30,7 +30,7 @@ base_rate <- function(bank_code = NULL) {
   }
   # If no argument provided, return all the base rate
   else {
-    get_bnm_data("/base-rate/")
+    get_bnm_tbl("/base-rate/")
   }
 }
 
