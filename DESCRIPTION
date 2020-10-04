@@ -19,8 +19,9 @@ Imports: httr,
   ISOcodes, 
   tibble, 
   tidyr, 
-  rlang
-RoxygenNote: 7.1.0
+  rlang,
+  lubridate
+RoxygenNote: 7.1.1
 Suggests: 
     testthat,
     covr,

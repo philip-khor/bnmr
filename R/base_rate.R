@@ -10,6 +10,7 @@
 #' @examples
 #' base_rate()
 #' @export
+#' @import lubridate
 #' @importFrom glue glue
 #' @source https://api.bnm.gov.my/
 #'
@@ -20,7 +21,7 @@ base_rate <- function(bank_code = NULL) {
   if (!is.null(bank_code)) {
     stopifnot(length(bank_code) == 1)
     # Handle the exception for invalid params value
-    tryCatch(get_bnm_data(glue("/base-rate/{bank_code}")),
+    tryCatch(as_tibble(get_bnm_data(glue("/base-rate/{bank_code}"))),
       error = function(e) {
         e$message <-
           paste0(e$message, bank_code, " is not a valid SWIFT code.")
