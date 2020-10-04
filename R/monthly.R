@@ -55,7 +55,7 @@
 #' @keywords api
 #' @export
 #' @examples
-#' islamic_interbank_rate()
+#' \donttest{islamic_interbank_rate()}
 #' islamic_interbank_rate(date = "2018-01-01")
 #' islamic_interbank_rate(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
@@ -86,7 +86,7 @@ islamic_interbank_rate <- function(date = NULL,
 #' @keywords api
 #' @export
 #' @examples
-#' interest_volume()
+#' \donttest{interest_volume()}
 #' interest_volume(date = "2018-01-01")
 #' interest_volume(year = 2016, month = 2)
 #' interest_volume(product = "overall", year = 2016, month = 2)
@@ -120,7 +120,7 @@ interest_volume <- function(product = "money_market_operations",
 #' @keywords api
 #' @export
 #' @examples
-#' interest_rate()
+#' \donttest{interest_rate()}
 #' interest_rate(date = "2018-01-01")
 #' interest_rate(year = 2016, month = 2)
 #' interest_rate(product = "overall", year = 2016, month = 2)
@@ -156,7 +156,7 @@ interest_rate <- function(product = "money_market_operations",
 #' @keywords api
 #' @export
 #' @examples
-#' kijang_emas()
+#' \donttest{kijang_emas()}
 #' kijang_emas(date = "2018-01-03")
 #' kijang_emas(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
@@ -186,7 +186,7 @@ kijang_emas <- function(date = NULL,
 #' @keywords api
 #' @export
 #' @examples
-#' usd_interbank_intraday_rate()
+#' \donttest{usd_interbank_intraday_rate()}
 #' usd_interbank_intraday_rate(date = "2018-01-03")
 #' usd_interbank_intraday_rate(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
@@ -215,7 +215,7 @@ usd_interbank_intraday_rate <- function(date = NULL,
 #' @keywords api
 #' @export
 #' @examples
-#' kl_usd_reference_rate()
+#' \donttest{kl_usd_reference_rate()}
 #' kl_usd_reference_rate(date = "2018-01-03")
 #' kl_usd_reference_rate(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/

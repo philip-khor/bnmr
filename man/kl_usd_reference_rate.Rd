@@ -26,7 +26,7 @@ the domestic financial institutions and published
 daily at 3:30 p.m from the BNM API.
 }
 \examples{
-kl_usd_reference_rate()
+\donttest{kl_usd_reference_rate()}
 kl_usd_reference_rate(date = "2018-01-03")
 kl_usd_reference_rate(year = 2016, month = 2)
 }
