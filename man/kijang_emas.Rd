@@ -23,8 +23,8 @@ This function allows you to obtain daily trading prices
 of Malaysia gold bullion coin from the BNM API.
 }
 \examples{
-\donttest{kijang_emas()}
-kijang_emas(date = "2018-01-03")
+\dontrun{kijang_emas()}
+kijang_emas(date = "2020-09-01")
 kijang_emas(year = 2016, month = 2)
 }
 \keyword{api}

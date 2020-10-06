@@ -1,5 +1,3 @@
-library(bnmr)
-
 test_that("Test kijang_emas() for wrong input errors", {
 
   testthat::skip_if_offline()

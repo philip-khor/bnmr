@@ -1,5 +1,3 @@
-library(bnmr)
-
 test_that("Test consumer_alert() for incorrect input errors", {
 
   testthat::skip_if_offline()

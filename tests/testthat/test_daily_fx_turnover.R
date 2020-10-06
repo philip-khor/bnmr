@@ -1,5 +1,3 @@
-library(bnmr)
-
 test_that("Test daily_fx_turnover() for wrong input errors", {
 
   testthat::skip_if_offline()

@@ -1,5 +1,3 @@
-library(bnmr)
-
 test_that("Test opr() for wrong input errors", {
 
   testthat::skip_if_offline()

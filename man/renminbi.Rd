@@ -18,7 +18,7 @@ forward prices for trade settlement and RMB deposit acceptance rates
 from the BNM API as a tidy tibble.
 }
 \examples{
-renminbi(type = "dar")
+\dontrun{renminbi(type = "dar")}
 renminbi(type = "fx_forward")
 }
 \keyword{api}

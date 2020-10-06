@@ -1,6 +1,3 @@
-library(bnmr)
-library(lubridate)
-
 test_that("Test kl_usd_reference_rate() for wrong input errors", {
 
   testthat::skip_if_offline()

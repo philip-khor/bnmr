@@ -22,7 +22,7 @@ This function has initial support for vectorisation, i.e. returning a
 single tibble given a vector of years as arguments.
 }
 \examples{
-opr()
+\dontrun{opr()}
 opr(2018:2019)
 }
 \keyword{api}

@@ -12,7 +12,7 @@
 #' @importFrom purrr map_dfr
 #' @export
 #' @examples
-#' opr()
+#' \dontrun{opr()}
 #' opr(2018:2019)
 #' @source https://api.bnm.gov.my/
 #'

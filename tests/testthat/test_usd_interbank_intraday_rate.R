@@ -1,6 +1,3 @@
-library(bnmr)
-library(lubridate)
-
 test_that("Test usd_interbank_intraday_rate() for wrong input errors", {
 
   testthat::skip_if_offline()

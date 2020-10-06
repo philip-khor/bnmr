@@ -1,5 +1,3 @@
-library(bnmr)
-
 test_that("Test exchange_rate() for wrong input errors", {
 
   testthat::skip_if_offline()

@@ -1,6 +1,3 @@
-library(bnmr)
-library(lubridate)
-
 test_that("Test interest_rate() for wrong input errors", {
 
   testthat::skip_if_offline()
