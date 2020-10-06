@@ -8,8 +8,9 @@
 #' @importFrom tidyr spread unnest
 #' @importFrom tibble tibble
 #' @importFrom purrr map_dbl
+#' @importFrom rlang .data
 #' @examples
-#' renminbi(type = "dar")
+#' \dontrun{renminbi(type = "dar")}
 #' renminbi(type = "fx_forward")
 #' @source https://api.bnm.gov.my/
 #' @export
@@ -23,9 +24,10 @@ renminbi <- function(type = "dar") {
 
 
   if (missing(type) | type == "dar") {
+    type <- "dar"
     rmb_tibble <- get_bnm_tbl(paths[[type]])
     rmb_tibble[["term"]] <- names(rmb_tibble[["deposit"]])
-    spread(unnest(rmb_tibble, cols = c(deposit)), "term", "deposit")
+    spread(unnest(rmb_tibble, cols = c(.data$deposit)), "term", "deposit")
   }
   else {
     fx_forward_list <- bnm_api(paths[[type]])[["content"]][["data"]]

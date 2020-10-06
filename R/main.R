@@ -8,6 +8,7 @@
 #' @noRd
 #' @importFrom httr GET accept user_agent content http_type http_error status_code
 #' @importFrom jsonlite fromJSON
+#' @importFrom glue glue
 #' @source https://api.bnm.gov.my/, https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
 #'
 
