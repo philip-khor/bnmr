@@ -26,7 +26,8 @@
 
 
     } else if (!is.null(year)) {
-      stopifnot(is.numeric(year) & is.numeric(month))
+      stopifnot(is.numeric(year) && is.numeric(month))
+
       get_bnm_tbl(glue("{stub}/year/{year}/month/{month}"),
                    query = args
       )
