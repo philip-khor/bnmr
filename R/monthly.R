@@ -26,7 +26,8 @@
 
 
     } else if (!is.null(year)) {
-      stopifnot(is.numeric(year))
+      stopifnot(is.numeric(year) && is.numeric(month))
+
       get_bnm_tbl(glue("{stub}/year/{year}/month/{month}"),
                    query = args
       )
@@ -55,7 +56,7 @@
 #' @keywords api
 #' @export
 #' @examples
-#' islamic_interbank_rate()
+#' \dontrun{islamic_interbank_rate()}
 #' islamic_interbank_rate(date = "2018-01-01")
 #' islamic_interbank_rate(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
@@ -86,7 +87,7 @@ islamic_interbank_rate <- function(date = NULL,
 #' @keywords api
 #' @export
 #' @examples
-#' interest_volume()
+#' \dontrun{interest_volume()}
 #' interest_volume(date = "2018-01-01")
 #' interest_volume(year = 2016, month = 2)
 #' interest_volume(product = "overall", year = 2016, month = 2)
@@ -120,7 +121,7 @@ interest_volume <- function(product = "money_market_operations",
 #' @keywords api
 #' @export
 #' @examples
-#' interest_rate()
+#' \dontrun{interest_rate()}
 #' interest_rate(date = "2018-01-01")
 #' interest_rate(year = 2016, month = 2)
 #' interest_rate(product = "overall", year = 2016, month = 2)
@@ -156,8 +157,8 @@ interest_rate <- function(product = "money_market_operations",
 #' @keywords api
 #' @export
 #' @examples
-#' kijang_emas()
-#' kijang_emas(date = "2018-01-03")
+#' \dontrun{kijang_emas()}
+#' kijang_emas(date = "2020-09-01")
 #' kijang_emas(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
@@ -186,7 +187,7 @@ kijang_emas <- function(date = NULL,
 #' @keywords api
 #' @export
 #' @examples
-#' usd_interbank_intraday_rate()
+#' \dontrun{usd_interbank_intraday_rate()}
 #' usd_interbank_intraday_rate(date = "2018-01-03")
 #' usd_interbank_intraday_rate(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
@@ -215,7 +216,7 @@ usd_interbank_intraday_rate <- function(date = NULL,
 #' @keywords api
 #' @export
 #' @examples
-#' kl_usd_reference_rate()
+#' \dontrun{kl_usd_reference_rate()}
 #' kl_usd_reference_rate(date = "2018-01-03")
 #' kl_usd_reference_rate(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
