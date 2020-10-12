@@ -12,13 +12,14 @@
 #' @export
 #' @import lubridate
 #' @importFrom glue glue
+#' @importFrom rlang is_null
 #' @source https://api.bnm.gov.my/
 #'
 
 base_rate <- function(bank_code = NULL) {
 
   # Checking if any argument provided to the function
-  if (!is.null(bank_code)) {
+  if (!is_null(bank_code)) {
     stopifnot(length(bank_code) == 1)
     # Handle the exception for invalid params value
     tryCatch(as_tibble(get_bnm_data(glue("/base-rate/{bank_code}"))),

@@ -11,9 +11,9 @@
   args <- list(...)
 
 
-  if (is.null(date)) {
-    if (is.null(month)) {
-      if (is.null(year)) {
+  if (is_null(date)) {
+    if (is_null(month)) {
+      if (is_null(year)) {
         get_bnm_data(glue("{stub}"), query = args)
       } else {
         map_dfr(1:12, function(x) {
@@ -25,7 +25,7 @@
       }
 
 
-    } else if (!is.null(year)) {
+    } else if (!is_null(year)) {
       stopifnot(is.numeric(year) && is.numeric(month))
 
       get_bnm_tbl(glue("{stub}/year/{year}/month/{month}"),
@@ -35,7 +35,7 @@
       stop("Please provide the year")
     }
   } else {
-    if (!is.null(year) || !is.null(month)) {
+    if (!is_null(year) || !is_null(month)) {
       warning("Date and year/month combination provided; querying based on date")
       }
     get_bnm_tbl(glue("{stub}/date/{date}"), query = args)
