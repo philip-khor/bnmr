@@ -83,20 +83,22 @@
 <a href="#bnmr" class="anchor"></a>bnmr</h1></div>
 <!-- badges: start -->
 
-<p>The goal of bnmr is to provide a set of convenient wrapper functions for the Central Bank of Malaysia’s API.</p>
+<p>The goal of <strong>bnmr</strong> is to provide a set of convenient wrapper functions for the Central Bank of Malaysia’s API.</p>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>To install <code>bnmr</code>, run the following code (requires remotes):</p>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="co"># install.packages("remotes")</span>
-<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"philip-khor/bnmr"</span>)</pre></div>
+<p>To install <strong>bnmr</strong>, run the following code (requires remotes):</p>
+<div class="sourceCode" id="cb1"><pre class="downlit">
+<span class="co"># install.packages("remotes")</span>
+<span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span><span class="op">(</span><span class="st">"philip-khor/bnmr"</span><span class="op">)</span></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
 <p>This is a basic example which shows you how to solve a common problem:</p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">bnmr</span>)
-<span class="fu"><a href="reference/base_rate.html">base_rate</a></span>()
+<div class="sourceCode" id="cb2"><pre class="downlit">
+<span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/philip-khor/bnmr">bnmr</a></span><span class="op">)</span>
+<span class="fu"><a href="reference/base_rate.html">base_rate</a></span><span class="op">(</span><span class="op">)</span>
 <span class="co">#&gt; # A tibble: 35 x 6</span>
 <span class="co">#&gt;    bank_code bank_name base_rate base_lending_ra~ indicative_eff_~</span>
 <span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;         &lt;dbl&gt;            &lt;dbl&gt;            &lt;dbl&gt;</span>
@@ -161,7 +163,7 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

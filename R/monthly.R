@@ -1,6 +1,6 @@
 #' @importFrom purrr map_dfr
 #' @importFrom jsonlite flatten
-#' @importFrom rlang list2 qq_show
+#' @importFrom rlang list2 qq_show is_scalar_integerish
 
 .get_monthly_data <- function(stub,
                               date = NULL,
@@ -26,7 +26,7 @@
 
 
     } else if (!is_null(year)) {
-      stopifnot(is.numeric(year) && is.numeric(month))
+      stopifnot(is_scalar_integerish(year) && is_scalar_integerish(month))
 
       get_bnm_tbl(glue("{stub}/year/{year}/month/{month}"),
                    query = args
