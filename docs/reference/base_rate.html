@@ -137,7 +137,7 @@ loan/home financing offered by financial institutions
 from the BNM API.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>base_rate</span>(<span class='kw'>bank_code</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>base_rate</span><span class='op'>(</span>bank_code <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -153,19 +153,20 @@ from the BNM API.</p>
     <p>https://api.bnm.gov.my/</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>base_rate</span>()</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 35 x 6</span><span>
+    <pre class="examples"><div class='input'><span class='fu'>base_rate</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 35 x 6</span><span>
 #&gt;    bank_code bank_name base_rate base_lending_ra~ indicative_eff_~
 #&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>            </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span> BKKBMYKL  Bangkok ~      3.97             6.62             5.17
-#&gt; </span><span style='color: #555555;'> 2</span><span> CIBBMYKL  CIMB Ban~      3.5              6.35             4.25
-#&gt; </span><span style='color: #555555;'> 3</span><span> CITIMYKL  Citibank~      3.15             6.3              3.95
-#&gt; </span><span style='color: #555555;'> 4</span><span> HLBBMYKL  Hong Leo~      3.38             6.39             4.25
-#&gt; </span><span style='color: #555555;'> 5</span><span> HBMBMYKL  HSBC Ban~      3.14             6.24             4.25
-#&gt; </span><span style='color: #555555;'> 6</span><span> ICBKMYKL  Industri~      3.27             6.2              4.22
-#&gt; </span><span style='color: #555555;'> 7</span><span> MBBEMYKL  Malayan ~      2.5              6.15             3.95
-#&gt; </span><span style='color: #555555;'> 8</span><span> OCBCMYKL  OCBC Ban~      3.33             6.26             4.2 
-#&gt; </span><span style='color: #555555;'> 9</span><span> PBBEMYKL  Public B~      3.02             6.22             3.85
-#&gt; </span><span style='color: #555555;'>10</span><span> RHBBMYKL  RHB Bank~      3.25             6.2              4.25
+#&gt; </span><span style='color: #555555;'> 1</span><span> </span><span style='color: #555555;'>"</span><span>AFFINBA~ Affin Ba~      2.7              5.56             3.3 
+#&gt; </span><span style='color: #555555;'> 2</span><span> </span><span style='color: #555555;'>"</span><span>ALLIANC~ Alliance~      2.57             5.42             3.11
+#&gt; </span><span style='color: #555555;'> 3</span><span> </span><span style='color: #555555;'>"</span><span>AMBANK</span><span style='color: #555555;'>"</span><span>  AmBank         2.6              5.45             3.25
+#&gt; </span><span style='color: #555555;'> 4</span><span> </span><span style='color: #555555;'>"</span><span>BANGKOK</span><span style='color: #555555;'>"</span><span> Bangkok ~      3.22             5.87             4.42
+#&gt; </span><span style='color: #555555;'> 5</span><span> </span><span style='color: #555555;'>"</span><span>BANKCHI~ Bank of ~      2.55             5.35             3.55
+#&gt; </span><span style='color: #555555;'> 6</span><span> </span><span style='color: #555555;'>"</span><span>CIMB BA~ CIMB Ban~      2.75             5.6              3.5 
+#&gt; </span><span style='color: #555555;'> 7</span><span> </span><span style='color: #555555;'>"</span><span>CITIBAN~ Citibank~      2.4              5.55             3.2 
+#&gt; </span><span style='color: #555555;'> 8</span><span> </span><span style='color: #555555;'>""</span><span>        Hong Leo~      2.63             5.64             3.5 
+#&gt; </span><span style='color: #555555;'> 9</span><span> </span><span style='color: #555555;'>""</span><span>        HSBC Ban~      2.39             5.49             3.5 
+#&gt; </span><span style='color: #555555;'>10</span><span> </span><span style='color: #555555;'>""</span><span>        Industri~      2.52             5.45             3.47
 #&gt; </span><span style='color: #555555;'># ... with 25 more rows, and 1 more variable: base_financing_rate </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
@@ -182,7 +183,7 @@ from the BNM API.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

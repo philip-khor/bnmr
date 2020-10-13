@@ -7,7 +7,7 @@
 https://api.bnm.gov.my/
 }
 \usage{
-exchange_rate(currency, session = "1130", quote = "rm")
+exchange_rate(currency = NULL, session = "1130", quote = "rm")
 }
 \arguments{
 \item{currency}{3-characters currency code based on ISO4217 standard}

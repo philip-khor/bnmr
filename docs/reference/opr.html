@@ -131,7 +131,7 @@ decided by the Monetary Policy Committee from the BNM API." />
 decided by the Monetary Policy Committee from the BNM API.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>opr</span>(<span class='kw'>year</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
+    <pre class="usage"><span class='fu'>opr</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -152,28 +152,21 @@ integer values also supported (experimental).</p></td>
 single tibble given a vector of years as arguments.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>opr</span>()</div><div class='output co'>#&gt; $year
-#&gt; [1] 2019
-#&gt; 
-#&gt; $date
-#&gt; [1] "2019-03-05"
-#&gt; 
-#&gt; $change_in_opr
-#&gt; NULL
-#&gt; 
-#&gt; $new_opr_level
-#&gt; [1] 3.25
-#&gt; </div><div class='input'><span class='fu'>opr</span>(<span class='fl'>2018</span>:<span class='fl'>2019</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 8 x 4</span><span>
-#&gt;    year date       change_in_opr new_opr_level
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-11-08         </span><span style='color: #BB0000;'>NA</span><span>             3.25
-#&gt; </span><span style='color: #555555;'>2</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-09-05         </span><span style='color: #BB0000;'>NA</span><span>             3.25
-#&gt; </span><span style='color: #555555;'>3</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-07-11         </span><span style='color: #BB0000;'>NA</span><span>             3.25
-#&gt; </span><span style='color: #555555;'>4</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-05-10         </span><span style='color: #BB0000;'>NA</span><span>             3.25
-#&gt; </span><span style='color: #555555;'>5</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-03-07         </span><span style='color: #BB0000;'>NA</span><span>             3.25
-#&gt; </span><span style='color: #555555;'>6</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-01-25          0.25          3.25
-#&gt; </span><span style='color: #555555;'>7</span><span>  </span><span style='text-decoration: underline;'>2</span><span>019 2019-03-05         </span><span style='color: #BB0000;'>NA</span><span>             3.25
-#&gt; </span><span style='color: #555555;'>8</span><span>  </span><span style='text-decoration: underline;'>2</span><span>019 2019-01-24         </span><span style='color: #BB0000;'>NA</span><span>             3.25</div></span></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='fu'>opr</span><span class='op'>(</span><span class='op'>)</span>
+<span class='fu'>opr</span><span class='op'>(</span><span class='fl'>2018</span><span class='op'>:</span><span class='fl'>2019</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 10 x 4</span><span>
+#&gt;     year date       change_in_opr new_opr_level
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'> 1</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-11-08         </span><span style='color: #BB0000;'>NA</span><span>             3.25
+#&gt; </span><span style='color: #555555;'> 2</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-09-05         </span><span style='color: #BB0000;'>NA</span><span>             3.25
+#&gt; </span><span style='color: #555555;'> 3</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-07-11         </span><span style='color: #BB0000;'>NA</span><span>             3.25
+#&gt; </span><span style='color: #555555;'> 4</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-05-10         </span><span style='color: #BB0000;'>NA</span><span>             3.25
+#&gt; </span><span style='color: #555555;'> 5</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-03-07         </span><span style='color: #BB0000;'>NA</span><span>             3.25
+#&gt; </span><span style='color: #555555;'> 6</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 2018-01-25          0.25          3.25
+#&gt; </span><span style='color: #555555;'> 7</span><span>  </span><span style='text-decoration: underline;'>2</span><span>019 2019-11-05         </span><span style='color: #BB0000;'>NA</span><span>             3   
+#&gt; </span><span style='color: #555555;'> 8</span><span>  </span><span style='text-decoration: underline;'>2</span><span>019 2019-09-12         </span><span style='color: #BB0000;'>NA</span><span>             3   
+#&gt; </span><span style='color: #555555;'> 9</span><span>  </span><span style='text-decoration: underline;'>2</span><span>019 2019-07-09         </span><span style='color: #BB0000;'>NA</span><span>             3   
+#&gt; </span><span style='color: #555555;'>10</span><span>  </span><span style='text-decoration: underline;'>2</span><span>019 2019-05-07         -</span><span style='color: #BB0000;'>0.25</span><span>          3   </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -189,7 +182,7 @@ single tibble given a vector of years as arguments.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>

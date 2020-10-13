@@ -30,12 +30,12 @@
 #'
 #'
 #'
-exchange_rate <- function(currency,
+exchange_rate <- function(currency = NULL,
                           session = "1130",
                           quote = "rm") {
   path <- "/exchange-rate"
 
-  if (!missing(currency)) {
+  if (!is_null(currency)) {
     if (!toupper(currency) %in% ISOcodes::ISO_4217[["Letter"]]) {
       stop("Invalid currency code.")
     }

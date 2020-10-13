@@ -1,6 +1,6 @@
 #' @importFrom purrr map_dfr
 #' @importFrom jsonlite flatten
-#' @importFrom rlang list2 qq_show
+#' @importFrom rlang list2 qq_show is_scalar_integerish
 
 .get_monthly_data <- function(stub,
                               date = NULL,
@@ -11,9 +11,9 @@
   args <- list(...)
 
 
-  if (is.null(date)) {
-    if (is.null(month)) {
-      if (is.null(year)) {
+  if (is_null(date)) {
+    if (is_null(month)) {
+      if (is_null(year)) {
         get_bnm_data(glue("{stub}"), query = args)
       } else {
         map_dfr(1:12, function(x) {
@@ -25,8 +25,8 @@
       }
 
 
-    } else if (!is.null(year)) {
-      stopifnot(is.numeric(year) && is.numeric(month))
+    } else if (!is_null(year)) {
+      stopifnot(is_scalar_integerish(year) && is_scalar_integerish(month))
 
       get_bnm_tbl(glue("{stub}/year/{year}/month/{month}"),
                    query = args
@@ -35,7 +35,7 @@
       stop("Please provide the year")
     }
   } else {
-    if (!is.null(year) || !is.null(month)) {
+    if (!is_null(year) || !is_null(month)) {
       warning("Date and year/month combination provided; querying based on date")
       }
     get_bnm_tbl(glue("{stub}/date/{date}"), query = args)

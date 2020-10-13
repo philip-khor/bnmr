@@ -133,28 +133,35 @@ forward prices for trade settlement and RMB deposit acceptance rates
 from the BNM API as a tidy tibble.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>renminbi</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"dar"</span>)</pre>
+    <pre class="usage"><span class='fu'>renminbi</span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"dar"</span><span class='op'>)</span></pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>type</th>
+      <td><p>String. Either "dar" or "fx_forward".</p></td>
+    </tr>
+    </table>
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p>https://api.bnm.gov.my/</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>renminbi</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"dar"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1 x 4</span><span>
-#&gt;   date       `1_month` `3_months` `6_months`
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>          </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> 2019-07-19      1.75        1.9       1.95</div><div class='input'><span class='fu'>renminbi</span>(<span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"fx_forward"</span>)</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 8 x 4</span><span>
-#&gt;   date       period   buying selling
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> 2019-07-09 spot      0.601   0.602
-#&gt; </span><span style='color: #555555;'>2</span><span> 2019-07-09 2_weeks   0.6     1.6  
-#&gt; </span><span style='color: #555555;'>3</span><span> 2019-07-09 1_month   2.4     3.6  
-#&gt; </span><span style='color: #555555;'>4</span><span> 2019-07-09 2_months  5.1     6.6  
-#&gt; </span><span style='color: #555555;'>5</span><span> 2019-07-09 3_months  7.9     9.9  
-#&gt; </span><span style='color: #555555;'>6</span><span> 2019-07-09 4_months 10.5    12.6  
-#&gt; </span><span style='color: #555555;'>7</span><span> 2019-07-09 5_months 12.5    14.9  
-#&gt; </span><span style='color: #555555;'>8</span><span> 2019-07-09 6_months 15.7    18.2  </div></span></pre>
+    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='fu'>renminbi</span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"dar"</span><span class='op'>)</span>
+<span class='fu'>renminbi</span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"fx_forward"</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 8 x 4</span><span>
+#&gt;   date       period    buying selling
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
+#&gt; </span><span style='color: #555555;'>1</span><span> 2020-09-30 spot       0.612   0.613
+#&gt; </span><span style='color: #555555;'>2</span><span> 2020-09-30 2_weeks   -</span><span style='color: #BB0000;'>5</span><span>      -</span><span style='color: #BB0000;'>4.5</span><span>  
+#&gt; </span><span style='color: #555555;'>3</span><span> 2020-09-30 1_month   -</span><span style='color: #BB0000;'>7.8</span><span>    -</span><span style='color: #BB0000;'>6</span><span>    
+#&gt; </span><span style='color: #555555;'>4</span><span> 2020-09-30 2_months -</span><span style='color: #BB0000;'>14.4</span><span>   -</span><span style='color: #BB0000;'>12.2</span><span>  
+#&gt; </span><span style='color: #555555;'>5</span><span> 2020-09-30 3_months -</span><span style='color: #BB0000;'>28.7</span><span>   -</span><span style='color: #BB0000;'>25.8</span><span>  
+#&gt; </span><span style='color: #555555;'>6</span><span> 2020-09-30 4_months -</span><span style='color: #BB0000;'>40.4</span><span>   -</span><span style='color: #BB0000;'>36.3</span><span>  
+#&gt; </span><span style='color: #555555;'>7</span><span> 2020-09-30 5_months -</span><span style='color: #BB0000;'>45.8</span><span>   -</span><span style='color: #BB0000;'>40.8</span><span>  
+#&gt; </span><span style='color: #555555;'>8</span><span> 2020-09-30 6_months -</span><span style='color: #BB0000;'>50.8</span><span>   -</span><span style='color: #BB0000;'>48.4</span><span>  </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -170,7 +177,7 @@ from the BNM API as a tidy tibble.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
 </div>
 
       </footer>
