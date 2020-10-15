@@ -16,28 +16,30 @@
 #' @source https://api.bnm.gov.my/
 #'
 
-base_rate <- function(bank_code = NULL) {
-  warning("Deprecated", call. = FALSE)
-  get_base_rate(bank_code = bank_code)
-}
-
 get_base_rate <- function(bank_code = NULL) {
   # Checking if any argument provided to the function
   if (!is_null(bank_code)) {
     stopifnot(length(bank_code) == 1)
     # Handle the exception for invalid params value
     tryCatch(as_tibble(get_bnm_data(glue("/base-rate/{bank_code}"))),
-      error = function(e) {
-        e$message <-
-          paste0(e$message, bank_code, " is not a valid SWIFT code.")
-        stop(e)
-      }
+             error = function(e) {
+               e$message <-
+                 paste0(e$message, bank_code, " is not a valid SWIFT code.")
+               stop(e)
+             }
     )
   }
   # If no argument provided, return all the base rate
   else {
     get_bnm_tbl("/base-rate/")
   }
+}
+
+
+#' @export
+base_rate <- function(bank_code = NULL) {
+  warning("Deprecated", call. = FALSE)
+  get_base_rate(bank_code = bank_code)
 }
 
 # write a print method that shows meta?

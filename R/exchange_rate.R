@@ -5,10 +5,10 @@
   )
 
   get_bnm_tbl(path,
-    query = list(
-      session = session,
-      quote = quote
-    )
+              query = list(
+                session = session,
+                quote = quote
+              )
   )
 }
 
@@ -32,17 +32,9 @@
 #'
 #'
 #'
-exchange_rate <- function(currency = NULL,
-                              session = "1130",
-                              quote = "rm") {
-  warning("Deprecated", call. = FALSE)
-  get_exchange_rate(currency, session, quote)
-}
-
 get_exchange_rate <- function(currency = NULL,
                           session = "1130",
                           quote = "rm") {
-
   path <- "/exchange-rate"
 
   if (!is_null(currency)) {
@@ -54,3 +46,12 @@ get_exchange_rate <- function(currency = NULL,
 
   .er(path = path, session = session, quote = quote)
 }
+
+#' @export
+exchange_rate <- function(currency = NULL,
+                          session = "1130",
+                          quote = "rm") {
+  warning("Deprecated", call. = FALSE)
+  get_exchange_rate(currency, session, quote)
+}
+

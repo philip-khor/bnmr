@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Renminbi — renminbi • bnmr</title>
+<title>Exchange Rate — get_exchange_rate • bnmr</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,11 @@
 
 
 
-<meta property="og:title" content="Renminbi — renminbi" />
-<meta property="og:description" content="This function allows you to extract indicative CNY/MYR
-forward prices for trade settlement and RMB deposit acceptance rates
-from the BNM API as a tidy tibble." />
+<meta property="og:title" content="Exchange Rate — get_exchange_rate" />
+<meta property="og:description" content="This function allows you to obtain currency exchange rates
+from the Interbank Foreign Exchange Market in Kuala Lumpur
+from the BNM API. The price of selected countries currency
+in relation to Ringgit." />
 
 
 
@@ -122,25 +123,35 @@ from the BNM API as a tidy tibble." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Renminbi</h1>
-    <small class="dont-index">Source: <a href='https://github.com/philip-khor/bnmr/blob/master/R/currencies.R'><code>R/currencies.R</code></a></small>
-    <div class="hidden name"><code>renminbi.Rd</code></div>
+    <h1>Exchange Rate</h1>
+    <small class="dont-index">Source: <a href='https://github.com/philip-khor/bnmr/blob/master/R/exchange_rate.R'><code>R/exchange_rate.R</code></a></small>
+    <div class="hidden name"><code>get_exchange_rate.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This function allows you to extract indicative CNY/MYR
-forward prices for trade settlement and RMB deposit acceptance rates
-from the BNM API as a tidy tibble.</p>
+    <p>This function allows you to obtain currency exchange rates
+from the Interbank Foreign Exchange Market in Kuala Lumpur
+from the BNM API. The price of selected countries currency
+in relation to Ringgit.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>renminbi</span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"dar"</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>get_exchange_rate</span><span class='op'>(</span>currency <span class='op'>=</span> <span class='cn'>NULL</span>, session <span class='op'>=</span> <span class='st'>"1130"</span>, quote <span class='op'>=</span> <span class='st'>"rm"</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>type</th>
-      <td><p>String. Either "dar" or "fx_forward".</p></td>
+      <th>currency</th>
+      <td><p>3-characters currency code based on ISO4217 standard</p></td>
+    </tr>
+    <tr>
+      <th>session</th>
+      <td><p>Character string "0900", "1130", "1200" or "1700".
+A snapshot of the exchange rate daily at 0900, 1130, 1200 and 1700 intervals</p></td>
+    </tr>
+    <tr>
+      <th>quote</th>
+      <td><p>Base currency (Ringgit ("rm") or foreign currency ("fx")) as the denominator for the exchange rate</p></td>
     </tr>
     </table>
 
@@ -149,19 +160,17 @@ from the BNM API as a tidy tibble.</p>
     <p>https://api.bnm.gov.my/</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='fu'>renminbi</span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"dar"</span><span class='op'>)</span>
-<span class='fu'>renminbi</span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"fx_forward"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 8 x 4</span><span>
-#&gt;   date       period    buying selling
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> 2020-10-14 spot       0.616   0.617
-#&gt; </span><span style='color: #555555;'>2</span><span> 2020-10-14 2_weeks   -</span><span style='color: #BB0000;'>4.8</span><span>    -</span><span style='color: #BB0000;'>4.3</span><span>  
-#&gt; </span><span style='color: #555555;'>3</span><span> 2020-10-14 1_month   -</span><span style='color: #BB0000;'>7.4</span><span>    -</span><span style='color: #BB0000;'>6.4</span><span>  
-#&gt; </span><span style='color: #555555;'>4</span><span> 2020-10-14 2_months -</span><span style='color: #BB0000;'>16.1</span><span>   -</span><span style='color: #BB0000;'>14.2</span><span>  
-#&gt; </span><span style='color: #555555;'>5</span><span> 2020-10-14 3_months -</span><span style='color: #BB0000;'>39</span><span>     -</span><span style='color: #BB0000;'>36</span><span>    
-#&gt; </span><span style='color: #555555;'>6</span><span> 2020-10-14 4_months -</span><span style='color: #BB0000;'>49.9</span><span>   -</span><span style='color: #BB0000;'>45.6</span><span>  
-#&gt; </span><span style='color: #555555;'>7</span><span> 2020-10-14 5_months -</span><span style='color: #BB0000;'>55.8</span><span>   -</span><span style='color: #BB0000;'>51.1</span><span>  
-#&gt; </span><span style='color: #555555;'>8</span><span> 2020-10-14 6_months -</span><span style='color: #BB0000;'>63.6</span><span>   -</span><span style='color: #BB0000;'>60.1</span><span>  </div></span></pre>
+    <pre class="examples"><div class='input'><span class='fu'>get_exchange_rate</span><span class='op'>(</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 7 x 3</span><span>
+#&gt;   currency_code  unit rate$date  $buying_rate $selling_rate $middle_rate
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>             </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>         </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;lgl&gt;</span><span>       
+#&gt; </span><span style='color: #555555;'>1</span><span> USD               1 2020-10-15         4.13          4.15 </span><span style='color: #BB0000;'>NA</span><span>          
+#&gt; </span><span style='color: #555555;'>2</span><span> SGD               1 2020-10-15         3.03          3.07 </span><span style='color: #BB0000;'>NA</span><span>          
+#&gt; </span><span style='color: #555555;'>3</span><span> JPY             100 2020-10-15         3.91          3.96 </span><span style='color: #BB0000;'>NA</span><span>          
+#&gt; </span><span style='color: #555555;'>4</span><span> GBP               1 2020-10-15         5.36          5.41 </span><span style='color: #BB0000;'>NA</span><span>          
+#&gt; </span><span style='color: #555555;'>5</span><span> EUR               1 2020-10-15         4.84          4.89 </span><span style='color: #BB0000;'>NA</span><span>          
+#&gt; </span><span style='color: #555555;'>6</span><span> CAD               1 2020-10-15         3.12          3.17 </span><span style='color: #BB0000;'>NA</span><span>          
+#&gt; </span><span style='color: #555555;'>7</span><span> AUD               1 2020-10-15         2.93          2.98 </span><span style='color: #BB0000;'>NA</span><span>          </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
