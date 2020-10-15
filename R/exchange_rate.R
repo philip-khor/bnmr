@@ -24,15 +24,25 @@
 #' @param quote Base currency (Ringgit ("rm") or foreign currency ("fx")) as the denominator for the exchange rate
 #' @keywords api
 #' @examples
-#' exchange_rate()
+#' get_exchange_rate()
 #' @export
 #' @source https://api.bnm.gov.my/
 #'
 #'
 #'
+#'
+#'
 exchange_rate <- function(currency = NULL,
+                              session = "1130",
+                              quote = "rm") {
+  warning("Deprecated", call. = FALSE)
+  get_exchange_rate(currency, session, quote)
+}
+
+get_exchange_rate <- function(currency = NULL,
                           session = "1130",
                           quote = "rm") {
+
   path <- "/exchange-rate"
 
   if (!is_null(currency)) {

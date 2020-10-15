@@ -8,7 +8,7 @@
 #' @param bank_code 8 characters of SWIFT code per https://api.bnm.gov.my/
 #' @keywords api
 #' @examples
-#' base_rate()
+#' get_base_rate()
 #' @export
 #' @import lubridate
 #' @importFrom glue glue
@@ -17,7 +17,11 @@
 #'
 
 base_rate <- function(bank_code = NULL) {
+  warning("Deprecated", call. = FALSE)
+  get_base_rate(bank_code = bank_code)
+}
 
+get_base_rate <- function(bank_code = NULL) {
   # Checking if any argument provided to the function
   if (!is_null(bank_code)) {
     stopifnot(length(bank_code) == 1)
