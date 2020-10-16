@@ -51,7 +51,7 @@ get_exchange_rate <- function(currency = NULL,
 exchange_rate <- function(currency = NULL,
                           session = "1130",
                           quote = "rm") {
-  warning("Deprecated", call. = FALSE)
+  .Deprecated("get_exchange_rate")
   get_exchange_rate(currency, session, quote)
 }
 

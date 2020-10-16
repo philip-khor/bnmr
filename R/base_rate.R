@@ -38,7 +38,7 @@ get_base_rate <- function(bank_code = NULL) {
 
 #' @export
 base_rate <- function(bank_code = NULL) {
-  warning("Deprecated", call. = FALSE)
+  .Deprecated("get_base_rate")
   get_base_rate(bank_code = bank_code)
 }
 
