@@ -36,9 +36,14 @@ get_base_rate <- function(bank_code = NULL) {
 }
 
 
+#' @templateVar old base_rate
+#' @templateVar new get_base_rate
+#' @templateVar fun base_rate
+#' @template template-depr_fun
+#'
 #' @export
 base_rate <- function(bank_code = NULL) {
-  .Deprecated("get_base_rate")
+  .Deprecated(new = "get_base_rate")
   get_base_rate(bank_code = bank_code)
 }
 

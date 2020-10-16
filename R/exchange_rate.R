@@ -47,6 +47,11 @@ get_exchange_rate <- function(currency = NULL,
   .er(path = path, session = session, quote = quote)
 }
 
+#' @templateVar old exchange_rate
+#' @templateVar new get_exchange_rate
+#' @templateVar fun exchange_rate
+#' @template template-depr_fun
+#'
 #' @export
 exchange_rate <- function(currency = NULL,
                           session = "1130",
