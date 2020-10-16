@@ -2,10 +2,7 @@
 % Please edit documentation in R/base_rate.R
 \name{base_rate}
 \alias{base_rate}
-\title{Base Rate}
-\source{
-https://api.bnm.gov.my/
-}
+\title{Base rate}
 \usage{
 base_rate(bank_code = NULL)
 }
@@ -13,13 +10,5 @@ base_rate(bank_code = NULL)
 \item{bank_code}{8 characters of SWIFT code per https://api.bnm.gov.my/}
 }
 \description{
-This function allows you to obtain current Base Rates and
-Base Lending Rates for retail loans or financing facilities
-and Indicative Effective Lending Rates for a standard housing
-loan/home financing offered by financial institutions
-from the BNM API.
+Deprecated. Use \code{\link{get_base_rate}}
 }
-\examples{
-base_rate()
-}
-\keyword{api}

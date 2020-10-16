@@ -8,7 +8,7 @@
 #' @param bank_code 8 characters of SWIFT code per https://api.bnm.gov.my/
 #' @keywords api
 #' @examples
-#' base_rate()
+#' get_base_rate()
 #' @export
 #' @import lubridate
 #' @importFrom glue glue
@@ -16,24 +16,35 @@
 #' @source https://api.bnm.gov.my/
 #'
 
-base_rate <- function(bank_code = NULL) {
-
+get_base_rate <- function(bank_code = NULL) {
   # Checking if any argument provided to the function
   if (!is_null(bank_code)) {
     stopifnot(length(bank_code) == 1)
     # Handle the exception for invalid params value
     tryCatch(as_tibble(get_bnm_data(glue("/base-rate/{bank_code}"))),
-      error = function(e) {
-        e$message <-
-          paste0(e$message, bank_code, " is not a valid SWIFT code.")
-        stop(e)
-      }
+             error = function(e) {
+               e$message <-
+                 paste0(e$message, bank_code, " is not a valid SWIFT code.")
+               stop(e)
+             }
     )
   }
   # If no argument provided, return all the base rate
   else {
     get_bnm_tbl("/base-rate/")
   }
+}
+
+
+#' Base rate
+#'
+#' Deprecated. Use \code{\link{get_base_rate}}
+#' @inheritParams get_base_rate
+#'
+#' @export
+base_rate <- function(bank_code = NULL) {
+  .Deprecated(new = "get_base_rate")
+  get_base_rate(bank_code = bank_code)
 }
 
 # write a print method that shows meta?
