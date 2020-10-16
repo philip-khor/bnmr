@@ -36,10 +36,10 @@ get_base_rate <- function(bank_code = NULL) {
 }
 
 
-#' @templateVar old base_rate
-#' @templateVar new get_base_rate
-#' @templateVar fun base_rate
-#' @template template-depr_fun
+#' Base rate
+#'
+#' Deprecated. Use \code{\link{get_base_rate}}
+#' @inheritParams get_base_rate
 #'
 #' @export
 base_rate <- function(bank_code = NULL) {

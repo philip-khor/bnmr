@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Base Rate — base_rate • bnmr</title>
+<title>Base rate — base_rate • bnmr</title>
 
 
 <!-- jquery -->
@@ -39,12 +39,8 @@
 
 
 
-<meta property="og:title" content="Base Rate — base_rate" />
-<meta property="og:description" content="This function allows you to obtain current Base Rates and
-Base Lending Rates for retail loans or financing facilities
-and Indicative Effective Lending Rates for a standard housing
-loan/home financing offered by financial institutions
-from the BNM API." />
+<meta property="og:title" content="Base rate — base_rate" />
+<meta property="og:description" content="Deprecated. Use get_base_rate" />
 
 
 
@@ -124,17 +120,13 @@ from the BNM API." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Base Rate</h1>
+    <h1>Base rate</h1>
     <small class="dont-index">Source: <a href='https://github.com/philip-khor/bnmr/blob/master/R/base_rate.R'><code>R/base_rate.R</code></a></small>
     <div class="hidden name"><code>base_rate.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>This function allows you to obtain current Base Rates and
-Base Lending Rates for retail loans or financing facilities
-and Indicative Effective Lending Rates for a standard housing
-loan/home financing offered by financial institutions
-from the BNM API.</p>
+    <p>Deprecated. Use <code><a href='get_base_rate.html'>get_base_rate</a></code></p>
     </div>
 
     <pre class="usage"><span class='fu'>base_rate</span><span class='op'>(</span>bank_code <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
@@ -148,13 +140,7 @@ from the BNM API.</p>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>https://api.bnm.gov.my/</p>
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>get_base_rate</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='error'>Error in get_base_rate(): could not find function "get_base_rate"</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

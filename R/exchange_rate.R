@@ -47,10 +47,10 @@ get_exchange_rate <- function(currency = NULL,
   .er(path = path, session = session, quote = quote)
 }
 
-#' @templateVar old exchange_rate
-#' @templateVar new get_exchange_rate
-#' @templateVar fun exchange_rate
-#' @template template-depr_fun
+#' Exchange rate
+#'
+#' Deprecated. Use \code{\link{get_exchange_Rate}}
+#' @inheritParams get_exchange_rate
 #'
 #' @export
 exchange_rate <- function(currency = NULL,
