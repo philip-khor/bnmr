@@ -15,5 +15,5 @@ A snapshot of the exchange rate daily at 0900, 1130, 1200 and 1700 intervals}
 \item{quote}{Base currency (Ringgit ("rm") or foreign currency ("fx")) as the denominator for the exchange rate}
 }
 \description{
-Deprecated. Use \code{\link{get_exchange_Rate}}
+Deprecated. Use \code{\link{get_exchange_rate}}
 }

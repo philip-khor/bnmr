@@ -49,7 +49,7 @@ get_exchange_rate <- function(currency = NULL,
 
 #' Exchange rate
 #'
-#' Deprecated. Use \code{\link{get_exchange_Rate}}
+#' Deprecated. Use \code{\link{get_exchange_rate}}
 #' @inheritParams get_exchange_rate
 #'
 #' @export
