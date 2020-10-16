@@ -10,6 +10,6 @@ These functions are provided for compatibility with older versions of
 \details{
 \itemize{
   \item \code{\link{base_rate}}
-  \item \code{\link{exchange_Rate}}
+  \item \code{\link{exchange_rate}}
 }
 }

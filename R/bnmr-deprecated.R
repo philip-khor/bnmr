@@ -5,7 +5,7 @@
 #'
 #' \itemize{
 #'   \item \code{\link{base_rate}}
-#'   \item \code{\link{exchange_Rate}}
+#'   \item \code{\link{exchange_rate}}
 #' }
 #'
 #' @name bnmr-deprecated
