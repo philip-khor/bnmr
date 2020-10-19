@@ -5,7 +5,7 @@
 #' from the BNM API.
 #' @keywords api
 #' @examples
-#' daily_fx_turnover()
+#' get_daily_fx_turnover()
 #' @export
 #' @source https://api.bnm.gov.my/
 #'

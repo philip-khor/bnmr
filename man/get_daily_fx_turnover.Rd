@@ -15,6 +15,6 @@ turnover for all currencies including interbank and customer deals
 from the BNM API.
 }
 \examples{
-daily_fx_turnover()
+get_daily_fx_turnover()
 }
 \keyword{api}
