@@ -11,5 +11,6 @@ These functions are provided for compatibility with older versions of
 \itemize{
   \item \code{\link{base_rate}}
   \item \code{\link{exchange_rate}}
+  \item \code{\link{daily_fx_turnover}}
 }
 }
