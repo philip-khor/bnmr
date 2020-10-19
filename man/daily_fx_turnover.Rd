@@ -3,18 +3,9 @@
 \name{daily_fx_turnover}
 \alias{daily_fx_turnover}
 \title{Daily Foreign Exchange Turnover}
-\source{
-https://api.bnm.gov.my/
-}
 \usage{
 daily_fx_turnover()
 }
 \description{
-This function allows you to obtain daily foreign exchange
-turnover for all currencies including interbank and customer deals
-from the BNM API.
+Deprecated. Use \code{\link{get_daily_fx_turnover}}
 }
-\examples{
-daily_fx_turnover()
-}
-\keyword{api}
