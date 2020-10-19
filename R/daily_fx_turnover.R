@@ -10,4 +10,15 @@
 #' @source https://api.bnm.gov.my/
 #'
 #'
-daily_fx_turnover <- function() get_bnm_tbl("/fx-turn-over")
+get_daily_fx_turnover <- function() get_bnm_tbl("/fx-turn-over")
+
+#' Daily Foreign Exchange Turnover
+#'
+#' Deprecated. Use \code{\link{get_daily_fx_turnover}}
+#' @inheritParams get_daily_fx_turnover
+#'
+#' @export
+daily_fx_turnover <- function() {
+  .Deprecated("get_daily_fx_turnover")
+  get_daily_fx_turnover()
+}

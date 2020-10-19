@@ -6,6 +6,7 @@
 #' \itemize{
 #'   \item \code{\link{base_rate}}
 #'   \item \code{\link{exchange_rate}}
+#'   \item \code{\link{daily_fx_turnover}}
 #' }
 #'
 #' @name bnmr-deprecated
