@@ -1,6 +1,7 @@
 test_that("Test base_rate() for incorrect input errors", {
 
-  testthat::skip_if_offline()
+  # Skip if no internet connection, or the bnm site is down.
+  testthat::skip_if_offline("api.bnm.gov.my")
   testthat::skip_on_cran()
 
   ## Test for invalid length of bank_code argument
