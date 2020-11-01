@@ -3,9 +3,6 @@
 \name{kijang_emas}
 \alias{kijang_emas}
 \title{Kijang Emas}
-\source{
-https://api.bnm.gov.my/
-}
 \usage{
 kijang_emas(date = NULL, year = NULL, month = NULL)
 }
@@ -19,12 +16,5 @@ If specified, return values for the specified date.}
 \item{month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
-This function allows you to obtain daily trading prices
-of Malaysia gold bullion coin from the BNM API.
+Deprecated. Use \code{\link{get_kijang_emas}}
 }
-\examples{
-\dontrun{kijang_emas()}
-kijang_emas(date = "2020-09-01")
-kijang_emas(year = 2016, month = 2)
-}
-\keyword{api}

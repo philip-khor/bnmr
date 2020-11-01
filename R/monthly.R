@@ -57,44 +57,38 @@
 #' @export
 #' @examples
 #' \dontrun{islamic_interbank_rate()}
-#' islamic_interbank_rate(date = "2018-01-01")
-#' islamic_interbank_rate(year = 2016, month = 2)
+#' get_islamic_interbank_rate(date = "2018-01-01")
+#' get_islamic_interbank_rate(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 #'
-islamic_interbank_rate <- function(date = NULL,
-                                   year = NULL,
-                                   month = NULL) {
+get_islamic_interbank_rate <- function(date = NULL,
+                                       year = NULL,
+                                       month = NULL) {
   .get_monthly_data(
     stub = "/islamic-interbank-rate",
     date = date, year = year, month = month
   )
 }
 
-.products <- c(
-  "money_market_operations",
-  "interbank",
-  "overall"
-)
-
 #' Interest Volume
 #'
 #' This function allows you to obtain daily interbank money
 #' market rates and volumes of transactions according to tenure.
 #' (2015 - present) from the BNM API.
-#' @inheritParams islamic_interbank_rate
+#' @inheritParams get_islamic_interbank_rate
 #' @param product Either "money_market_operations", "interbank" or "overall"
 #' @keywords api
 #' @export
 #' @examples
-#' \dontrun{interest_volume()}
-#' interest_volume(date = "2018-01-01")
-#' interest_volume(year = 2016, month = 2)
-#' interest_volume(product = "overall", year = 2016, month = 2)
+#' \dontrun{get_interest_volume()}
+#' get_interest_volume(date = "2018-01-01")
+#' get_interest_volume(year = 2016, month = 2)
+#' get_interest_volume(product = "overall", year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 
-interest_volume <- function(product = "money_market_operations",
+get_interest_volume <- function(product = "money_market_operations",
                             date = NULL,
                             year = NULL,
                             month = NULL) {
@@ -112,25 +106,27 @@ interest_volume <- function(product = "money_market_operations",
   #           date = date, year = year, month = month)
 }
 
+
+
 #' Interest Rate
 #'
 #' This function allows you to obtain daily interbank money
 #' market rates and volumes of transactions according to
 #' tenure. (2015 - present) from the BNM API.
-#' @inheritParams interest_volume
+#' @inheritParams get_interest_volume
 #' @keywords api
 #' @export
 #' @examples
-#' \dontrun{interest_rate()}
-#' interest_rate(date = "2018-01-01")
-#' interest_rate(year = 2016, month = 2)
-#' interest_rate(product = "overall", year = 2016, month = 2)
+#' \dontrun{get_interest_rate()}
+#' get_interest_rate(date = "2018-01-01")
+#' get_interest_rate(year = 2016, month = 2)
+#' get_interest_rate(product = "overall", year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 #'
 #'
 
-interest_rate <- function(product = "money_market_operations",
+get_interest_rate <- function(product = "money_market_operations",
                           date = NULL,
                           year = NULL,
                           month = NULL) {
@@ -157,15 +153,15 @@ interest_rate <- function(product = "money_market_operations",
 #' @keywords api
 #' @export
 #' @examples
-#' \dontrun{kijang_emas()}
-#' kijang_emas(date = "2020-09-01")
-#' kijang_emas(year = 2016, month = 2)
+#' \dontrun{get_kijang_emas()}
+#' get_kijang_emas(date = "2020-09-01")
+#' get_kijang_emas(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 #'
-kijang_emas <- function(date = NULL,
-                        year = NULL,
-                        month = NULL) {
+get_kijang_emas <- function(date = NULL,
+                            year = NULL,
+                            month = NULL) {
   # if date does not work most likely there's
   # just no records for that date. write tryCatch here.
   .get_monthly_data(
@@ -233,3 +229,82 @@ kl_usd_reference_rate <- function(date = NULL,
     month = month
   )
 }
+
+# EXCLUDE COVERAGE START
+#' Islamic Interbank Rate
+#'
+#' Deprecated. Use \code{\link{get_islamic_interbank_rate}}
+#' @inheritParams get_islamic_interbank_rate
+#'
+#' @export
+islamic_interbank_rate <- function(date = NULL,
+                                   year = NULL,
+                                   month = NULL) {
+  .Deprecated("get_islamic_interbank_rate")
+  get_islamic_interbank_rate(
+    date = date,
+    year = year,
+    month = month
+  )
+}
+
+.products <- c(
+  "money_market_operations",
+  "interbank",
+  "overall"
+)
+#' Interest Volume
+#'
+#' Deprecated. Use \code{\link{get_interest_volume}}
+#' @inheritParams get_interest_volume
+#'
+#' @export
+interest_volume <- function(product = "money_market_operations",
+                            date = NULL,
+                            year = NULL,
+                            month = NULL) {
+  .Deprecated("get_interest_volume")
+  get_interest_volume(
+    product = product,
+    date = date,
+    year = year,
+    month = month
+  )
+}
+#' Interest Rate
+#'
+#' Deprecated. Use \code{\link{get_interest_rate}}
+#' @inheritParams get_interest_rate
+#'
+#' @export
+interest_rate <- function(product = "money_market_operations",
+                          date = NULL,
+                          year = NULL,
+                          month = NULL) {
+  .Deprecated("get_interest_rate")
+  get_interest_rate(
+    product = product,
+    date = date,
+    year = year,
+    month = month
+  )
+}
+
+#' Kijang Emas
+#'
+#' Deprecated. Use \code{\link{get_kijang_emas}}
+#' @inheritParams get_kijang_emas
+#'
+#' @export
+kijang_emas <- function(date = NULL,
+                        year = NULL,
+                        month = NULL) {
+  .Deprecated("get_kijang_emas")
+  get_kijang_emas(
+    date = date,
+    year = year,
+    month = month
+  )
+}
+# EXCLUDE COVERAGE END
+

@@ -5,6 +5,6 @@ test_that("Test interbank_swap() for wrong input errors", {
   testthat::skip_on_cran()
 
   ## Test for invalid argument
-  expect_error(interbank_swap("Random String"))
+  expect_error(get_interbank_swap("Random String"))
 
 })

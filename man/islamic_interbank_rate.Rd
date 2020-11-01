@@ -3,9 +3,6 @@
 \name{islamic_interbank_rate}
 \alias{islamic_interbank_rate}
 \title{Islamic Interbank Rate}
-\source{
-https://api.bnm.gov.my/
-}
 \usage{
 islamic_interbank_rate(date = NULL, year = NULL, month = NULL)
 }
@@ -14,16 +11,10 @@ islamic_interbank_rate(date = NULL, year = NULL, month = NULL)
 (YYYY-MM-DD).
 If specified, return values for the specified date.}
 
-\item{year, month}{Year and month as integers. If date, year and month left blank, return today's values.}
+\item{year}{Year and month as integers. If date, year and month left blank, return today's values.}
+
+\item{month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
-This function allows you to obtain daily weighted average of Islamic
-interbank deposit rates for various tenures. (Jan 2015-present)
-from the BNM API.
+Deprecated. Use \code{\link{get_islamic_interbank_rate}}
 }
-\examples{
-\dontrun{islamic_interbank_rate()}
-islamic_interbank_rate(date = "2018-01-01")
-islamic_interbank_rate(year = 2016, month = 2)
-}
-\keyword{api}

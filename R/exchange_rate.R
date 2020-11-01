@@ -47,6 +47,7 @@ get_exchange_rate <- function(currency = NULL,
   .er(path = path, session = session, quote = quote)
 }
 
+# EXCLUDE COVERAGE START
 #' Exchange rate
 #'
 #' Deprecated. Use \code{\link{get_exchange_rate}}
@@ -59,4 +60,4 @@ exchange_rate <- function(currency = NULL,
   .Deprecated("get_exchange_rate")
   get_exchange_rate(currency, session, quote)
 }
-
+# EXCLUDE COVERAGE END

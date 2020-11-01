@@ -3,9 +3,6 @@
 \name{interest_rate}
 \alias{interest_rate}
 \title{Interest Rate}
-\source{
-https://api.bnm.gov.my/
-}
 \usage{
 interest_rate(
   product = "money_market_operations",
@@ -26,14 +23,5 @@ If specified, return values for the specified date.}
 \item{month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
-This function allows you to obtain daily interbank money
-market rates and volumes of transactions according to
-tenure. (2015 - present) from the BNM API.
+Deprecated. Use \code{\link{get_interest_rate}}
 }
-\examples{
-\dontrun{interest_rate()}
-interest_rate(date = "2018-01-01")
-interest_rate(year = 2016, month = 2)
-interest_rate(product = "overall", year = 2016, month = 2)
-}
-\keyword{api}

@@ -40,10 +40,7 @@
 
 
 <meta property="og:title" content="Consumer Alert — consumer_alert" />
-<meta property="og:description" content="This function allows you to obtain a list of known companies
-and websites which are neither authorised nor approved
-under the relevant laws and regulations administered by BNM
-from the BNM API." />
+<meta property="og:description" content="Deprecated. Use get_consumer_alert" />
 
 
 
@@ -75,7 +72,7 @@ from the BNM API." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">bnmr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9002</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9003</span>
       </span>
     </div>
 
@@ -129,35 +126,13 @@ from the BNM API." />
     </div>
 
     <div class="ref-description">
-    <p>This function allows you to obtain a list of known companies
-and websites which are neither authorised nor approved
-under the relevant laws and regulations administered by BNM
-from the BNM API.</p>
+    <p>Deprecated. Use <code><a href='get_consumer_alert.html'>get_consumer_alert</a></code></p>
     </div>
 
     <pre class="usage"><span class='fu'>consumer_alert</span><span class='op'>(</span><span class='op'>)</span></pre>
 
 
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>https://api.bnm.gov.my/</p>
-
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>consumer_alert</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 431 x 4</span><span>
-#&gt;    name                                   regisration_number added_date websites
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                                  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>              </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;list&gt;</span><span>  
-#&gt; </span><span style='color: #555555;'> 1</span><span> 1globalcash                            </span><span style='color: #555555;'>""</span><span>                 2012-07-13 </span><span style='color: #555555;'>&lt;chr [0</span><span>~
-#&gt; </span><span style='color: #555555;'> 2</span><span> 1Gold.com.my                           </span><span style='color: #555555;'>""</span><span>                 2012-07-13 </span><span style='color: #555555;'>&lt;chr [1</span><span>~
-#&gt; </span><span style='color: #555555;'> 3</span><span> 3Sixty Venture Capital PLC             </span><span style='color: #555555;'>""</span><span>                 2014-12-30 </span><span style='color: #555555;'>&lt;chr [1</span><span>~
-#&gt; </span><span style='color: #555555;'> 4</span><span> A.A.M Global Corporation Sdn Bhd       </span><span style='color: #555555;'>""</span><span>                 2017-05-17 </span><span style='color: #555555;'>&lt;chr [0</span><span>~
-#&gt; </span><span style='color: #555555;'> 5</span><span> Ace Global Sales &amp; Services            </span><span style='color: #555555;'>""</span><span>                 2013-05-02 </span><span style='color: #555555;'>&lt;chr [0</span><span>~
-#&gt; </span><span style='color: #555555;'> 6</span><span> Ace Dimension Network Sdn Bhd          </span><span style='color: #555555;'>""</span><span>                 2015-04-10 </span><span style='color: #555555;'>&lt;chr [0</span><span>~
-#&gt; </span><span style='color: #555555;'> 7</span><span> AE Group Holding Pte. Ltd. (201322498~ </span><span style='color: #555555;'>""</span><span>                 2015-05-14 </span><span style='color: #555555;'>&lt;chr [1</span><span>~
-#&gt; </span><span style='color: #555555;'> 8</span><span> Agarwood Venture   (002273031-A)       </span><span style='color: #555555;'>""</span><span>                 2014-02-19 </span><span style='color: #555555;'>&lt;chr [0</span><span>~
-#&gt; </span><span style='color: #555555;'> 9</span><span> Agar Wood Chamber of Commerce Malaysia </span><span style='color: #555555;'>""</span><span>                 2015-05-21 </span><span style='color: #555555;'>&lt;chr [0</span><span>~
-#&gt; </span><span style='color: #555555;'>10</span><span> Ahmad Zulkhairi Associates PLT (LLP00~ </span><span style='color: #555555;'>""</span><span>                 2017-06-22 </span><span style='color: #555555;'>&lt;chr [1</span><span>~
-#&gt; </span><span style='color: #555555;'># ... with 421 more rows</span><span></div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">

@@ -6,9 +6,21 @@
 #' from the BNM API.
 #' @keywords api
 #' @examples
-#' consumer_alert()
+#' get_consumer_alert()
 #' @export
 #' @source https://api.bnm.gov.my/
 #'
 #'
-consumer_alert <- function() get_bnm_tbl("/consumer-alert")
+get_consumer_alert <- function() get_bnm_tbl("/consumer-alert")
+
+# EXCLUDE COVERAGE START
+#' Consumer Alert
+#'
+#' Deprecated. Use \code{\link{get_consumer_alert}}
+#'
+#' @export
+consumer_alert <- function() {
+  .Deprecated("get_consumer_alert")
+  get_consumer_alert()
+}
+# EXCLUDE COVERAGE END

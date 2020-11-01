@@ -3,17 +3,9 @@
 \name{interbank_swap}
 \alias{interbank_swap}
 \title{Interbank Swap}
-\source{
-https://api.bnm.gov.my/
-}
 \usage{
 interbank_swap()
 }
 \description{
-This function allows you to obtain daily interbank swap
-volume by tenure from the BNM API.
+Deprecated. Use \code{\link{get_interbank_swap}}
 }
-\examples{
-interbank_swap()
-}
-\keyword{api}

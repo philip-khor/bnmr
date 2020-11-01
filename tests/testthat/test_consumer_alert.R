@@ -5,6 +5,6 @@ test_that("Test consumer_alert() for incorrect input errors", {
   testthat::skip_on_cran()
 
   ## Test for unused argument
-  expect_error(consumer_alert("Random Strings"))
+  expect_error(get_consumer_alert("Random Strings"))
 
 })
