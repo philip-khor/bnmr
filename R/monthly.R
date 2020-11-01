@@ -158,16 +158,16 @@ interest_volume <- function(product = "money_market_operations",
 #' @keywords api
 #' @export
 #' @examples
-#' \dontrun{interest_rate()}
-#' interest_rate(date = "2018-01-01")
-#' interest_rate(year = 2016, month = 2)
-#' interest_rate(product = "overall", year = 2016, month = 2)
+#' \dontrun{get_interest_rate()}
+#' get_interest_rate(date = "2018-01-01")
+#' get_interest_rate(year = 2016, month = 2)
+#' get_interest_rate(product = "overall", year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 #'
 #'
 
-interest_rate <- function(product = "money_market_operations",
+get_interest_rate <- function(product = "money_market_operations",
                           date = NULL,
                           year = NULL,
                           month = NULL) {
@@ -184,7 +184,24 @@ interest_rate <- function(product = "money_market_operations",
   #           date = date, year = year, month = month)
 }
 
-
+#' Interest Volume
+#'
+#' Deprecated. Use \code{\link{get_interest_rate}}
+#' @inheritParams get_interest_rate
+#'
+#' @export
+interest_rate <- function(product = "money_market_operations",
+                          date = NULL,
+                          year = NULL,
+                          month = NULL) {
+  .Deprecated("get_interest_rate")
+  get_interest_rate(
+    product = product,
+    date = date,
+    year = year,
+    month = month
+  )
+}
 #' Kijang Emas
 #'
 #' This function allows you to obtain daily trading prices
