@@ -11,4 +11,15 @@
 #' @source https://api.bnm.gov.my/
 #'
 #'
-consumer_alert <- function() get_bnm_tbl("/consumer-alert")
+get_consumer_alert <- function() get_bnm_tbl("/consumer-alert")
+
+#' Consumer Alert
+#'
+#' Deprecated. Use \code{\link{get_consumer_alert}}
+#' @inheritParams get_consumer_alert
+#'
+#' @export
+consumer_alert <- function() {
+  .Deprecated("get_consumer_alert")
+  get_consumer_alert()
+}

@@ -62,13 +62,25 @@
 #' @source https://api.bnm.gov.my/
 #'
 #'
-islamic_interbank_rate <- function(date = NULL,
-                                   year = NULL,
-                                   month = NULL) {
+get_islamic_interbank_rate <- function(date = NULL,
+                                       year = NULL,
+                                       month = NULL) {
   .get_monthly_data(
     stub = "/islamic-interbank-rate",
     date = date, year = year, month = month
   )
+}
+
+
+#' Islamic Interbank Rate
+#'
+#' Deprecated. Use \code{\link{get_islamic_interbank_rate}}
+#' @inheritParams get_islamic_interbank_rate
+#'
+#' @export
+islamic_interbank_rate <- function() {
+  .Deprecated("get_islamic_interbank_rate")
+  get_islamic_interbank_rate()
 }
 
 .products <- c(

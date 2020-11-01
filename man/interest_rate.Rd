@@ -16,14 +16,6 @@ interest_rate(
 }
 \arguments{
 \item{product}{Either "money_market_operations", "interbank" or "overall"}
-
-\item{date}{Character string of date with format as defined by RFC 3339, section 5.6
-(YYYY-MM-DD).
-If specified, return values for the specified date.}
-
-\item{year}{Year and month as integers. If date, year and month left blank, return today's values.}
-
-\item{month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
 This function allows you to obtain daily interbank money

@@ -12,5 +12,8 @@ These functions are provided for compatibility with older versions of
   \item \code{\link{base_rate}}
   \item \code{\link{exchange_rate}}
   \item \code{\link{daily_fx_turnover}}
+  \item \code{\link{consumer_alert}}
+  \item \code{\link{interbank_swap}}
+  \item \code{\link{islamic_interbank_rate}}
 }
 }

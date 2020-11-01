@@ -3,19 +3,9 @@
 \name{consumer_alert}
 \alias{consumer_alert}
 \title{Consumer Alert}
-\source{
-https://api.bnm.gov.my/
-}
 \usage{
 consumer_alert()
 }
 \description{
-This function allows you to obtain a list of known companies
-and websites which are neither authorised nor approved
-under the relevant laws and regulations administered by BNM
-from the BNM API.
+Deprecated. Use \code{\link{get_consumer_alert}}
 }
-\examples{
-consumer_alert()
-}
-\keyword{api}
