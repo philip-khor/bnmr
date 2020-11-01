@@ -71,30 +71,6 @@ get_islamic_interbank_rate <- function(date = NULL,
   )
 }
 
-
-#' Islamic Interbank Rate
-#'
-#' Deprecated. Use \code{\link{get_islamic_interbank_rate}}
-#' @inheritParams get_islamic_interbank_rate
-#'
-#' @export
-islamic_interbank_rate <- function(date = NULL,
-                                   year = NULL,
-                                   month = NULL) {
-  .Deprecated("get_islamic_interbank_rate")
-  get_islamic_interbank_rate(
-    date = date,
-    year = year,
-    month = month
-  )
-}
-
-.products <- c(
-  "money_market_operations",
-  "interbank",
-  "overall"
-)
-
 #' Interest Volume
 #'
 #' This function allows you to obtain daily interbank money
@@ -130,24 +106,7 @@ get_interest_volume <- function(product = "money_market_operations",
   #           date = date, year = year, month = month)
 }
 
-#' Interest Volume
-#'
-#' Deprecated. Use \code{\link{get_interest_volume}}
-#' @inheritParams get_interest_volume
-#'
-#' @export
-interest_volume <- function(product = "money_market_operations",
-                            date = NULL,
-                            year = NULL,
-                            month = NULL) {
-  .Deprecated("get_interest_volume")
-  get_interest_volume(
-    product = product,
-    date = date,
-    year = year,
-    month = month
-  )
-}
+
 
 #' Interest Rate
 #'
@@ -184,24 +143,7 @@ get_interest_rate <- function(product = "money_market_operations",
   #           date = date, year = year, month = month)
 }
 
-#' Interest Volume
-#'
-#' Deprecated. Use \code{\link{get_interest_rate}}
-#' @inheritParams get_interest_rate
-#'
-#' @export
-interest_rate <- function(product = "money_market_operations",
-                          date = NULL,
-                          year = NULL,
-                          month = NULL) {
-  .Deprecated("get_interest_rate")
-  get_interest_rate(
-    product = product,
-    date = date,
-    year = year,
-    month = month
-  )
-}
+
 #' Kijang Emas
 #'
 #' This function allows you to obtain daily trading prices
@@ -287,3 +229,65 @@ kl_usd_reference_rate <- function(date = NULL,
     month = month
   )
 }
+
+# EXCLUDE COVERAGE START
+#' Islamic Interbank Rate
+#'
+#' Deprecated. Use \code{\link{get_islamic_interbank_rate}}
+#' @inheritParams get_islamic_interbank_rate
+#'
+#' @export
+islamic_interbank_rate <- function(date = NULL,
+                                   year = NULL,
+                                   month = NULL) {
+  .Deprecated("get_islamic_interbank_rate")
+  get_islamic_interbank_rate(
+    date = date,
+    year = year,
+    month = month
+  )
+}
+
+.products <- c(
+  "money_market_operations",
+  "interbank",
+  "overall"
+)
+#' Interest Volume
+#'
+#' Deprecated. Use \code{\link{get_interest_volume}}
+#' @inheritParams get_interest_volume
+#'
+#' @export
+interest_volume <- function(product = "money_market_operations",
+                            date = NULL,
+                            year = NULL,
+                            month = NULL) {
+  .Deprecated("get_interest_volume")
+  get_interest_volume(
+    product = product,
+    date = date,
+    year = year,
+    month = month
+  )
+}
+#' Interest Rate
+#'
+#' Deprecated. Use \code{\link{get_interest_rate}}
+#' @inheritParams get_interest_rate
+#'
+#' @export
+interest_rate <- function(product = "money_market_operations",
+                          date = NULL,
+                          year = NULL,
+                          month = NULL) {
+  .Deprecated("get_interest_rate")
+  get_interest_rate(
+    product = product,
+    date = date,
+    year = year,
+    month = month
+  )
+}
+# EXCLUDE COVERAGE END
+
