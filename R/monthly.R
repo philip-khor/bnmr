@@ -78,9 +78,15 @@ get_islamic_interbank_rate <- function(date = NULL,
 #' @inheritParams get_islamic_interbank_rate
 #'
 #' @export
-islamic_interbank_rate <- function() {
+islamic_interbank_rate <- function(date = NULL,
+                                   year = NULL,
+                                   month = NULL) {
   .Deprecated("get_islamic_interbank_rate")
-  get_islamic_interbank_rate()
+  get_islamic_interbank_rate(
+    date = date,
+    year = year,
+    month = month
+  )
 }
 
 .products <- c(
@@ -130,9 +136,17 @@ get_interest_volume <- function(product = "money_market_operations",
 #' @inheritParams get_interest_volume
 #'
 #' @export
-interest_volume <- function() {
+interest_volume <- function(product = "money_market_operations",
+                            date = NULL,
+                            year = NULL,
+                            month = NULL) {
   .Deprecated("get_interest_volume")
-  get_interest_volume()
+  get_interest_volume(
+    product = product,
+    date = date,
+    year = year,
+    month = month
+  )
 }
 
 #' Interest Rate

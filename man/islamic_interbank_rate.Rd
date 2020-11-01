@@ -4,7 +4,16 @@
 \alias{islamic_interbank_rate}
 \title{Islamic Interbank Rate}
 \usage{
-islamic_interbank_rate()
+islamic_interbank_rate(date = NULL, year = NULL, month = NULL)
+}
+\arguments{
+\item{date}{Character string of date with format as defined by RFC 3339, section 5.6
+(YYYY-MM-DD).
+If specified, return values for the specified date.}
+
+\item{year}{Year and month as integers. If date, year and month left blank, return today's values.}
+
+\item{month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
 Deprecated. Use \code{\link{get_islamic_interbank_rate}}

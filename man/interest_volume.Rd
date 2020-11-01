@@ -4,7 +4,23 @@
 \alias{interest_volume}
 \title{Interest Volume}
 \usage{
-interest_volume()
+interest_volume(
+  product = "money_market_operations",
+  date = NULL,
+  year = NULL,
+  month = NULL
+)
+}
+\arguments{
+\item{product}{Either "money_market_operations", "interbank" or "overall"}
+
+\item{date}{Character string of date with format as defined by RFC 3339, section 5.6
+(YYYY-MM-DD).
+If specified, return values for the specified date.}
+
+\item{year}{Year and month as integers. If date, year and month left blank, return today's values.}
+
+\item{month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
 Deprecated. Use \code{\link{get_interest_volume}}
