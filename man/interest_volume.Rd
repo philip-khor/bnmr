@@ -3,29 +3,9 @@
 \name{interest_volume}
 \alias{interest_volume}
 \title{Interest Volume}
-\source{
-https://api.bnm.gov.my/
-}
 \usage{
-interest_volume(
-  product = "money_market_operations",
-  date = NULL,
-  year = NULL,
-  month = NULL
-)
-}
-\arguments{
-\item{product}{Either "money_market_operations", "interbank" or "overall"}
+interest_volume()
 }
 \description{
-This function allows you to obtain daily interbank money
-market rates and volumes of transactions according to tenure.
-(2015 - present) from the BNM API.
+Deprecated. Use \code{\link{get_interest_volume}}
 }
-\examples{
-\dontrun{interest_volume()}
-interest_volume(date = "2018-01-01")
-interest_volume(year = 2016, month = 2)
-interest_volume(product = "overall", year = 2016, month = 2)
-}
-\keyword{api}

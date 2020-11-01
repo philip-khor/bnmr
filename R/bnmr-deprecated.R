@@ -9,6 +9,8 @@
 #'   \item \code{\link{daily_fx_turnover}}
 #'   \item \code{\link{consumer_alert}}
 #'   \item \code{\link{interbank_swap}}
+#'   \item \code{\link{interest_volume}}
+#'   \item \code{\link{interest_rate}}
 #'   \item \code{\link{islamic_interbank_rate}}
 #' }
 #'

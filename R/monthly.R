@@ -94,7 +94,7 @@ islamic_interbank_rate <- function() {
 #' This function allows you to obtain daily interbank money
 #' market rates and volumes of transactions according to tenure.
 #' (2015 - present) from the BNM API.
-#' @inheritParams islamic_interbank_rate
+#' @inheritParams get_islamic_interbank_rate
 #' @param product Either "money_market_operations", "interbank" or "overall"
 #' @keywords api
 #' @export
@@ -106,7 +106,7 @@ islamic_interbank_rate <- function() {
 #' @source https://api.bnm.gov.my/
 #'
 
-interest_volume <- function(product = "money_market_operations",
+get_interest_volume <- function(product = "money_market_operations",
                             date = NULL,
                             year = NULL,
                             month = NULL) {
@@ -124,12 +124,23 @@ interest_volume <- function(product = "money_market_operations",
   #           date = date, year = year, month = month)
 }
 
+#' Interest Volume
+#'
+#' Deprecated. Use \code{\link{get_interest_volume}}
+#' @inheritParams get_interest_volume
+#'
+#' @export
+interest_volume <- function() {
+  .Deprecated("get_interest_volume")
+  get_interest_volume()
+}
+
 #' Interest Rate
 #'
 #' This function allows you to obtain daily interbank money
 #' market rates and volumes of transactions according to
 #' tenure. (2015 - present) from the BNM API.
-#' @inheritParams interest_volume
+#' @inheritParams get_interest_volume
 #' @keywords api
 #' @export
 #' @examples
