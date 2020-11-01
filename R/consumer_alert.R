@@ -6,7 +6,7 @@
 #' from the BNM API.
 #' @keywords api
 #' @examples
-#' consumer_alert()
+#' get_consumer_alert()
 #' @export
 #' @source https://api.bnm.gov.my/
 #'

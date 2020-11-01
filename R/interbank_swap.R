@@ -4,7 +4,7 @@
 #' volume by tenure from the BNM API.
 #' @keywords api
 #' @examples
-#' interbank_swap()
+#' get_interbank_swap()
 #' @export
 #' @source https://api.bnm.gov.my/
 #'

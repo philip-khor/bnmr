@@ -57,8 +57,8 @@
 #' @export
 #' @examples
 #' \dontrun{islamic_interbank_rate()}
-#' islamic_interbank_rate(date = "2018-01-01")
-#' islamic_interbank_rate(year = 2016, month = 2)
+#' get_islamic_interbank_rate(date = "2018-01-01")
+#' get_islamic_interbank_rate(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 #'
@@ -105,10 +105,10 @@ islamic_interbank_rate <- function(date = NULL,
 #' @keywords api
 #' @export
 #' @examples
-#' \dontrun{interest_volume()}
-#' interest_volume(date = "2018-01-01")
-#' interest_volume(year = 2016, month = 2)
-#' interest_volume(product = "overall", year = 2016, month = 2)
+#' \dontrun{get_interest_volume()}
+#' get_interest_volume(date = "2018-01-01")
+#' get_interest_volume(year = 2016, month = 2)
+#' get_interest_volume(product = "overall", year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 
