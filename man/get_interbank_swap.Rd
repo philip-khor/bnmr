@@ -14,6 +14,6 @@ This function allows you to obtain daily interbank swap
 volume by tenure from the BNM API.
 }
 \examples{
-interbank_swap()
+get_interbank_swap()
 }
 \keyword{api}

@@ -16,6 +16,6 @@ under the relevant laws and regulations administered by BNM
 from the BNM API.
 }
 \examples{
-consumer_alert()
+get_consumer_alert()
 }
 \keyword{api}

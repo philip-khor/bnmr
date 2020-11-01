@@ -31,9 +31,9 @@ market rates and volumes of transactions according to tenure.
 (2015 - present) from the BNM API.
 }
 \examples{
-\dontrun{interest_volume()}
-interest_volume(date = "2018-01-01")
-interest_volume(year = 2016, month = 2)
-interest_volume(product = "overall", year = 2016, month = 2)
+\dontrun{get_interest_volume()}
+get_interest_volume(date = "2018-01-01")
+get_interest_volume(year = 2016, month = 2)
+get_interest_volume(product = "overall", year = 2016, month = 2)
 }
 \keyword{api}

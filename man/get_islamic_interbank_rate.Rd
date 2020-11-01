@@ -23,7 +23,7 @@ from the BNM API.
 }
 \examples{
 \dontrun{islamic_interbank_rate()}
-islamic_interbank_rate(date = "2018-01-01")
-islamic_interbank_rate(year = 2016, month = 2)
+get_islamic_interbank_rate(date = "2018-01-01")
+get_islamic_interbank_rate(year = 2016, month = 2)
 }
 \keyword{api}
