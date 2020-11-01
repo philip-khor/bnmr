@@ -153,15 +153,15 @@ get_interest_rate <- function(product = "money_market_operations",
 #' @keywords api
 #' @export
 #' @examples
-#' \dontrun{kijang_emas()}
-#' kijang_emas(date = "2020-09-01")
-#' kijang_emas(year = 2016, month = 2)
+#' \dontrun{get_kijang_emas()}
+#' get_kijang_emas(date = "2020-09-01")
+#' get_kijang_emas(year = 2016, month = 2)
 #' @source https://api.bnm.gov.my/
 #'
 #'
-kijang_emas <- function(date = NULL,
-                        year = NULL,
-                        month = NULL) {
+get_kijang_emas <- function(date = NULL,
+                            year = NULL,
+                            month = NULL) {
   # if date does not work most likely there's
   # just no records for that date. write tryCatch here.
   .get_monthly_data(
@@ -284,6 +284,23 @@ interest_rate <- function(product = "money_market_operations",
   .Deprecated("get_interest_rate")
   get_interest_rate(
     product = product,
+    date = date,
+    year = year,
+    month = month
+  )
+}
+
+#' Kijang Emas
+#'
+#' Deprecated. Use \code{\link{get_kijang_emas}}
+#' @inheritParams get_kijang_emas
+#'
+#' @export
+kijang_emas <- function(date = NULL,
+                        year = NULL,
+                        month = NULL) {
+  .Deprecated("get_kijang_emas")
+  get_kijang_emas(
     date = date,
     year = year,
     month = month

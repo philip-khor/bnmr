@@ -17,5 +17,6 @@ These functions are provided for compatibility with older versions of
   \item \code{\link{interest_volume}}
   \item \code{\link{interest_rate}}
   \item \code{\link{islamic_interbank_rate}}
+  \item \code{\link{kijang_emas}}
 }
 }
