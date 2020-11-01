@@ -2,7 +2,7 @@
 % Please edit documentation in R/monthly.R
 \name{interest_rate}
 \alias{interest_rate}
-\title{Interest Volume}
+\title{Interest Rate}
 \usage{
 interest_rate(
   product = "money_market_operations",

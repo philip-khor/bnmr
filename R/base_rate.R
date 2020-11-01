@@ -35,7 +35,7 @@ get_base_rate <- function(bank_code = NULL) {
   }
 }
 
-
+# EXCLUDE COVERAGE START
 #' Base rate
 #'
 #' Deprecated. Use \code{\link{get_base_rate}}
@@ -46,5 +46,6 @@ base_rate <- function(bank_code = NULL) {
   .Deprecated(new = "get_base_rate")
   get_base_rate(bank_code = bank_code)
 }
+# EXCLUDE COVERAGE END
 
 # write a print method that shows meta?

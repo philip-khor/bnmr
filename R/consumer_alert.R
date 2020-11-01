@@ -13,13 +13,14 @@
 #'
 get_consumer_alert <- function() get_bnm_tbl("/consumer-alert")
 
+# EXCLUDE COVERAGE START
 #' Consumer Alert
 #'
 #' Deprecated. Use \code{\link{get_consumer_alert}}
-#' @inheritParams get_consumer_alert
 #'
 #' @export
 consumer_alert <- function() {
   .Deprecated("get_consumer_alert")
   get_consumer_alert()
 }
+# EXCLUDE COVERAGE END
