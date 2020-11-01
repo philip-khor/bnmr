@@ -26,3 +26,5 @@ Suggests:
     testthat,
     covr,
     rmarkdown
+Config/testthat/edition: 3
+Config/testthat/parallel: true
