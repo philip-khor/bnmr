@@ -1,6 +1,9 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# bnmr <img src="src/logo.png" align="right" width=120 height=139 alt="" />
+# bnmr
+
+<img src="man/figures/logo.png" align="right" width=120 height=139 alt="" />
 
 <!-- badges: start -->
 
@@ -10,7 +13,6 @@ status](https://travis-ci.org/philip-khor/bnmr.svg?branch=master)](https://travi
 coverage](https://codecov.io/gh/philip-khor/bnmr/branch/master/graph/badge.svg)](https://codecov.io/gh/philip-khor/bnmr?branch=master)
 [![R build
 status](https://github.com/philip-khor/bnmr/workflows/R-CMD-check/badge.svg)](https://github.com/philip-khor/bnmr/actions)
-
 <!-- badges: end -->
 
 The goal of **bnmr** is to provide a set of convenient wrapper functions
@@ -20,7 +22,7 @@ for the Central Bank of Malaysia’s API.
 
 To install **bnmr**, run the following code (requires remotes):
 
-```r
+``` r
 # install.packages("remotes")
 remotes::install_github("philip-khor/bnmr")
 ```
@@ -29,7 +31,7 @@ remotes::install_github("philip-khor/bnmr")
 
 This is a basic example which shows you how to solve a common problem:
 
-```r
+``` r
 library(bnmr)
 get_base_rate()
 #> # A tibble: 35 x 6
