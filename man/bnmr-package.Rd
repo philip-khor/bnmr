@@ -6,6 +6,8 @@
 \alias{bnmr-package}
 \title{bnmr: Wrapper Functions for the Open API of the Central Bank of Malaysia}
 \description{
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
+
 A set of wrapper functions for the Open API of the Central Bank of Malaysia.
 }
 \details{

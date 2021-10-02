@@ -3,6 +3,8 @@
 
 # bnmr
 
+<img src="man/figures/logo.png" align="right" width=120 height=139 alt="" />
+
 <!-- badges: start -->
 
 [![Travis build
@@ -35,15 +37,15 @@ get_base_rate()
 #> # A tibble: 35 x 6
 #>    bank_code bank_name base_rate base_lending_ra~ indicative_eff_~
 #>    <chr>     <chr>         <dbl>            <dbl>            <dbl>
-#>  1 "AFFINBA~ Affin Ba~      2.7              5.56             3.3 
+#>  1 "AFFINBA~ Affin Ba~      2.7              5.56             3.3
 #>  2 "ALLIANC~ Alliance~      2.57             5.42             3.11
 #>  3 "AMBANK"  AmBank         2.6              5.45             3.25
 #>  4 "BANGKOK" Bangkok ~      3.22             5.87             4.42
 #>  5 "BANKCHI~ Bank of ~      2.55             5.35             3.55
-#>  6 "CIMB BA~ CIMB Ban~      2.75             5.6              3.5 
-#>  7 "CITIBAN~ Citibank~      2.4              5.55             3.2 
-#>  8 ""        Hong Leo~      2.63             5.64             3.5 
-#>  9 ""        HSBC Ban~      2.39             5.49             3.5 
+#>  6 "CIMB BA~ CIMB Ban~      2.75             5.6              3.5
+#>  7 "CITIBAN~ Citibank~      2.4              5.55             3.2
+#>  8 ""        Hong Leo~      2.63             5.64             3.5
+#>  9 ""        HSBC Ban~      2.39             5.49             3.5
 #> 10 ""        Industri~      2.52             5.45             3.47
 #> # ... with 25 more rows, and 1 more variable: base_financing_rate <dbl>
 ```
