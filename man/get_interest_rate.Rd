@@ -15,7 +15,7 @@ get_interest_rate(
 )
 }
 \arguments{
-\item{product}{Either "money_market_operations", "interbank" or "overall"}
+\item{product}{One of "money_market_operations", "interbank" or "overall"}
 
 \item{date}{Character string of date with format as defined by RFC 3339, section 5.6
 (YYYY-MM-DD).
