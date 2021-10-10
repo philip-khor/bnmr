@@ -77,7 +77,7 @@ get_islamic_interbank_rate <- function(date = NULL,
 #' market rates and volumes of transactions according to tenure.
 #' (2015 - present) from the BNM API.
 #' @inheritParams get_islamic_interbank_rate
-#' @param product Either "money_market_operations", "interbank" or "overall"
+#' @param product One of "money_market_operations", "interbank" or "overall"
 #' @keywords api
 #' @export
 #' @examples
