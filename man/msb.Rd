@@ -7,6 +7,12 @@
 \alias{get_bnm_stmt_assets}
 \alias{get_bnm_stmt_cap_lbl}
 \alias{get_bnm_special_funds}
+\alias{get_sys_stmt_assets}
+\alias{get_sys_stmt_cap_lbl}
+\alias{get_stry_lqa_req}
+\alias{get_cc_mas}
+\alias{get_sys_lf_ratio}
+\alias{get_islm_sys_inv}
 \title{MSB Data}
 \usage{
 get_reserve_money(year = NULL)
@@ -20,9 +26,21 @@ get_bnm_stmt_assets(year = NULL)
 get_bnm_stmt_cap_lbl(year = NULL)
 
 get_bnm_special_funds(year = NULL)
+
+get_sys_stmt_assets(year = NULL)
+
+get_sys_stmt_cap_lbl(year = NULL)
+
+get_stry_lqa_req(year = NULL)
+
+get_cc_mas(year = NULL)
+
+get_sys_lf_ratio(year = NULL)
+
+get_islm_sys_inv(year = NULL)
 }
 \arguments{
-\item{Year.}{Scalar integer}
+\item{Year}{Scalar integer}
 }
 \description{
 MSB Data
@@ -40,9 +58,24 @@ MSB Data
 \item \code{get_bnm_stmt_cap_lbl}: 1.5 Bank Negara Malaysia: Statement of Capital and Liabilities
 
 \item \code{get_bnm_special_funds}: 1.6 Bank Negara Malaysia's Special Funds
+
+\item \code{get_sys_stmt_assets}: 1.7 Banking System: Statement of Assets
+
+\item \code{get_sys_stmt_cap_lbl}: 1.9 Banking System: Statement of Capital and Liabilities
+
+\item \code{get_stry_lqa_req}: 1.27 Statutory Reserve and Liquid Asset Requirement
+
+\item \code{get_cc_mas}: 1.30 Credit Card Operations in Malaysia
+
+\item \code{get_sys_lf_ratio}: 1.31 Banking System: Loan to Fund Ratio, Loan to Fund and Equity Ratio and Outstanding Surplus Liquidity placed with Bank Negara Malaysia
+
+\item \code{get_islm_sys_inv}: 1.32 Islamic Banking System: Total Investment Account by Type and Holder
 }}
 
 \examples{
 \dontrun{get_reserve_money()}
 \dontrun{get_reserve_money(year = 2010)}
+}
+\seealso{
+\code{\link{msb_loans}}, \code{\link{msb_deposits}}
 }

@@ -89,9 +89,10 @@ get_islamic_interbank_rate <- function(date = NULL,
 #'
 
 get_interest_volume <- function(product = "money_market_operations",
-                            date = NULL,
-                            year = NULL,
-                            month = NULL) {
+                                date = NULL,
+                                year = NULL,
+                                month = NULL) {
+
   stopifnot(product %in% .products)
 
   .get_monthly_data(
