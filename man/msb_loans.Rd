@@ -10,12 +10,18 @@
 \alias{get_sys_loans_repay_purpose}
 \alias{get_sys_loans_repay_sector}
 \alias{get_sys_loans_class_type}
+\alias{get_islm_fin_class_type}
+\alias{get_islm_fin_class_concept}
 \alias{get_sys_loans_class_purpose}
+\alias{get_islm_fin_purpose_sector}
 \alias{get_sys_loans_class_sector}
 \alias{get_sys_npl_provisions}
+\alias{get_sys_imp_loans_provisions}
+\alias{get_sys_imp_loans_fin_provisions}
+\alias{get_islm_imp_fin_provisions}
 \alias{get_sys_npl_purpose}
 \alias{get_sys_npl_sector}
-\title{MSB Loans}
+\title{MSB Conventional loans and Islamic financing}
 \usage{
 get_sys_loans_appl_purpose(year = NULL, type = "commercial")
 
@@ -35,11 +41,23 @@ get_sys_loans_repay_sector(year = NULL, type = "commercial")
 
 get_sys_loans_class_type(year = NULL, type = "commercial")
 
+get_islm_fin_class_type(year = NULL, type = "commercial")
+
+get_islm_fin_class_concept(year = NULL, type = "commercial")
+
 get_sys_loans_class_purpose(year = NULL, type = "commercial")
+
+get_islm_fin_purpose_sector(year = NULL, type = "commercial")
 
 get_sys_loans_class_sector(year = NULL, type = "commercial")
 
 get_sys_npl_provisions(year = NULL)
+
+get_sys_imp_loans_provisions(year = NULL)
+
+get_sys_imp_loans_fin_provisions(year = NULL)
+
+get_islm_imp_fin_provisions(year = NULL)
 
 get_sys_npl_purpose(year = NULL)
 
@@ -51,7 +69,7 @@ get_sys_npl_sector(year = NULL)
 \item{Year}{Scalar integer}
 }
 \description{
-MSB Loans
+MSB Conventional loans and Islamic financing
 }
 \section{Functions}{
 \itemize{
@@ -73,11 +91,23 @@ MSB Loans
 
 \item \code{get_sys_loans_class_type}: 1.18 Banking System: Classification of Loans by Type
 
+\item \code{get_islm_fin_class_type}: 1.18.1: Islamic Banking System: Financing by Type
+
+\item \code{get_islm_fin_class_concept}: 1.18.2: Islamic Banking System: Financing by Concept
+
 \item \code{get_sys_loans_class_purpose}: 1.19 Banking System: Classification of Loans by Purpose
+
+\item \code{get_islm_fin_purpose_sector}: 1.19.1 Islamic Banking System: Financing by Purpose and Sectors
 
 \item \code{get_sys_loans_class_sector}: 1.20 Banking System: Classification of Loans by Sector
 
 \item \code{get_sys_npl_provisions}: 1.21 Banking System: Non-Performing Loans/Impaired Loans and Impairment Provisions
+
+\item \code{get_sys_imp_loans_provisions}: 1.21a Banking System: Impaired Loans and Impairment Provisions
+
+\item \code{get_sys_imp_loans_fin_provisions}: 1.21b Banking System: Impaired Loan/Financing and Provisions
+
+\item \code{get_islm_imp_fin_provisions}: 1.21.1a Islamic Banking System: Impaired Financing and Impairment Provisions
 
 \item \code{get_sys_npl_purpose}: 1.22 Banking System: Non-Performing/Impaired Loans by Purpose
 

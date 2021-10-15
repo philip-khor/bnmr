@@ -4,15 +4,19 @@
 \alias{get_reserve_money}
 \alias{get_curr_in_circ_by_denom}
 \alias{get_monetary_agg}
+\alias{get_m3}
+\alias{get_m3_factors}
 \alias{get_bnm_stmt_assets}
 \alias{get_bnm_stmt_cap_lbl}
 \alias{get_bnm_special_funds}
 \alias{get_sys_stmt_assets}
+\alias{get_islm_stmt_assets}
 \alias{get_sys_stmt_cap_lbl}
+\alias{get_islm_stmt_cap_lbl}
 \alias{get_stry_lqa_req}
 \alias{get_cc_mas}
 \alias{get_sys_lf_ratio}
-\alias{get_islm_sys_inv}
+\alias{get_islm_inv}
 \title{MSB Data}
 \usage{
 get_reserve_money(year = NULL)
@@ -20,6 +24,10 @@ get_reserve_money(year = NULL)
 get_curr_in_circ_by_denom(year = NULL)
 
 get_monetary_agg(year = NULL)
+
+get_m3(year = NULL)
+
+get_m3_factors(year = NULL)
 
 get_bnm_stmt_assets(year = NULL)
 
@@ -29,7 +37,11 @@ get_bnm_special_funds(year = NULL)
 
 get_sys_stmt_assets(year = NULL)
 
+get_islm_stmt_assets(year = NULL, type = "commercial")
+
 get_sys_stmt_cap_lbl(year = NULL)
+
+get_islm_stmt_cap_lbl(year = NULL, type = "commercial")
 
 get_stry_lqa_req(year = NULL)
 
@@ -37,10 +49,10 @@ get_cc_mas(year = NULL)
 
 get_sys_lf_ratio(year = NULL)
 
-get_islm_sys_inv(year = NULL)
+get_islm_inv(year = NULL)
 }
 \arguments{
-\item{Year}{Scalar integer}
+\item{year}{Scalar integer}
 }
 \description{
 MSB Data
@@ -53,6 +65,10 @@ MSB Data
 
 \item \code{get_monetary_agg}: 1.3 Monetary aggregates
 
+\item \code{get_m3}: 1.3.1 Broad Money, M3
+
+\item \code{get_m3_factors}: 1.3.2 Factors affecting M3
+
 \item \code{get_bnm_stmt_assets}: 1.4 Bank Negara Malaysia: Statement of Assets
 
 \item \code{get_bnm_stmt_cap_lbl}: 1.5 Bank Negara Malaysia: Statement of Capital and Liabilities
@@ -61,7 +77,11 @@ MSB Data
 
 \item \code{get_sys_stmt_assets}: 1.7 Banking System: Statement of Assets
 
+\item \code{get_islm_stmt_assets}: 1.7.1 Islamic Banking System: Statement of Assets
+
 \item \code{get_sys_stmt_cap_lbl}: 1.9 Banking System: Statement of Capital and Liabilities
+
+\item \code{get_islm_stmt_cap_lbl}: 1.9.1 Islamic Banking System: Statement of Capital and Liabilities
 
 \item \code{get_stry_lqa_req}: 1.27 Statutory Reserve and Liquid Asset Requirement
 
@@ -69,7 +89,7 @@ MSB Data
 
 \item \code{get_sys_lf_ratio}: 1.31 Banking System: Loan to Fund Ratio, Loan to Fund and Equity Ratio and Outstanding Surplus Liquidity placed with Bank Negara Malaysia
 
-\item \code{get_islm_sys_inv}: 1.32 Islamic Banking System: Total Investment Account by Type and Holder
+\item \code{get_islm_inv}: 1.32 Islamic Banking System: Total Investment Account by Type and Holder
 }}
 
 \examples{

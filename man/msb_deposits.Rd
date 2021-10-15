@@ -2,14 +2,28 @@
 % Please edit documentation in R/msb.R
 \name{get_sys_deps_type}
 \alias{get_sys_deps_type}
+\alias{get_islm_deps_type_holder}
 \alias{get_sys_deps_holder}
+\alias{get_sys_dd_holder}
+\alias{get_sys_sav_fd_deps_holder}
+\alias{get_sys_repo_holder}
 \title{MSB Deposits}
 \usage{
 get_sys_deps_type(year = NULL)
 
+get_islm_deps_type_holder(year = NULL, type = "commercial")
+
 get_sys_deps_holder(year = NULL)
+
+get_sys_dd_holder(year = NULL, ins = "commercial")
+
+get_sys_sav_fd_deps_holder(year = NULL, ins = "commercial")
+
+get_sys_repo_holder(year = NULL, ins = "commercial")
 }
 \arguments{
+\item{ins}{One of "commercial", "islamic"}
+
 \item{Year}{Scalar integer}
 }
 \description{
@@ -19,6 +33,15 @@ MSB Deposits
 \itemize{
 \item \code{get_sys_deps_type}: 1.24 Banking System: Total Deposits by Type
 
+\item \code{get_islm_deps_type_holder}: 1.24.2 Islamic Banking System - Deposits by Type & Holder
+
 \item \code{get_sys_deps_holder}: 1.25 Banking System: Total Deposits by Holder
+
+\item \code{get_sys_dd_holder}: 1.25.1 Banking System: Demand Deposits by Holder
+
+\item \code{get_sys_sav_fd_deps_holder}: 1.25.2 Banking System: Savings and Fixed Deposits,
+Special and General Investment Deposits by Holder
+
+\item \code{get_sys_repo_holder}: 1.25.3 Banking System: Repurchase Agreements by Holder
 }}
 
