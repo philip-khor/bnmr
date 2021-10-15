@@ -12,8 +12,11 @@
   }
 }
 #' MSB Data
-#' @describeIn msb 1.1 Reserve Money
 #' @param year Scalar integer
+#' @name msb
+NULL
+
+#' @describeIn msb 1.1 Reserve Money
 #' @examples
 #' \dontrun{get_reserve_money()}
 #' \dontrun{get_reserve_money(year = 2010)}
@@ -99,6 +102,9 @@ get_islm_stmt_cap_lbl <- function(year = NULL, type = "commercial") {
 #' MSB Conventional loans and Islamic financing
 #' @param year Scalar integer
 #' @param type Banking institution type; one of "commercial" "islamic" "investment" "total"
+#' @name msb_loans
+NULL
+
 #' @describeIn msb_loans 1.10 Banking System: Loans Applied by Purpose
 #' @export
 get_sys_loans_appl_purpose <- function(year = NULL, type = "commercial") {
@@ -234,7 +240,12 @@ get_sys_npl_sector <- function(year = NULL) {
 }
 
 #' MSB Deposits
+#' @name msb_deposits
 #' @param year Scalar integer
+#' @param type Banking institution type; one of "commercial" "islamic" "investment" "total"
+
+NULL
+
 #' @describeIn msb_deposits 1.24 Banking System: Total Deposits by Type
 #' @export
 get_sys_deps_type <- function(year = NULL) {
