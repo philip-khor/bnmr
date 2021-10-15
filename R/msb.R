@@ -32,8 +32,16 @@ get_monetary_agg <- function(year = NULL) {
   .get_msb_data("1.3", year = year)
 }
 
-# TODO: 1.3.1
-# TODO: 1.3.2
+#' @descibeIn msb 1.3.1 Broad Money, M3
+get_m3 <- function(year = NULL) {
+  .get_msb_data("1.3.1", year = year)
+}
+
+#' @describeIn msb 1.3.2 Factors affecting M3
+get_m3_factors <- function(year = NULL) {
+  .get_msb_data("1.3.2", year = year)
+}
+
 #' @describeIn msb 1.4 Bank Negara Malaysia: Statement of Assets
 get_bnm_stmt_assets <- function(year = NULL) {
   .get_msb_data("1.4", year = year)
@@ -54,16 +62,28 @@ get_sys_stmt_assets <- function(year = NULL) {
   .get_msb_data("1.7", year = year)
 }
 
-# TODO: 1.7.1
+#' @describeIn msb 1.7.1 Islamic Banking System: Statement of Assets
+get_islm_sys_stmt_assets <- function(year = NULL, type = "commercial") {
+  # type seems to be ignored if year specified
+  .get_msb_data("1.7.1", year = year, type = type)
+}
+
+# 1.7.2?
+# 1.7.3?
+# 1.7.4?
 
 #' @describeIn msb 1.9 Banking System: Statement of Capital and Liabilities
 get_sys_stmt_cap_lbl <- function(year = NULL) {
   .get_msb_data("1.9", year = year)
 }
 
-# TODO: 1.9.1
+#' @describeIn msb 1.9.1 Islamic Banking System: Statement of Capital and Liabilities
+get_islm_sys_stmt_cap_lbl <- function(year = NULL, type = "commercial") {
+  # type seems to be ignored if year specified
+  .get_msb_data("1.9.1", year = year, type = type)
+}
 
-#' MSB Loans
+#' MSB Conventional loans and Islamic financing
 #' @param Year Scalar integer
 #' @param type Banking institution type; one of "commercial" "islamic" "investment" "total"
 #' @describeIn msb_loans 1.10 Banking System: Loans Applied by Purpose
@@ -111,15 +131,25 @@ get_sys_loans_class_type <- function(year = NULL, type = "commercial") {
   .get_msb_data("1.18", year = year, type = type)
 }
 
-# TODO: 1.18.1
-# TODO: 1.18.2
+#' @describeIn msb_loans 1.18.1: Islamic Banking System: Financing by Type
+get_islm_fin_class_type <- function(year = NULL, type = "commercial") {
+  .get_msb_data("1.18.1", year = year, type = type)
+}
+
+#' @describeIn msb_loans 1.18.2: Islamic Banking System: Financing by Concept
+get_islm_fin_class_concept <- function(year = NULL, type = "commercial") {
+  .get_msb_data("1.18.2", year = year, type = type)
+}
 
 #' @describeIn msb_loans 1.19 Banking System: Classification of Loans by Purpose
 get_sys_loans_class_purpose <- function(year = NULL, type = "commercial") {
   .get_msb_data("1.19", year = year, type = type)
 }
 
-# TODO: 1.19.1
+#' @describeIn msb_loans 1.19.1 Islamic Banking System: Financing by Purpose and Sectors
+get_islm_fin_purpose_sector <- function(year = NULL, type = "commercial") {
+  .get_msb_data("1.19.1", year = year, type = type)
+}
 
 #' @describeIn msb_loans 1.20 Banking System: Classification of Loans by Sector
 get_sys_loans_class_sector <- function(year = NULL, type = "commercial") {
@@ -131,8 +161,17 @@ get_sys_npl_provisions <- function(year = NULL) {
   if (!is_null(year)) assert_that(year >= 2000)
   .get_msb_data("1.21", year = year)
 }
-# TODO: 1.21a
-# TODO: 1.21b
+
+#' @describeIn msb_loans 1.21a Banking System: Impaired Loans and Impairment Provisions
+get_sys_imp_loans_provisions <- function(year = NULL) {
+  .get_msb_data("1.21a", year = year)
+}
+
+#' @describeIn msb_loans 1.21b Banking System: Impaired Loan/Financing and Provisions
+get_sys_imp_loans_fin_provisions <- function(year = NULL) {
+  .get_msb_data("1.21b", year = year)
+}
+
 # TODO: 1.21.1a
 # TODO: 1.21.2a
 # TODO: 1.21.3a
