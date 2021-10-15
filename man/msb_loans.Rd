@@ -18,6 +18,7 @@
 \alias{get_sys_npl_provisions}
 \alias{get_sys_imp_loans_provisions}
 \alias{get_sys_imp_loans_fin_provisions}
+\alias{get_islm_imp_fin_provisions}
 \alias{get_sys_npl_purpose}
 \alias{get_sys_npl_sector}
 \title{MSB Conventional loans and Islamic financing}
@@ -55,6 +56,8 @@ get_sys_npl_provisions(year = NULL)
 get_sys_imp_loans_provisions(year = NULL)
 
 get_sys_imp_loans_fin_provisions(year = NULL)
+
+get_islm_imp_fin_provisions(year = NULL)
 
 get_sys_npl_purpose(year = NULL)
 
@@ -103,6 +106,8 @@ MSB Conventional loans and Islamic financing
 \item \code{get_sys_imp_loans_provisions}: 1.21a Banking System: Impaired Loans and Impairment Provisions
 
 \item \code{get_sys_imp_loans_fin_provisions}: 1.21b Banking System: Impaired Loan/Financing and Provisions
+
+\item \code{get_islm_imp_fin_provisions}: 1.21.1a Islamic Banking System: Impaired Financing and Impairment Provisions
 
 \item \code{get_sys_npl_purpose}: 1.22 Banking System: Non-Performing/Impaired Loans by Purpose
 
