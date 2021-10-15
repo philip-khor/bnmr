@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Interest Volume — interest_volume • bnmr</title>
+<title>MSB Deposits — get_sys_deps_type • bnmr</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Interest Volume — interest_volume" />
-<meta property="og:description" content="Deprecated. Use get_interest_volume" />
+<meta property="og:title" content="MSB Deposits — get_sys_deps_type" />
+<meta property="og:description" content="MSB Deposits" />
 <meta property="og:image" content="/logo.png" />
 
 
@@ -121,45 +121,52 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Interest Volume</h1>
-    <small class="dont-index">Source: <a href='https://github.com/philip-khor/bnmr/blob/master/R/monthly.R'><code>R/monthly.R</code></a></small>
-    <div class="hidden name"><code>interest_volume.Rd</code></div>
+    <h1>MSB Deposits</h1>
+    <small class="dont-index">Source: <a href='https://github.com/philip-khor/bnmr/blob/master/R/msb.R'><code>R/msb.R</code></a></small>
+    <div class="hidden name"><code>msb_deposits.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Deprecated. Use <code><a href='get_interest_volume.html'>get_interest_volume</a></code></p>
+    <p>MSB Deposits</p>
     </div>
 
-    <pre class="usage"><span class='fu'>interest_volume</span><span class='op'>(</span>
-  product <span class='op'>=</span> <span class='st'>"money_market_operations"</span>,
-  date <span class='op'>=</span> <span class='cn'>NULL</span>,
-  year <span class='op'>=</span> <span class='cn'>NULL</span>,
-  month <span class='op'>=</span> <span class='cn'>NULL</span>
-<span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>get_sys_deps_type</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
+
+<span class='fu'>get_islm_deps_type_holder</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span>, type <span class='op'>=</span> <span class='st'>"commercial"</span><span class='op'>)</span>
+
+<span class='fu'>get_sys_deps_holder</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
+
+<span class='fu'>get_sys_dd_holder</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span>, ins <span class='op'>=</span> <span class='st'>"commercial"</span><span class='op'>)</span>
+
+<span class='fu'>get_sys_sav_fd_deps_holder</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span>, ins <span class='op'>=</span> <span class='st'>"commercial"</span><span class='op'>)</span>
+
+<span class='fu'>get_sys_repo_holder</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span>, ins <span class='op'>=</span> <span class='st'>"commercial"</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>product</th>
-      <td><p>One of "money_market_operations", "interbank" or "overall"</p></td>
-    </tr>
-    <tr>
-      <th>date</th>
-      <td><p>Character string of date with format as defined by RFC 3339, section 5.6
-(YYYY-MM-DD).
-If specified, return values for the specified date.</p></td>
-    </tr>
-    <tr>
       <th>year</th>
-      <td><p>Year and month as integers. If date, year and month left blank, return today's values.</p></td>
+      <td><p>Scalar integer</p></td>
     </tr>
     <tr>
-      <th>month</th>
-      <td><p>Year and month as integers. If date, year and month left blank, return today's values.</p></td>
+      <th>ins</th>
+      <td><p>One of "commercial", "islamic"</p></td>
     </tr>
     </table>
 
+    <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+
+    
+<ul>
+<li><p><code>get_sys_deps_type</code>: 1.24 Banking System: Total Deposits by Type</p></li>
+<li><p><code>get_islm_deps_type_holder</code>: 1.24.2 Islamic Banking System - Deposits by Type &amp; Holder</p></li>
+<li><p><code>get_sys_deps_holder</code>: 1.25 Banking System: Total Deposits by Holder</p></li>
+<li><p><code>get_sys_dd_holder</code>: 1.25.1 Banking System: Demand Deposits by Holder</p></li>
+<li><p><code>get_sys_sav_fd_deps_holder</code>: 1.25.2 Banking System: Savings and Fixed Deposits,
+Special and General Investment Deposits by Holder</p></li>
+<li><p><code>get_sys_repo_holder</code>: 1.25.3 Banking System: Repurchase Agreements by Holder</p></li>
+</ul>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

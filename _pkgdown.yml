@@ -4,6 +4,11 @@ development:
 reference:
 - title: All functions
   contents: has_keyword("api")
+- title: MSB
+  contents:
+  - get_reserve_money
+  - get_sys_loans_appl_purpose
+  - get_sys_deps_type
 
 template:
   params:

@@ -43,6 +43,7 @@
 <meta property="og:description" content="This function allows you to extract indicative CNY/MYR
 forward prices for trade settlement and RMB deposit acceptance rates
 from the BNM API as a tidy tibble." />
+<meta property="og:image" content="/logo.png" />
 
 
 
@@ -74,7 +75,7 @@ from the BNM API as a tidy tibble." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">bnmr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9003</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9004</span>
       </span>
     </div>
 
@@ -82,7 +83,7 @@ from the BNM API as a tidy tibble." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -105,7 +106,7 @@ from the BNM API as a tidy tibble." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/philip-khor/bnmr/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -151,17 +152,17 @@ from the BNM API as a tidy tibble.</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='kw'>if</span> <span class='op'>(</span><span class='cn'>FALSE</span><span class='op'>)</span> <span class='fu'>renminbi</span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"dar"</span><span class='op'>)</span>
 <span class='fu'>renminbi</span><span class='op'>(</span>type <span class='op'>=</span> <span class='st'>"fx_forward"</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 8 x 4</span><span>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 8 x 4</span>
 #&gt;   date       period    buying selling
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span>
-#&gt; </span><span style='color: #555555;'>1</span><span> 2020-10-14 spot       0.616   0.617
-#&gt; </span><span style='color: #555555;'>2</span><span> 2020-10-14 2_weeks   -</span><span style='color: #BB0000;'>4.8</span><span>    -</span><span style='color: #BB0000;'>4.3</span><span>  
-#&gt; </span><span style='color: #555555;'>3</span><span> 2020-10-14 1_month   -</span><span style='color: #BB0000;'>7.4</span><span>    -</span><span style='color: #BB0000;'>6.4</span><span>  
-#&gt; </span><span style='color: #555555;'>4</span><span> 2020-10-14 2_months -</span><span style='color: #BB0000;'>16.1</span><span>   -</span><span style='color: #BB0000;'>14.2</span><span>  
-#&gt; </span><span style='color: #555555;'>5</span><span> 2020-10-14 3_months -</span><span style='color: #BB0000;'>39</span><span>     -</span><span style='color: #BB0000;'>36</span><span>    
-#&gt; </span><span style='color: #555555;'>6</span><span> 2020-10-14 4_months -</span><span style='color: #BB0000;'>49.9</span><span>   -</span><span style='color: #BB0000;'>45.6</span><span>  
-#&gt; </span><span style='color: #555555;'>7</span><span> 2020-10-14 5_months -</span><span style='color: #BB0000;'>55.8</span><span>   -</span><span style='color: #BB0000;'>51.1</span><span>  
-#&gt; </span><span style='color: #555555;'>8</span><span> 2020-10-14 6_months -</span><span style='color: #BB0000;'>63.6</span><span>   -</span><span style='color: #BB0000;'>60.1</span><span>  </div></span></pre>
+#&gt;   <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>   <span style='color: #949494; font-style: italic;'>&lt;dbl&gt;</span>
+#&gt; <span style='color: #BCBCBC;'>1</span> 2020-12-29 spot       0.620   0.620
+#&gt; <span style='color: #BCBCBC;'>2</span> 2020-12-29 2_weeks   -<span style='color: #BB0000;'>9.6</span>    -<span style='color: #BB0000;'>9</span>    
+#&gt; <span style='color: #BCBCBC;'>3</span> 2020-12-29 1_month  -<span style='color: #BB0000;'>10.1</span>    -<span style='color: #BB0000;'>8.5</span>  
+#&gt; <span style='color: #BCBCBC;'>4</span> 2020-12-29 2_months -<span style='color: #BB0000;'>18.9</span>   -<span style='color: #BB0000;'>16.6</span>  
+#&gt; <span style='color: #BCBCBC;'>5</span> 2020-12-29 3_months -<span style='color: #BB0000;'>22.2</span>   -<span style='color: #BB0000;'>19.8</span>  
+#&gt; <span style='color: #BCBCBC;'>6</span> 2020-12-29 4_months -<span style='color: #BB0000;'>29.5</span>   -<span style='color: #BB0000;'>24.3</span>  
+#&gt; <span style='color: #BCBCBC;'>7</span> 2020-12-29 5_months -<span style='color: #BB0000;'>37.5</span>   -<span style='color: #BB0000;'>29.3</span>  
+#&gt; <span style='color: #BCBCBC;'>8</span> 2020-12-29 6_months -<span style='color: #BB0000;'>41.3</span>   -<span style='color: #BB0000;'>38.1</span>  </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
