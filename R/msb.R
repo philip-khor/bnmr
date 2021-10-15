@@ -13,7 +13,7 @@
 }
 #' MSB Data
 #' @describeIn msb 1.1 Reserve Money
-#' @param Year Scalar integer
+#' @param year Scalar integer
 #' @examples
 #' \dontrun{get_reserve_money()}
 #' \dontrun{get_reserve_money(year = 2010)}

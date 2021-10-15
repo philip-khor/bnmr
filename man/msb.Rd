@@ -52,7 +52,7 @@ get_sys_lf_ratio(year = NULL)
 get_islm_inv(year = NULL)
 }
 \arguments{
-\item{Year}{Scalar integer}
+\item{year}{Scalar integer}
 }
 \description{
 MSB Data
