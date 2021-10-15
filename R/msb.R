@@ -97,7 +97,7 @@ get_islm_stmt_cap_lbl <- function(year = NULL, type = "commercial") {
 }
 
 #' MSB Conventional loans and Islamic financing
-#' @param Year Scalar integer
+#' @param year Scalar integer
 #' @param type Banking institution type; one of "commercial" "islamic" "investment" "total"
 #' @describeIn msb_loans 1.10 Banking System: Loans Applied by Purpose
 #' @export
@@ -234,7 +234,7 @@ get_sys_npl_sector <- function(year = NULL) {
 }
 
 #' MSB Deposits
-#' @param Year Scalar integer
+#' @param year Scalar integer
 #' @describeIn msb_deposits 1.24 Banking System: Total Deposits by Type
 #' @export
 get_sys_deps_type <- function(year = NULL) {

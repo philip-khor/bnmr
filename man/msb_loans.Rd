@@ -64,9 +64,9 @@ get_sys_npl_purpose(year = NULL)
 get_sys_npl_sector(year = NULL)
 }
 \arguments{
-\item{type}{Banking institution type; one of "commercial" "islamic" "investment" "total"}
+\item{year}{Scalar integer}
 
-\item{Year}{Scalar integer}
+\item{type}{Banking institution type; one of "commercial" "islamic" "investment" "total"}
 }
 \description{
 MSB Conventional loans and Islamic financing

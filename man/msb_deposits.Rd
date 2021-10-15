@@ -22,9 +22,9 @@ get_sys_sav_fd_deps_holder(year = NULL, ins = "commercial")
 get_sys_repo_holder(year = NULL, ins = "commercial")
 }
 \arguments{
-\item{ins}{One of "commercial", "islamic"}
+\item{year}{Scalar integer}
 
-\item{Year}{Scalar integer}
+\item{ins}{One of "commercial", "islamic"}
 }
 \description{
 MSB Deposits
