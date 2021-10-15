@@ -18,6 +18,7 @@
 #' \dontrun{get_reserve_money()}
 #' \dontrun{get_reserve_money(year = 2010)}
 #' @seealso \code{\link{msb_loans}}, \code{\link{msb_deposits}}
+#' @importFrom assertthat assert_that
 #' @export
 get_reserve_money <- function(year = NULL) {
   .get_msb_data("1.1", year = year)
