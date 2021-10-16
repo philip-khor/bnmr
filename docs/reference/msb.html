@@ -163,11 +163,27 @@
 
 <span class='fu'>get_stry_lqa_req</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
 
+<span class='fu'>get_liq_cov_rt</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
+
+<span class='fu'>get_sys_const_cap</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
+
+<span class='fu'>get_islm_const_cap</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span>, capital <span class='op'>=</span> <span class='st'>"total"</span><span class='op'>)</span>
+
 <span class='fu'>get_cc_mas</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
 
 <span class='fu'>get_sys_lf_ratio</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
 
-<span class='fu'>get_islm_inv</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
+<span class='fu'>get_islm_inv</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
+
+<span class='fu'>get_islm_stmt_assets_inv</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
+
+<span class='fu'>get_islm_fin_inv_type</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
+
+<span class='fu'>get_islm_fin_inv_concept</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
+
+<span class='fu'>get_islm_fin_inv_purpose_sectors</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
+
+<span class='fu'>get_islm_inv_maturity</span><span class='op'>(</span>year <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -175,6 +191,10 @@
     <tr>
       <th>year</th>
       <td><p>Scalar integer</p></td>
+    </tr>
+    <tr>
+      <th>type</th>
+      <td><p>Banking institution type; one of "commercial" "islamic" "investment" "total"</p></td>
     </tr>
     </table>
 
@@ -195,9 +215,17 @@
 <li><p><code>get_sys_stmt_cap_lbl</code>: 1.9 Banking System: Statement of Capital and Liabilities</p></li>
 <li><p><code>get_islm_stmt_cap_lbl</code>: 1.9.1 Islamic Banking System: Statement of Capital and Liabilities</p></li>
 <li><p><code>get_stry_lqa_req</code>: 1.27 Statutory Reserve and Liquid Asset Requirement</p></li>
+<li><p><code>get_liq_cov_rt</code>: 1.28a Liquidity Coverage Ratio</p></li>
+<li><p><code>get_sys_const_cap</code>: 1.29a Banking System: Constituents of Capital</p></li>
+<li><p><code>get_islm_const_cap</code>: 1.29.1a Islamic Banking System : Constituents of Capital</p></li>
 <li><p><code>get_cc_mas</code>: 1.30 Credit Card Operations in Malaysia</p></li>
 <li><p><code>get_sys_lf_ratio</code>: 1.31 Banking System: Loan to Fund Ratio, Loan to Fund and Equity Ratio and Outstanding Surplus Liquidity placed with Bank Negara Malaysia</p></li>
 <li><p><code>get_islm_inv</code>: 1.32 Islamic Banking System: Total Investment Account by Type and Holder</p></li>
+<li><p><code>get_islm_stmt_assets_inv</code>: 1.32.1 Islamic Banking System: Statement of Total Assets funded through Investment Account</p></li>
+<li><p><code>get_islm_fin_inv_type</code>: 1.32.2 Islamic Banking System: Total Financing funded through Investment Account by Type</p></li>
+<li><p><code>get_islm_fin_inv_concept</code>: 1.32.3 Islamic Banking System: Total Financing funded through Investment Account by Concept</p></li>
+<li><p><code>get_islm_fin_inv_purpose_sectors</code>: 1.32.4 Islamic Banking System: Total Financing funded through Investment Account by Purpose and Sectors</p></li>
+<li><p><code>get_islm_inv_maturity</code>: 1.32.5 Islamic Banking System: Total Investment Account by Original Maturity</p></li>
 </ul>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 

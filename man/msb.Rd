@@ -15,9 +15,17 @@
 \alias{get_sys_stmt_cap_lbl}
 \alias{get_islm_stmt_cap_lbl}
 \alias{get_stry_lqa_req}
+\alias{get_liq_cov_rt}
+\alias{get_sys_const_cap}
+\alias{get_islm_const_cap}
 \alias{get_cc_mas}
 \alias{get_sys_lf_ratio}
 \alias{get_islm_inv}
+\alias{get_islm_stmt_assets_inv}
+\alias{get_islm_fin_inv_type}
+\alias{get_islm_fin_inv_concept}
+\alias{get_islm_fin_inv_purpose_sectors}
+\alias{get_islm_inv_maturity}
 \title{MSB Data}
 \usage{
 get_reserve_money(year = NULL)
@@ -46,14 +54,34 @@ get_islm_stmt_cap_lbl(year = NULL, type = "commercial")
 
 get_stry_lqa_req(year = NULL)
 
+get_liq_cov_rt(year = NULL)
+
+get_sys_const_cap(year = NULL)
+
+get_islm_const_cap(year = NULL, capital = "total")
+
 get_cc_mas(year = NULL)
 
 get_sys_lf_ratio(year = NULL)
 
 get_islm_inv(year = NULL)
+
+get_islm_stmt_assets_inv(year = NULL)
+
+get_islm_fin_inv_type(year = NULL)
+
+get_islm_fin_inv_concept(year = NULL)
+
+get_islm_fin_inv_purpose_sectors(year = NULL)
+
+get_islm_inv_maturity(year = NULL)
 }
 \arguments{
 \item{year}{Scalar integer}
+
+\item{type}{Banking institution type; one of "commercial" "islamic" "investment" "total"}
+
+\item{capital}{One of "ibs", "islamic", "total"}
 }
 \description{
 MSB Data
@@ -86,11 +114,27 @@ MSB Data
 
 \item \code{get_stry_lqa_req}: 1.27 Statutory Reserve and Liquid Asset Requirement
 
+\item \code{get_liq_cov_rt}: 1.28a Liquidity Coverage Ratio
+
+\item \code{get_sys_const_cap}: 1.29a Banking System: Constituents of Capital
+
+\item \code{get_islm_const_cap}: 1.29.1a Islamic Banking System : Constituents of Capital
+
 \item \code{get_cc_mas}: 1.30 Credit Card Operations in Malaysia
 
 \item \code{get_sys_lf_ratio}: 1.31 Banking System: Loan to Fund Ratio, Loan to Fund and Equity Ratio and Outstanding Surplus Liquidity placed with Bank Negara Malaysia
 
 \item \code{get_islm_inv}: 1.32 Islamic Banking System: Total Investment Account by Type and Holder
+
+\item \code{get_islm_stmt_assets_inv}: 1.32.1 Islamic Banking System: Statement of Total Assets funded through Investment Account
+
+\item \code{get_islm_fin_inv_type}: 1.32.2 Islamic Banking System: Total Financing funded through Investment Account by Type
+
+\item \code{get_islm_fin_inv_concept}: 1.32.3 Islamic Banking System: Total Financing funded through Investment Account by Concept
+
+\item \code{get_islm_fin_inv_purpose_sectors}: 1.32.4 Islamic Banking System: Total Financing funded through Investment Account by Purpose and Sectors
+
+\item \code{get_islm_inv_maturity}: 1.32.5 Islamic Banking System: Total Investment Account by Original Maturity
 }}
 
 \examples{
