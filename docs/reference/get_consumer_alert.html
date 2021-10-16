@@ -8,6 +8,13 @@
 
 <title>Consumer Alert — get_consumer_alert • bnmr</title>
 
+<!-- favicons -->
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png" />
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png" />
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -44,6 +51,7 @@
 and websites which are neither authorised nor approved
 under the relevant laws and regulations administered by BNM
 from the BNM API." />
+<meta property="og:image" content="/logo.png" />
 
 
 
@@ -75,7 +83,7 @@ from the BNM API." />
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">bnmr</a>
-        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9003</span>
+        <span class="version label label-danger" data-toggle="tooltip" data-placement="bottom" title="Unreleased version">0.0.0.9004</span>
       </span>
     </div>
 
@@ -83,7 +91,7 @@ from the BNM API." />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
+    <span class="fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -106,7 +114,7 @@ from the BNM API." />
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/philip-khor/bnmr/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -144,7 +152,20 @@ from the BNM API.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>get_consumer_alert</span><span class='op'>(</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span class='error'>Error in get_consumer_alert(): could not find function "get_consumer_alert"</span></div></pre>
+</div><div class='output co'>#&gt; <span style='color: #949494;'># A tibble: 431 x 4</span>
+#&gt;    name                                        regisration_num~ added_date websites
+#&gt;    <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>                                       <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>            <span style='color: #949494; font-style: italic;'>&lt;chr&gt;</span>      <span style='color: #949494; font-style: italic;'>&lt;list&gt;</span>  
+#&gt; <span style='color: #BCBCBC;'> 1</span> 1globalcash                                 <span style='color: #949494;'>""</span>               2012-07-13 <span style='color: #949494;'>&lt;chr [0</span>~
+#&gt; <span style='color: #BCBCBC;'> 2</span> 1Gold.com.my                                <span style='color: #949494;'>""</span>               2012-07-13 <span style='color: #949494;'>&lt;chr [1</span>~
+#&gt; <span style='color: #BCBCBC;'> 3</span> 3Sixty Venture Capital PLC                  <span style='color: #949494;'>""</span>               2014-12-30 <span style='color: #949494;'>&lt;chr [1</span>~
+#&gt; <span style='color: #BCBCBC;'> 4</span> A.A.M Global Corporation Sdn Bhd            <span style='color: #949494;'>""</span>               2017-05-17 <span style='color: #949494;'>&lt;chr [0</span>~
+#&gt; <span style='color: #BCBCBC;'> 5</span> Ace Global Sales &amp; Services                 <span style='color: #949494;'>""</span>               2013-05-02 <span style='color: #949494;'>&lt;chr [0</span>~
+#&gt; <span style='color: #BCBCBC;'> 6</span> Ace Dimension Network Sdn Bhd               <span style='color: #949494;'>""</span>               2015-04-10 <span style='color: #949494;'>&lt;chr [0</span>~
+#&gt; <span style='color: #BCBCBC;'> 7</span> AE Group Holding Pte. Ltd. (201322498-D)    <span style='color: #949494;'>""</span>               2015-05-14 <span style='color: #949494;'>&lt;chr [1</span>~
+#&gt; <span style='color: #BCBCBC;'> 8</span> Agarwood Venture   (002273031-A)            <span style='color: #949494;'>""</span>               2014-02-19 <span style='color: #949494;'>&lt;chr [0</span>~
+#&gt; <span style='color: #BCBCBC;'> 9</span> Agar Wood Chamber of Commerce Malaysia      <span style='color: #949494;'>""</span>               2015-05-21 <span style='color: #949494;'>&lt;chr [0</span>~
+#&gt; <span style='color: #BCBCBC;'>10</span> Ahmad Zulkhairi Associates PLT (LLP0009065) <span style='color: #949494;'>""</span>               2017-06-22 <span style='color: #949494;'>&lt;chr [1</span>~
+#&gt; <span style='color: #949494;'># ... with 421 more rows</span></div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
