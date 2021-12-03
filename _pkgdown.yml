@@ -8,5 +8,5 @@ reference:
   contents: starts_with("msb")
 
 template:
-  params:
-    bootswatch: cosmo
+  bootstrap: 5
+  bootswatch: cosmo
