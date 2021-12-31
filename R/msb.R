@@ -12,7 +12,7 @@
   }
 }
 
-#' Monetary and banking system (MSB section 1)
+#' Monetary and banking system 
 #' @param year Scalar integer
 #' @param type Banking institution type; one of "commercial" "islamic" "investment" "total"
 #' @param capital One of "ibs", "islamic", "total"
@@ -242,7 +242,7 @@ get_sys_npl_sector <- function(year = NULL) {
   .get_msb_data("1.23", year = year)
 }
 
-#' MSB Deposits
+#' Monetary and banking system: deposits
 #' @name msb1_deposits
 #' @param year Scalar integer
 #' @param type Banking institution type; one of "commercial" "islamic" "investment" "total"
@@ -403,7 +403,7 @@ get_islm_inv_maturity <- function(year = NULL) {
   .get_msb_data("1.32.5", year = year)
 }
 
-#' Financial and Capital System (MSB section 2)
+#' Financial and capital markets 
 #' @param year Scalar integer
 #' @name msb2
 NULL
@@ -439,6 +439,7 @@ get_rates_tbills <- function(year = NULL) {
 
 #' @describeIn msb2 2.4.1 Treasury Bills, Bank Negara Bills, Malaysian Government 
 #' Securities and Khazanah Bonds: Tender Results *
+#' @export
 get_tbills_tender <- function(bill_type = "treasury_bills", year = NULL) {
   # TODO: make sure the positioning of parameters is standardised 
   # if (!is_null(year)) assert_that(year >= 2000)
@@ -447,7 +448,107 @@ get_tbills_tender <- function(bill_type = "treasury_bills", year = NULL) {
 }
 
 #' @describeIn msb2 2.5 Market Indicative Yield: Malaysian Government Securities
+#' @export
 get_rates_mgs <- function(year = NULL) {
   # if (!is_null(year)) assert_that(year >= 2000)
   .get_msb_data("2.5", year = year)
+}
+
+#' @describeIn msb2 2.6 Exchange Rates: Malaysian Ringgit
+#' @export
+get_rates_myr <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.6", year = year)
+}
+
+#' @describeIn msb2 2.6.1 Exchange Rates: the Malaysian Ringgit (Daily)
+#' @export
+get_rates_myr_daily <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.6.1", year = year)
+}
+
+#' @describeIn msb2 2.7 Volume of Transaction in Interbank Money Market
+#' @export
+get_volume_interbank_mm <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.7", year = year)
+}
+
+#' @describeIn msb2 2.8 Volume of Interbank Transactions in the Kuala Lumpur Foreign Exchange Market
+#' @export
+get_volume_interbank_forex <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.8", year = year)
+}
+
+#' @describeIn msb2 2.9 Funds Raised in the Capital Market (by Public Sector)
+#' @export
+get_cap_funds_public <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.9", year = year)
+}
+
+#' @describeIn msb2 2.10 Funds Raised in the Capital Market (by Private Sector)
+#' @export
+get_cap_funds_private <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.10", year = year)
+}
+
+#' @describeIn msb2 2.11 New Issues of Corporate Bond and/or Sukuk
+#' @export
+get_bond_issues <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.11", year = year)
+}
+
+#' @describeIn msb2 2.12 Bursa Malaysia Securities Berhad: Selected Indicators
+#' @export
+get_bursa_indicators <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.12", year = year)
+}
+
+#' @describeIn msb2 2.13 Futures and Options Markets: Selected Indicators
+#' @export
+get_futures_indicators <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.13", year = year)
+}
+
+#' @describeIn msb2 2.14 Turnover of Conventional and Islamic Money Market
+#' @export
+get_mm_turnover <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.14", year = year)
+}
+
+#' @describeIn msb2 2.15 Turnover of Derivatives Transactions
+#' @export
+get_deriv_turnover <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.15", year = year)
+}
+
+#' @describeIn msb2 2.16 Turnover of Debt Securities and Sukuk
+#' @export
+get_debt_turnover <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.16", year = year)
+}
+
+#' @describeIn msb2 2.17 Turnover of Foreign Currency Market Transactions
+#' @export
+get_forex_turnover <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.17", year = year)
+}
+
+#' @describeIn msb2 2.18 Net Financing through the Banking System, Development 
+#' Financial Institutions (DFIs) and Corporate Bonds (CB)
+#' @export
+get_net_financing <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("2.18", year = year)
 }

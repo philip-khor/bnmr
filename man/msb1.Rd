@@ -26,7 +26,7 @@
 \alias{get_islm_fin_inv_concept}
 \alias{get_islm_fin_inv_purpose_sectors}
 \alias{get_islm_inv_maturity}
-\title{Monetary and banking system (MSB section 1)}
+\title{Monetary and banking system}
 \usage{
 get_reserve_money(year = NULL)
 
@@ -84,7 +84,7 @@ get_islm_inv_maturity(year = NULL)
 \item{capital}{One of "ibs", "islamic", "total"}
 }
 \description{
-Monetary and banking system (MSB section 1)
+Monetary and banking system
 }
 \section{Functions}{
 \itemize{

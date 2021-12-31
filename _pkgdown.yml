@@ -4,9 +4,17 @@ development:
 reference:
 - title: All functions
   contents: has_keyword("api")
-- title: Monetary and banking (MSB)
-  contents: starts_with("msb")
+
+- title: Monthly Statistical Bulletin (MSB)
+  desc: > 
+    The following functions refer to statistics 
+    published in the Monthly Statistical Bulletin.
+
+- subtitle: 1. Monetary and banking system
+  contents: starts_with("msb1")
+- subtitle: 2. Financial and capital markets
+  contents: starts_with("msb2") 
 
 template:
   bootstrap: 5
-  bootswatch: cosmo
+  bootswatch: lux

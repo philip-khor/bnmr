@@ -11,7 +11,7 @@
 \alias{get_sys_nid_holder}
 \alias{get_sys_fc_deps_holder}
 \alias{get_sys_fd_maturity}
-\title{MSB Deposits}
+\title{Monetary and banking system: deposits}
 \usage{
 get_sys_deps_type(year = NULL)
 
@@ -39,7 +39,7 @@ get_sys_fd_maturity(year = NULL, type = "total")
 \item{ins}{One of "commercial", "islamic"}
 }
 \description{
-MSB Deposits
+Monetary and banking system: deposits
 }
 \section{Functions}{
 \itemize{
