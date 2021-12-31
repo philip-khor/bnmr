@@ -28,10 +28,6 @@
 #' @export
 #' @source https://api.bnm.gov.my/
 #'
-#'
-#'
-#'
-#'
 get_exchange_rate <- function(currency = NULL,
                           session = "1130",
                           quote = "rm") {
