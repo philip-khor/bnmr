@@ -246,7 +246,6 @@ get_sys_npl_sector <- function(year = NULL) {
 #' @name msb_deposits
 #' @param year Scalar integer
 #' @param type Banking institution type; one of "commercial" "islamic" "investment" "total"
-
 NULL
 
 #' @describeIn msb_deposits 1.24 Banking System: Total Deposits by Type
@@ -297,7 +296,8 @@ get_sys_repo_holder <- function(year = NULL, ins = "commercial") {
 #' @export
 get_sys_nid_holder <- function(year = NULL, type = "total") {
   # type and fin_ins have the same value constraints
-  assert_that(type %in% c("commerical", "islamic", "investment", "total"))
+  # TODO: can we somehow shift the assertion check to .get_msb_data? 
+  assert_that(type %in% c("commercial", "islamic", "investment", "total"))
   .get_msb_data("1.25.4", year = year, fin_ins = type)
 }
 
@@ -305,14 +305,14 @@ get_sys_nid_holder <- function(year = NULL, type = "total") {
 #' and Other Deposits by Holder
 #' @export
 get_sys_fc_deps_holder <- function(year = NULL, type = "total") {
-  assert_that(type %in% c("commerical", "islamic", "investment", "total"))
+  assert_that(type %in% c("commercial", "islamic", "investment", "total"))
   .get_msb_data("1.25.5", year = year, fin_ins = type)
 }
 #' @describeIn msb_deposits 1.25.6 Banking System: Fixed Deposits,
 #' Special Investment Deposits and General Deposit Investment by Original Maturity
 #' @export
 get_sys_fd_maturity <- function(year = NULL, type = "total") {
-  assert_that(type %in% c("commerical", "islamic", "investment", "total"))
+  assert_that(type %in% c("commercial", "islamic", "investment", "total"))
   .get_msb_data("1.25.6", year = year, fin_ins = type)
 }
 
