@@ -66,6 +66,8 @@ get_net_financing(year = NULL)
 }
 \arguments{
 \item{year}{Scalar integer}
+
+\item{bill_type}{One of "treasury_bills", "bank_negara_bills", "malaysian_government_securities", "khazanah_bonds"}
 }
 \description{
 Financial and capital markets

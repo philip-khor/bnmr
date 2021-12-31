@@ -439,6 +439,7 @@ get_rates_tbills <- function(year = NULL) {
 
 #' @describeIn msb2 2.4.1 Treasury Bills, Bank Negara Bills, Malaysian Government 
 #' Securities and Khazanah Bonds: Tender Results *
+#' @param bill_type One of "treasury_bills", "bank_negara_bills", "malaysian_government_securities", "khazanah_bonds"
 #' @export
 get_tbills_tender <- function(bill_type = "treasury_bills", year = NULL) {
   # TODO: make sure the positioning of parameters is standardised 
