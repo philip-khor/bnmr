@@ -4,6 +4,8 @@ development:
 reference:
 - title: All functions
   contents: has_keyword("api")
+- title: Monetary and banking (MSB)
+  contents: starts_with("msb")
 
 - title: Monthly Statistical Bulletin (MSB)
   desc: > 
