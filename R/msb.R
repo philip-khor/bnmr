@@ -589,16 +589,16 @@ get_federal_devex <- function(year = NULL) {
 
 #' @describeIn msb3 3.1.4-3.1.6 Federal Government Debt
 #' @export
-#' @importFrom dplyr case_when
 #' @param by Classification of government debt: one of "original_maturity", "holder", "currency_and_remaining_maturity"
 get_federal_debt <- function(year = NULL, by = "holder") {
   # if (!is_null(year)) assert_that(year >= 2000)
   assert_that(by %in% c("original_maturity", "holder", "currency_and_remaining_maturity"))
-  case_when(
-    by == "original_maturity" ~ .get_msb_data("3.1.4", year = year), 
-    by == "holder" ~ .get_msb_data("3.1.5", year = year),
-    TRUE ~ .get_msb_data("3.1.6", year = year)
-  )  
+  section <- c(
+    original_maturity = "3.1.4", 
+    holder = "3.1.5", 
+    currency_and_remaining_maturity = "3.1.6"
+  )
+  .get_msb_data(section[[by]], year = year)
 }
 
 

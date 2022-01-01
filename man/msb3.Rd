@@ -8,6 +8,7 @@
 \alias{get_federal_devex}
 \alias{get_federal_debt}
 \alias{get_rentas_foreign_debt_holdings}
+\alias{get_economic_indicators}
 \title{External sector and macroeconomic indicators}
 \usage{
 get_federal_finance(year = NULL)
@@ -21,6 +22,8 @@ get_federal_devex(year = NULL)
 get_federal_debt(year = NULL, by = "holder")
 
 get_rentas_foreign_debt_holdings(year = NULL)
+
+get_economic_indicators(year = NULL)
 }
 \arguments{
 \item{year}{Scalar integer}
@@ -43,5 +46,7 @@ External sector and macroeconomic indicators
 \item \code{get_federal_debt}: 3.1.4-3.1.6 Federal Government Debt
 
 \item \code{get_rentas_foreign_debt_holdings}: 3.2 RENTAS- Foreign Holdings in Debt Securities and Sukuk
+
+\item \code{get_economic_indicators}: 3.5 Selected Economic Indicators
 }}
 

@@ -29,8 +29,10 @@ External sector and macroeconomic indicators: aggregate output
 \examples{
 # we retrieve GDP by expenditure by default 
 res <- get_aggregate_output()
+
 # result is a nested list
 str(res)
+
 # to get change at 2000 prices run the following: 
 res$change$base_2000 
 }
