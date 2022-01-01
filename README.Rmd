@@ -43,3 +43,7 @@ This is a basic example which shows you how to solve a common problem:
 library(bnmr)
 get_base_rate()
 ```
+
+## License 
+
+This project is licensed under the terms of the MIT license.
