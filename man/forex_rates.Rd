@@ -4,7 +4,7 @@
 \alias{forex_rates}
 \alias{get_usd_interbank_intraday_rate}
 \alias{get_kl_usd_reference_rate}
-\title{Forex rates}
+\title{Interbank forex rates}
 \source{
 https://apikijangportal.bnm.gov.my/
 }
@@ -23,7 +23,7 @@ If specified, return values for the specified date.}
 \item{month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
-Forex rates
+Interbank forex rates
 }
 \details{
 USD Interbank Intraday Rate: Obtain USD/MYR interbank intraday highest and 

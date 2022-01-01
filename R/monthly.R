@@ -152,7 +152,7 @@ get_kijang_emas <- function(date = NULL,
   )
 }
 
-#' Forex rates 
+#' Interbank forex rates 
 #' 
 #' @name forex_rates
 #' @inheritParams get_interbank_rates

@@ -2,7 +2,7 @@
 % Please edit documentation in R/exchange_rate.R
 \name{get_exchange_rate}
 \alias{get_exchange_rate}
-\title{Exchange Rate}
+\title{KL Interbank Foreign Exchange Market Exchange Rate}
 \source{
 https://apikijangportal.bnm.gov.my/
 }
@@ -18,9 +18,8 @@ A snapshot of the exchange rate daily at 0900, 1130, 1200 and 1700 intervals}
 \item{quote}{Base currency (Ringgit ("rm") or foreign currency ("fx")) as the denominator for the exchange rate}
 }
 \description{
-This function allows you to obtain currency exchange rates
+Obtain currency exchange rates
 from the Interbank Foreign Exchange Market in Kuala Lumpur
-from the BNM API. The price of selected countries currency
 in relation to Ringgit.
 }
 \examples{
