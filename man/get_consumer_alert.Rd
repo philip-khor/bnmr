@@ -4,7 +4,7 @@
 \alias{get_consumer_alert}
 \title{Consumer Alert}
 \source{
-https://api.bnm.gov.my/
+https://apikijangportal.bnm.gov.my/
 }
 \usage{
 get_consumer_alert()
@@ -18,4 +18,4 @@ from the BNM API.
 \examples{
 get_consumer_alert()
 }
-\keyword{api}
+\keyword{rates_and_volumes}

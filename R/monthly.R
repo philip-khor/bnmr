@@ -42,26 +42,47 @@
   }
 }
 
+# EXCLUDE COVERAGE START
+.products <- c(
+  "money_market_operations",
+  "interbank",
+  "overall"
+)
+# EXCLUDE COVERAGE END
 
-
-#' Islamic Interbank Rate
-#'
-#' This function allows you to obtain daily weighted average of Islamic
-#' interbank deposit rates for various tenures. (Jan 2015-present)
-#' from the BNM API.
+#' Interbank money market/deposit rates and volume
+#'  
+#' @description Obtain daily interbank money market rates and volumes of transactions according
+#' to tenure (2015 - present) from the BNM API.
+#' 
+#' @name get_interbank_rates
+#' @param year,month Year and month as integers. If date, year and month left blank, return today's values.
 #' @param date Character string of date with format as defined by RFC 3339, section 5.6
 #' (YYYY-MM-DD).
 #' If specified, return values for the specified date.
-#' @param year,month Year and month as integers. If date, year and month left blank, return today's values.
-#' @keywords api
-#' @export
+#' @param product One of "money_market_operations", "interbank" or "overall"
+#' @keywords rates_and_volumes
+#' @details 
+#' Interbank money market rate: Daily interbank money market rates and volumes of transactions according to tenure. (2015 - present)
+#' Interbank money market volume: Daily interbank money market rates and volumes of transactions according to tenure. (2015 - present)
+#' Islamic interbank deposit rate: Daily weighted average of Islamic interbank deposit rates for various tenures. (Jan 2015-present)
 #' @examples
-#' \dontrun{islamic_interbank_rate()}
+#' \dontrun{get_interest_rate()}
+#' get_interest_rate(date = "2018-01-01")
+#' get_interest_rate(year = 2016, month = 2)
+#' get_interest_rate(product = "overall", year = 2016, month = 2)
+#' \dontrun{get_interest_volume()}
+#' get_interest_volume(date = "2018-01-01")
+#' get_interest_volume(year = 2016, month = 2)
+#' get_interest_volume(product = "overall", year = 2016, month = 2)
+#' \dontrun{get_islamic_interbank_rate()}
 #' get_islamic_interbank_rate(date = "2018-01-01")
 #' get_islamic_interbank_rate(year = 2016, month = 2)
-#' @source https://api.bnm.gov.my/
-#'
-#'
+#' @source https://apikijangportal.bnm.gov.my/
+NULL 
+
+#' @describeIn get_interbank_rates Islamic interbank deposit rate
+#' @export
 get_islamic_interbank_rate <- function(date = NULL,
                                        year = NULL,
                                        month = NULL) {
@@ -71,23 +92,8 @@ get_islamic_interbank_rate <- function(date = NULL,
   )
 }
 
-#' Interest Volume
-#'
-#' This function allows you to obtain daily interbank money
-#' market rates and volumes of transactions according to tenure.
-#' (2015 - present) from the BNM API.
-#' @inheritParams get_islamic_interbank_rate
-#' @param product One of "money_market_operations", "interbank" or "overall"
-#' @keywords api
+#' @describeIn get_interbank_rates Interbank money market volume
 #' @export
-#' @examples
-#' \dontrun{get_interest_volume()}
-#' get_interest_volume(date = "2018-01-01")
-#' get_interest_volume(year = 2016, month = 2)
-#' get_interest_volume(product = "overall", year = 2016, month = 2)
-#' @source https://api.bnm.gov.my/
-#'
-
 get_interest_volume <- function(product = "money_market_operations",
                                 date = NULL,
                                 year = NULL,
@@ -102,35 +108,15 @@ get_interest_volume <- function(product = "money_market_operations",
     month = month,
     product = product
   )
-  # .interest(type = "volume",
-  #           product = product,
-  #           date = date, year = year, month = month)
 }
 
-
-
-#' Interest Rate
-#'
-#' This function allows you to obtain daily interbank money
-#' market rates and volumes of transactions according to
-#' tenure. (2015 - present) from the BNM API.
-#' @inheritParams get_interest_volume
-#' @keywords api
+#' @describeIn get_interbank_rates Interbank money market rate
 #' @export
-#' @examples
-#' \dontrun{get_interest_rate()}
-#' get_interest_rate(date = "2018-01-01")
-#' get_interest_rate(year = 2016, month = 2)
-#' get_interest_rate(product = "overall", year = 2016, month = 2)
-#' @source https://api.bnm.gov.my/
-#'
-#'
-#'
-
-get_interest_rate <- function(product = "money_market_operations",
-                          date = NULL,
-                          year = NULL,
-                          month = NULL) {
+get_interest_rate <- function(
+  product = "money_market_operations",
+  date = NULL,
+  year = NULL,
+  month = NULL) {
   stopifnot(product %in% .products)
   .get_monthly_data(
     stub = "/interest-rate",
@@ -139,27 +125,20 @@ get_interest_rate <- function(product = "money_market_operations",
     month = month,
     product = product
   )
-  # .interest(type = "rate",
-  #           product = product,
-  #           date = date, year = year, month = month)
 }
-
 
 #' Kijang Emas
 #'
-#' This function allows you to obtain daily trading prices
+#' Obtain daily trading prices
 #' of Malaysia gold bullion coin from the BNM API.
-#' @inheritParams islamic_interbank_rate
-
-#' @keywords api
+#' @inheritParams get_interbank_rates
+#' @keywords rates_and_volumes
 #' @export
 #' @examples
 #' \dontrun{get_kijang_emas()}
 #' get_kijang_emas(date = "2020-09-01")
 #' get_kijang_emas(year = 2016, month = 2)
-#' @source https://api.bnm.gov.my/
-#'
-#'
+#' @source https://apikijangportal.bnm.gov.my/
 get_kijang_emas <- function(date = NULL,
                             year = NULL,
                             month = NULL) {
@@ -173,24 +152,33 @@ get_kijang_emas <- function(date = NULL,
   )
 }
 
-#' USD Interbank Intraday Rate
-#'
-#' This function allows you to obtain USD/MYR
-#' interbank intraday highest and lowest rate from the BNM API.
-#' Rates are obtained from the best U.S. dollar
-#' against Malaysian ringgit interbank highest
-#' and lowest dealt rates by commercial banks on the specific date.
-#' @inheritParams islamic_interbank_rate
-#' @keywords api
-#' @export
+#' Interbank forex rates 
+#' 
+#' @name forex_rates
+#' @inheritParams get_interbank_rates
+#' @keywords rates_and_volumes
+#' @details 
+#' USD Interbank Intraday Rate: Obtain USD/MYR interbank intraday highest and 
+#' lowest rate from the BNM API. Rates are obtained from the best U.S. dollar 
+#' against Malaysian ringgit interbank highest and lowest dealt rates by 
+#' commercial banks on the specific date.
+#' KL USD Reference Rate: Obtain a reference rate that is computed based on weighted
+#' average volume of the interbank USD/MYR FX spot rate transacted by
+#' the domestic financial institutions and published
+#' daily at 3:30 p.m from the BNM API.
 #' @examples
-#' \dontrun{usd_interbank_intraday_rate()}
-#' usd_interbank_intraday_rate(date = "2018-01-03")
-#' usd_interbank_intraday_rate(year = 2016, month = 2)
-#' @source https://api.bnm.gov.my/
-#'
-#'
-usd_interbank_intraday_rate <- function(date = NULL,
+#' \dontrun{get_usd_interbank_intraday_rate()}
+#' get_usd_interbank_intraday_rate(date = "2018-01-03")
+#' get_usd_interbank_intraday_rate(year = 2016, month = 2)
+#' \dontrun{get_kl_usd_reference_rate()}
+#' get_kl_usd_reference_rate(date = "2018-01-03")
+#' get_kl_usd_reference_rate(year = 2016, month = 2)
+#' @source https://apikijangportal.bnm.gov.my/
+NULL
+
+#' @describeIn forex_rates USD Interbank Intraday Rate 
+#' @export
+get_usd_interbank_intraday_rate <- function(date = NULL,
                                         year = NULL,
                                         month = NULL) {
   .get_monthly_data(
@@ -201,26 +189,9 @@ usd_interbank_intraday_rate <- function(date = NULL,
   )
 }
 
-
-#' KL USD Reference Rate
-#'
-#' This function allows you to obtain a reference rate
-#' that is computed based on weighted average volume
-#' of the interbank USD/MYR FX spot rate transacted by
-#' the domestic financial institutions and published
-#' daily at 3:30 p.m from the BNM API.
-#' @inheritParams islamic_interbank_rate
-#' @keywords api
+#' @describeIn forex_rates KL USD Reference Rate
 #' @export
-#' @examples
-#' \dontrun{kl_usd_reference_rate()}
-#' kl_usd_reference_rate(date = "2018-01-03")
-#' kl_usd_reference_rate(year = 2016, month = 2)
-#' @source https://api.bnm.gov.my/
-#'
-#'
-
-kl_usd_reference_rate <- function(date = NULL,
+get_kl_usd_reference_rate <- function(date = NULL,
                                   year = NULL,
                                   month = NULL) {
   .get_monthly_data(
@@ -231,81 +202,4 @@ kl_usd_reference_rate <- function(date = NULL,
   )
 }
 
-# EXCLUDE COVERAGE START
-#' Islamic Interbank Rate
-#'
-#' Deprecated. Use \code{\link{get_islamic_interbank_rate}}
-#' @inheritParams get_islamic_interbank_rate
-#'
-#' @export
-islamic_interbank_rate <- function(date = NULL,
-                                   year = NULL,
-                                   month = NULL) {
-  .Deprecated("get_islamic_interbank_rate")
-  get_islamic_interbank_rate(
-    date = date,
-    year = year,
-    month = month
-  )
-}
-
-.products <- c(
-  "money_market_operations",
-  "interbank",
-  "overall"
-)
-#' Interest Volume
-#'
-#' Deprecated. Use \code{\link{get_interest_volume}}
-#' @inheritParams get_interest_volume
-#'
-#' @export
-interest_volume <- function(product = "money_market_operations",
-                            date = NULL,
-                            year = NULL,
-                            month = NULL) {
-  .Deprecated("get_interest_volume")
-  get_interest_volume(
-    product = product,
-    date = date,
-    year = year,
-    month = month
-  )
-}
-#' Interest Rate
-#'
-#' Deprecated. Use \code{\link{get_interest_rate}}
-#' @inheritParams get_interest_rate
-#'
-#' @export
-interest_rate <- function(product = "money_market_operations",
-                          date = NULL,
-                          year = NULL,
-                          month = NULL) {
-  .Deprecated("get_interest_rate")
-  get_interest_rate(
-    product = product,
-    date = date,
-    year = year,
-    month = month
-  )
-}
-
-#' Kijang Emas
-#'
-#' Deprecated. Use \code{\link{get_kijang_emas}}
-#' @inheritParams get_kijang_emas
-#'
-#' @export
-kijang_emas <- function(date = NULL,
-                        year = NULL,
-                        month = NULL) {
-  .Deprecated("get_kijang_emas")
-  get_kijang_emas(
-    date = date,
-    year = year,
-    month = month
-  )
-}
-# EXCLUDE COVERAGE END
 

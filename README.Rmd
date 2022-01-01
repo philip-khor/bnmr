@@ -12,18 +12,18 @@ knitr::opts_chunk$set(
   out.width = "100%"
 )
 ```
+
 # bnmr
 
-<img src="man/figures/logo.png" align="right" width=120 height=139 alt="" />
+<img src="man/figures/logo.png" width=120 height=139 align="right" /></img>
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/philip-khor/bnmr.svg?branch=master)](https://travis-ci.org/philip-khor/bnmr)
 [![Codecov test coverage](https://codecov.io/gh/philip-khor/bnmr/branch/master/graph/badge.svg)](https://codecov.io/gh/philip-khor/bnmr?branch=master)
 [![R build status](https://github.com/philip-khor/bnmr/workflows/R-CMD-check/badge.svg)](https://github.com/philip-khor/bnmr/actions)
-[![R-CMD-check](https://github.com/philip-khor/bnmr/workflows/R-CMD-check/badge.svg)](https://github.com/philip-khor/bnmr/actions)
 <!-- badges: end -->
   
 The goal of **bnmr** is to provide a set of convenient wrapper functions for the Central Bank of Malaysia's API. 
+
 
 ## Installation
 
@@ -43,3 +43,7 @@ This is a basic example which shows you how to solve a common problem:
 library(bnmr)
 get_base_rate()
 ```
+
+## License 
+
+This project is licensed under the terms of the MIT license.

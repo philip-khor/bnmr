@@ -1,22 +1,40 @@
+home:
+  title: Convenience functions for BNM's Open API
+  strip_header: true
+
+url: https://bnmr.philipscurve.com
+
 development:
   mode: auto
 
 reference:
-- title: All functions
-  contents: has_keyword("api")
+- title: Rates and Volumes
+  contents: has_keyword("rates_and_volumes")
 
 - title: Monthly Statistical Bulletin (MSB)
-  desc: > 
-    The following functions refer to statistics 
+  desc: >
+    The following functions refer to statistics
     published in the Monthly Statistical Bulletin.
 
 - subtitle: 1. Monetary and banking system
   contents: starts_with("msb1")
 - subtitle: 2. Financial and capital markets
-  contents: starts_with("msb2") 
+  contents: starts_with("msb2")
 - subtitle: 3. External sector and macroeconomic indicators
   contents: starts_with("msb3")
+- subtitle: 4. Insurance and takaful
+- subtitle: 5. Other indicators
+
+- title: Financial Inclusion
+
+- title: Other statistics
+  contents: has_keyword("others")
 
 template:
   bootstrap: 5
   bootswatch: lux
+  bslib:
+    pkgdown-nav-height: 98.5px
+
+navbar:
+  bg: dark

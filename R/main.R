@@ -1,7 +1,7 @@
 #' Access BNM API
 #'
 #' This function allows you to obtain data from the BNM API.
-#' @param path Specifies the API path per https://api.bnm.gov.my/
+#' @param path Specifies the API path per https://apikijangportal.bnm.gov.my/
 #' @param ... Additional arguments to httr::GET()
 #' @examples
 #' bnm_api("/welcome")
@@ -9,7 +9,7 @@
 #' @importFrom httr GET accept user_agent content http_type http_error status_code
 #' @importFrom jsonlite fromJSON
 #' @importFrom glue glue
-#' @source https://api.bnm.gov.my/, https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
+#' @source https://apikijangportal.bnm.gov.my/, https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
 #'
 
 bnm_api <- function(path, ...) {
@@ -50,7 +50,7 @@ bnm_api <- function(path, ...) {
 
 #' Get BNM Data as tibble
 #'
-#' @param path Specifies the API path per https://api.bnm.gov.my/
+#' @param path Specifies the API path per https://apikijangportal.bnm.gov.my/
 #' @importFrom tibble as_tibble
 #' @importFrom purrr discard
 #' @noRd
@@ -61,13 +61,13 @@ get_bnm_tbl <- function(path, ...) {
 #' Get BNM Data
 #'
 #' This function allows you to obtain data from the BNM API.
-#' @param path Specifies the API path per https://api.bnm.gov.my/
+#' @param path Specifies the API path per https://apikijangportal.bnm.gov.my/
 #' @param ... Additional arguments to be passed to bnm_api
 #' @keywords internal cats
 #' @examples
 #' get_bnm_data("/welcome")
 #' @noRd
-#' @source https://api.bnm.gov.my/
+#' @source https://apikijangportal.bnm.gov.my/
 
 get_bnm_data <- function(path, ...) {
   bnm_api(path, ...)[["content"]][["data"]]

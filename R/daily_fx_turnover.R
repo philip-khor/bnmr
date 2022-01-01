@@ -7,7 +7,7 @@
 #' @examples
 #' get_daily_fx_turnover()
 #' @export
-#' @source https://api.bnm.gov.my/
+#' @source https://apikijangportal.bnm.gov.my/
 #'
 #'
 get_daily_fx_turnover <- function() get_bnm_tbl("/fx-turn-over")

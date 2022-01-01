@@ -1,10 +1,10 @@
 #' Renminbi
 #'
-#' This function allows you to extract indicative CNY/MYR
+#' Extract indicative CNY/MYR
 #' forward prices for trade settlement and RMB deposit acceptance rates
 #' from the BNM API as a tidy tibble.
 #' @param type String. Either "dar" or "fx_forward".
-#' @keywords api
+#' @keywords rates_and_volumes
 #' @importFrom tidyr spread unnest
 #' @importFrom tibble tibble
 #' @importFrom purrr map_dbl
@@ -12,7 +12,7 @@
 #' @examples
 #' \dontrun{renminbi(type = "dar")}
 #' renminbi(type = "fx_forward")
-#' @source https://api.bnm.gov.my/
+#' @source https://apikijangportal.bnm.gov.my/
 #' @export
 
 renminbi <- function(type = "dar") {

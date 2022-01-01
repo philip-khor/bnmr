@@ -4,23 +4,11 @@
 #' and websites which are neither authorised nor approved
 #' under the relevant laws and regulations administered by BNM
 #' from the BNM API.
-#' @keywords api
+#' @keywords rates_and_volumes
 #' @examples
 #' get_consumer_alert()
 #' @export
-#' @source https://api.bnm.gov.my/
+#' @source https://apikijangportal.bnm.gov.my/
 #'
 #'
 get_consumer_alert <- function() get_bnm_tbl("/consumer-alert")
-
-# EXCLUDE COVERAGE START
-#' Consumer Alert
-#'
-#' Deprecated. Use \code{\link{get_consumer_alert}}
-#'
-#' @export
-consumer_alert <- function() {
-  .Deprecated("get_consumer_alert")
-  get_consumer_alert()
-}
-# EXCLUDE COVERAGE END

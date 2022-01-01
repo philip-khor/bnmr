@@ -1,32 +1,18 @@
-.er <- function(path, session = session, quote = quote) {
-  stopifnot(
-    session %in% c("0900", "1130", "1200", "1700"),
-    quote %in% c("rm", "fx")
-  )
-
-  get_bnm_tbl(path,
-              query = list(
-                session = session,
-                quote = quote
-              )
-  )
-}
-
-#' Exchange Rate
+#' KL Interbank Foreign Exchange Market Exchange Rate
 #'
-#' This function allows you to obtain currency exchange rates
+#' Obtain currency exchange rates
 #' from the Interbank Foreign Exchange Market in Kuala Lumpur
-#' from the BNM API. The price of selected countries currency
 #' in relation to Ringgit.
+#' 
 #' @param currency 3-characters currency code based on ISO4217 standard
 #' @param session Character string "0900", "1130", "1200" or "1700".
 #' A snapshot of the exchange rate daily at 0900, 1130, 1200 and 1700 intervals
 #' @param quote Base currency (Ringgit ("rm") or foreign currency ("fx")) as the denominator for the exchange rate
-#' @keywords api
+#' @keywords rates_and_volumes
 #' @examples
 #' get_exchange_rate()
 #' @export
-#' @source https://api.bnm.gov.my/
+#' @source https://apikijangportal.bnm.gov.my/
 #'
 get_exchange_rate <- function(currency = NULL,
                           session = "1130",
@@ -39,21 +25,15 @@ get_exchange_rate <- function(currency = NULL,
     }
     path <- paste0(path, "/", currency)
   }
+  stopifnot(
+    session %in% c("0900", "1130", "1200", "1700"),
+    quote %in% c("rm", "fx")
+  )
 
-  .er(path = path, session = session, quote = quote)
+  get_bnm_tbl(path,
+              query = list(
+                session = session,
+                quote = quote
+              )
+  )
 }
-
-# EXCLUDE COVERAGE START
-#' Exchange rate
-#'
-#' Deprecated. Use \code{\link{get_exchange_rate}}
-#' @inheritParams get_exchange_rate
-#'
-#' @export
-exchange_rate <- function(currency = NULL,
-                          session = "1130",
-                          quote = "rm") {
-  .Deprecated("get_exchange_rate")
-  get_exchange_rate(currency, session, quote)
-}
-# EXCLUDE COVERAGE END

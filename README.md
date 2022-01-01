@@ -3,12 +3,10 @@
 
 # bnmr
 
-<img src="man/figures/logo.png" align="right" width=120 height=139 alt="" />
+<img src="man/figures/logo.png" width=120 height=139 align="right" /></img>
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.org/philip-khor/bnmr.svg?branch=master)](https://travis-ci.org/philip-khor/bnmr)
 [![Codecov test
 coverage](https://codecov.io/gh/philip-khor/bnmr/branch/master/graph/badge.svg)](https://codecov.io/gh/philip-khor/bnmr?branch=master)
 [![R build
@@ -17,6 +15,8 @@ status](https://github.com/philip-khor/bnmr/workflows/R-CMD-check/badge.svg)](ht
 
 The goal of **bnmr** is to provide a set of convenient wrapper functions
 for the Central Bank of Malaysia’s API.
+
+</br></br></br></br>
 
 ## Installation
 
@@ -49,3 +49,7 @@ get_base_rate()
 #> 10 ""          Industrial and Com~      2.52             5.45               3.47
 #> # ... with 25 more rows, and 1 more variable: base_financing_rate <dbl>
 ```
+
+## License
+
+This project is licensed under the terms of the MIT license.
