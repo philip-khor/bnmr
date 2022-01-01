@@ -9,7 +9,7 @@ Maintainer: Philip Khor <pk.qa@outlook.com>
 Description: A set of wrapper functions for the Open API of the Central Bank of Malaysia.
 URL: https://github.com/philip-khor/bnmr
 BugReports: https://github.com/philip-khor/bnmr/issues
-License: CC0
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Imports: httr, 
