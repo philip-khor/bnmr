@@ -553,3 +553,135 @@ get_net_financing <- function(year = NULL) {
   # if (!is_null(year)) assert_that(year >= 2000)
   .get_msb_data("2.18", year = year)
 }
+
+#' External sector and macroeconomic indicators
+#' @param year Scalar integer
+#' @name msb3
+NULL
+
+#' @describeIn msb3 3.1 Federal Government Finance
+#' @export
+get_federal_finance <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("3.1", year = year)
+}
+
+#' @describeIn msb3 3.1.1 Federal Government Revenue
+#' @export
+get_federal_revenue <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("3.1.1", year = year)
+}
+
+#' @describeIn msb3 3.1.2 Federal Government Operating Expenditure by Object
+#' @export
+get_federal_opex <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("3.1.2", year = year)
+}
+
+#' @describeIn msb3 3.1.3 Federal Government Development Expenditure: A Functional Classification
+#' @export
+get_federal_devex <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("3.1.3", year = year)
+}
+
+#' @describeIn msb3 3.1.4-3.1.6 Federal Government Debt
+#' @export
+#' @importFrom dplyr case_when
+#' @param by Classification of government debt: one of "original_maturity", "holder", "currency_and_remaining_maturity"
+get_federal_debt <- function(year = NULL, by = "holder") {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  assert_that(by %in% c("original_maturity", "holder", "currency_and_remaining_maturity"))
+  case_when(
+    by == "original_maturity" ~ .get_msb_data("3.1.4", year = year), 
+    by == "holder" ~ .get_msb_data("3.1.5", year = year),
+    TRUE ~ .get_msb_data("3.1.6", year = year)
+  )  
+}
+
+
+#' @describeIn msb3 3.2 RENTAS- Foreign Holdings in Debt Securities and Sukuk
+#' @export
+get_rentas_foreign_debt_holdings <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("3.2", year = year)
+}
+
+#' External sector and macroeconomic indicators: aggregate output
+#' 
+#' @param year Scalar integer
+#' @param metric One of "gdp", "gni"
+#' @param output_by One of "expenditure", "activity"
+#' @export 
+#' @return nested list with "amt" and "change". Different base rates are 
+#' nested within. 
+#' @examples 
+#' # we retrieve GDP by expenditure by default 
+#' res <- get_aggregate_output()
+#' 
+#' # result is a nested list
+#' str(res)
+#' 
+#' # to get change at 2000 prices run the following: 
+#' res$change$base_2000 
+#' @name msb3_output
+get_aggregate_output <- function(year = NULL, metric = "gdp", output_by = "expenditure", change = TRUE) {
+  assert_that(metric %in% c("gdp", "gni"))
+  assert_that(output_by %in% c("expenditure", "activity"))
+  if (metric == "gdp") {
+    if (output_by == "expenditure") {
+      message("GDP by expenditure")
+      return(
+        list(
+          # TODO find a better name than amt 
+          # amt = .get_msb_data("3.2", year = year), 
+          change = list(
+            base_2000 = .get_msb_data("3.3a", year = year),
+            base_2010 = .get_msb_data("3.3", year = year)
+          )
+        )
+      )
+    } else if (output_by == "activity") {
+      return(
+        list(
+          amt = list(
+            base_2000 = .get_msb_data("3.4.1a", year = year),
+            base_2010 = .get_msb_data("3.4.1", year = year), 
+            current = .get_msb_data("3.4.2", year = year)
+          ), 
+          change = list(
+            base_2000 = .get_msb_data("3.4a", year = year),
+            base_2010 = .get_msb_data("3.4", year = year)
+          )
+        )
+      )
+    }
+  } else if (metric == "gni") {
+    if (output_by == "expenditure") {
+      return(
+        list(
+          # TODO find a better name than amt 
+          # amt = .get_msb_data("3.2", year = year), 
+          amt = list(
+            base_2000 = .get_msb_data("3.3.1a", year = year), 
+            base_2010 = .get_msb_data("3.3.1", year = year)
+          ), 
+          change = NULL
+        )
+      )
+    } else {
+      message("No endpoint for retrieving GNI by economic activity")
+      NULL
+    }
+  }
+
+}
+
+#' @describeIn msb3 3.5 Selected Economic Indicators
+#' @export 
+get_economic_indicators <- function(year = NULL) {
+  # if (!is_null(year)) assert_that(year >= 2000)
+  .get_msb_data("3.5", year = year)
+}
