@@ -4,7 +4,7 @@
 \alias{renminbi}
 \title{Renminbi}
 \source{
-https://api.bnm.gov.my/
+https://apikijangportal.bnm.gov.my/
 }
 \usage{
 renminbi(type = "dar")
@@ -13,7 +13,7 @@ renminbi(type = "dar")
 \item{type}{String. Either "dar" or "fx_forward".}
 }
 \description{
-This function allows you to extract indicative CNY/MYR
+Extract indicative CNY/MYR
 forward prices for trade settlement and RMB deposit acceptance rates
 from the BNM API as a tidy tibble.
 }
@@ -21,4 +21,4 @@ from the BNM API as a tidy tibble.
 \dontrun{renminbi(type = "dar")}
 renminbi(type = "fx_forward")
 }
-\keyword{api}
+\keyword{rates_and_volumes}

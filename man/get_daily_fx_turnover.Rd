@@ -4,7 +4,7 @@
 \alias{get_daily_fx_turnover}
 \title{Daily Foreign Exchange Turnover}
 \source{
-https://api.bnm.gov.my/
+https://apikijangportal.bnm.gov.my/
 }
 \usage{
 get_daily_fx_turnover()

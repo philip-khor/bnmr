@@ -8,17 +8,17 @@
 #'
 #' @param year Optional. Integer value above 2000. Series of
 #' integer values also supported (experimental).
-#' @keywords api opr
+#' @keywords rates_and_volumes
 #' @importFrom purrr map_dfr
 #' @importFrom rlang is_integerish
 #' @export
 #' @examples
-#' \dontrun{opr()}
-#' opr(2018:2019)
-#' @source https://api.bnm.gov.my/
+#' \dontrun{get_opr()}
+#' get_opr(2018:2019)
+#' @source https://apikijangportal.bnm.gov.my/
 #'
 #'
-opr <- function(year = NULL) {
+get_opr <- function(year = NULL) {
   if (is_null(year)) {
     as_tibble(get_bnm_data("/opr"))
   } else {

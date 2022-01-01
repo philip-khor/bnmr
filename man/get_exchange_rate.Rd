@@ -4,7 +4,7 @@
 \alias{get_exchange_rate}
 \title{Exchange Rate}
 \source{
-https://api.bnm.gov.my/
+https://apikijangportal.bnm.gov.my/
 }
 \usage{
 get_exchange_rate(currency = NULL, session = "1130", quote = "rm")
@@ -26,4 +26,4 @@ in relation to Ringgit.
 \examples{
 get_exchange_rate()
 }
-\keyword{api}
+\keyword{rates_and_volumes}

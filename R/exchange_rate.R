@@ -22,11 +22,11 @@
 #' @param session Character string "0900", "1130", "1200" or "1700".
 #' A snapshot of the exchange rate daily at 0900, 1130, 1200 and 1700 intervals
 #' @param quote Base currency (Ringgit ("rm") or foreign currency ("fx")) as the denominator for the exchange rate
-#' @keywords api
+#' @keywords rates_and_volumes
 #' @examples
 #' get_exchange_rate()
 #' @export
-#' @source https://api.bnm.gov.my/
+#' @source https://apikijangportal.bnm.gov.my/
 #'
 get_exchange_rate <- function(currency = NULL,
                           session = "1130",
@@ -42,18 +42,3 @@ get_exchange_rate <- function(currency = NULL,
 
   .er(path = path, session = session, quote = quote)
 }
-
-# EXCLUDE COVERAGE START
-#' Exchange rate
-#'
-#' Deprecated. Use \code{\link{get_exchange_rate}}
-#' @inheritParams get_exchange_rate
-#'
-#' @export
-exchange_rate <- function(currency = NULL,
-                          session = "1130",
-                          quote = "rm") {
-  .Deprecated("get_exchange_rate")
-  get_exchange_rate(currency, session, quote)
-}
-# EXCLUDE COVERAGE END

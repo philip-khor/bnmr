@@ -1,6 +1,6 @@
 .onAttach <- function(libname, pkgname) {
   packageStartupMessage("BNM Open API")
-  packageStartupMessage("Please visit https://api.bnm.gov.my/disclaimer to view disclaimers.")
+  packageStartupMessage("Visit https://apikijangportal.bnm.gov.my/disclaimer to view disclaimers.")
   tryCatch(
     packageStartupMessage(bnm_api("/welcome")$content$api),
     error = function(e) {

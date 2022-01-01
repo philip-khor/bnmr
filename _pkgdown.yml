@@ -2,8 +2,8 @@ development:
   mode: auto
 
 reference:
-- title: All functions
-  contents: has_keyword("api")
+- title: Rates and Volumes
+  contents: has_keyword("rates_and_volumes")
 
 - title: Monthly Statistical Bulletin (MSB)
   desc: > 
@@ -16,6 +16,13 @@ reference:
   contents: starts_with("msb2") 
 - subtitle: 3. External sector and macroeconomic indicators
   contents: starts_with("msb3")
+- subtitle: 4. Insurance and takaful 
+- subtitle: 5. Other indicators 
+
+- title: Financial Inclusion 
+
+- title: Other statistics 
+  contents: has_keyword("others")
 
 template:
   bootstrap: 5

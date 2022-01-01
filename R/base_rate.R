@@ -5,7 +5,7 @@
 #' and Indicative Effective Lending Rates for a standard housing
 #' loan/home financing offered by financial institutions
 #' from the BNM API.
-#' @param bank_code 8 characters of SWIFT code per https://api.bnm.gov.my/
+#' @param bank_code 8 characters of SWIFT code per https://apikijangportal.bnm.gov.my/
 #' @keywords api
 #' @examples
 #' get_base_rate()
@@ -13,7 +13,7 @@
 #' @import lubridate
 #' @importFrom glue glue
 #' @importFrom rlang is_null
-#' @source https://api.bnm.gov.my/
+#' @source https://apikijangportal.bnm.gov.my/
 #'
 
 get_base_rate <- function(bank_code = NULL) {

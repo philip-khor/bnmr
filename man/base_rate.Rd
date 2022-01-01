@@ -7,7 +7,7 @@
 base_rate(bank_code = NULL)
 }
 \arguments{
-\item{bank_code}{8 characters of SWIFT code per https://api.bnm.gov.my/}
+\item{bank_code}{8 characters of SWIFT code per https://apikijangportal.bnm.gov.my/}
 }
 \description{
 Deprecated. Use \code{\link{get_base_rate}}

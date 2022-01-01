@@ -4,13 +4,13 @@
 \alias{get_base_rate}
 \title{Base Rate}
 \source{
-https://api.bnm.gov.my/
+https://apikijangportal.bnm.gov.my/
 }
 \usage{
 get_base_rate(bank_code = NULL)
 }
 \arguments{
-\item{bank_code}{8 characters of SWIFT code per https://api.bnm.gov.my/}
+\item{bank_code}{8 characters of SWIFT code per https://apikijangportal.bnm.gov.my/}
 }
 \description{
 This function allows you to obtain current Base Rates and

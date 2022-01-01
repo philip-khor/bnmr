@@ -4,7 +4,7 @@
 \alias{get_interbank_swap}
 \title{Interbank Swap}
 \source{
-https://api.bnm.gov.my/
+https://apikijangportal.bnm.gov.my/
 }
 \usage{
 get_interbank_swap()
@@ -16,4 +16,4 @@ volume by tenure from the BNM API.
 \examples{
 get_interbank_swap()
 }
-\keyword{api}
+\keyword{rates_and_volumes}
