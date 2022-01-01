@@ -42,6 +42,14 @@
   }
 }
 
+# EXCLUDE COVERAGE START
+.products <- c(
+  "money_market_operations",
+  "interbank",
+  "overall"
+)
+# EXCLUDE COVERAGE END
+
 #' Interbank money market/deposit rates and volume
 #'  
 #' @description Obtain daily interbank money market rates and volumes of transactions according
