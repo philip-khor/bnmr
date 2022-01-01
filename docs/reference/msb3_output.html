@@ -54,12 +54,7 @@
 
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_aggregate_output</span><span class="op">(</span>
-  year <span class="op">=</span> <span class="cn">NULL</span>,
-  metric <span class="op">=</span> <span class="st">"gdp"</span>,
-  output_by <span class="op">=</span> <span class="st">"expenditure"</span>,
-  change <span class="op">=</span> <span class="cn">TRUE</span>
-<span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">get_aggregate_output</span><span class="op">(</span>year <span class="op">=</span> <span class="cn">NULL</span>, metric <span class="op">=</span> <span class="st">"gdp"</span>, output_by <span class="op">=</span> <span class="st">"expenditure"</span><span class="op">)</span></code></pre></div>
     </div>
 
     <div class="section level2">
@@ -82,6 +77,7 @@ nested within.</p>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="co"># we retrieve GDP by expenditure by default </span></span>
 <span class="r-in"><span class="va">res</span> <span class="op">&lt;-</span> <span class="fu">get_aggregate_output</span><span class="op">(</span><span class="op">)</span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> GDP by expenditure</span>
+<span class="r-in"></span>
 <span class="r-in"><span class="co"># result is a nested list</span></span>
 <span class="r-in"><span class="fu"><a href="https://rdrr.io/r/utils/str.html" class="external-link">str</a></span><span class="op">(</span><span class="va">res</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> List of 1</span>
@@ -111,6 +107,7 @@ nested within.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   .. ..$ gro_fix_cap_inf_pub_sec: chr "-18.600000000000"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   .. ..$ exp_of_goo_and_ser     : chr "-4.657889855202"</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>   .. ..$ imp_of_goo_and_ser     : chr "-7.776710334792"</span>
+<span class="r-in"></span>
 <span class="r-in"><span class="co"># to get change at 2000 prices run the following: </span></span>
 <span class="r-in"><span class="va">res</span><span class="op">$</span><span class="va">change</span><span class="op">$</span><span class="va">base_2000</span> </span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> $year_dt</span>

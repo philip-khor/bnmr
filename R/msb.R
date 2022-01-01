@@ -627,7 +627,7 @@ get_rentas_foreign_debt_holdings <- function(year = NULL) {
 #' # to get change at 2000 prices run the following: 
 #' res$change$base_2000 
 #' @name msb3_output
-get_aggregate_output <- function(year = NULL, metric = "gdp", output_by = "expenditure", change = TRUE) {
+get_aggregate_output <- function(year = NULL, metric = "gdp", output_by = "expenditure") {
   assert_that(metric %in% c("gdp", "gni"))
   assert_that(output_by %in% c("expenditure", "activity"))
   if (metric == "gdp") {

@@ -5,12 +5,7 @@
 \alias{get_aggregate_output}
 \title{External sector and macroeconomic indicators: aggregate output}
 \usage{
-get_aggregate_output(
-  year = NULL,
-  metric = "gdp",
-  output_by = "expenditure",
-  change = TRUE
-)
+get_aggregate_output(year = NULL, metric = "gdp", output_by = "expenditure")
 }
 \arguments{
 \item{year}{Scalar integer}
