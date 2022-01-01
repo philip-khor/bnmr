@@ -3,5 +3,8 @@ pkgdown: 2.0.1
 pkgdown_sha: ~
 articles:
   using-bnmr: using-bnmr.html
-last_built: 2022-01-01T01:49Z
+last_built: 2022-01-01T07:05Z
+urls:
+  reference: https://bnmr.philipscurve.com/reference
+  article: https://bnmr.philipscurve.com/articles
 
