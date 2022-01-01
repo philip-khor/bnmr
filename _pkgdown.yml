@@ -14,6 +14,8 @@ reference:
   contents: starts_with("msb1")
 - subtitle: 2. Financial and capital markets
   contents: starts_with("msb2") 
+- subtitle: 3. External sector and macroeconomic indicators
+  contents: starts_with("msb3")
 
 template:
   bootstrap: 5
