@@ -6,7 +6,7 @@
 #' loan/home financing offered by financial institutions
 #' from the BNM API.
 #' @param bank_code 8 characters of SWIFT code per https://apikijangportal.bnm.gov.my/
-#' @keywords api
+#' @keywords rates_and_volumes api
 #' @examples
 #' get_base_rate()
 #' @export
@@ -34,18 +34,5 @@ get_base_rate <- function(bank_code = NULL) {
     get_bnm_tbl("/base-rate/")
   }
 }
-
-# EXCLUDE COVERAGE START
-#' Base rate
-#'
-#' Deprecated. Use \code{\link{get_base_rate}}
-#' @inheritParams get_base_rate
-#'
-#' @export
-base_rate <- function(bank_code = NULL) {
-  .Deprecated(new = "get_base_rate")
-  get_base_rate(bank_code = bank_code)
-}
-# EXCLUDE COVERAGE END
 
 # TODO: write a print method that shows meta?

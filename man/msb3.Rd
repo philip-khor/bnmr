@@ -35,18 +35,18 @@ External sector and macroeconomic indicators
 }
 \section{Functions}{
 \itemize{
-\item \code{get_federal_finance}: 3.1 Federal Government Finance
+\item \code{get_federal_finance()}: 3.1 Federal Government Finance
 
-\item \code{get_federal_revenue}: 3.1.1 Federal Government Revenue
+\item \code{get_federal_revenue()}: 3.1.1 Federal Government Revenue
 
-\item \code{get_federal_opex}: 3.1.2 Federal Government Operating Expenditure by Object
+\item \code{get_federal_opex()}: 3.1.2 Federal Government Operating Expenditure by Object
 
-\item \code{get_federal_devex}: 3.1.3 Federal Government Development Expenditure: A Functional Classification
+\item \code{get_federal_devex()}: 3.1.3 Federal Government Development Expenditure: A Functional Classification
 
-\item \code{get_federal_debt}: 3.1.4-3.1.6 Federal Government Debt
+\item \code{get_federal_debt()}: 3.1.4-3.1.6 Federal Government Debt
 
-\item \code{get_rentas_foreign_debt_holdings}: 3.2 RENTAS- Foreign Holdings in Debt Securities and Sukuk
+\item \code{get_rentas_foreign_debt_holdings()}: 3.2 RENTAS- Foreign Holdings in Debt Securities and Sukuk
 
-\item \code{get_economic_indicators}: 3.5 Selected Economic Indicators
+\item \code{get_economic_indicators()}: 3.5 Selected Economic Indicators
+
 }}
-

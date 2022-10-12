@@ -14,9 +14,7 @@ get_kijang_emas(date = NULL, year = NULL, month = NULL)
 (YYYY-MM-DD).
 If specified, return values for the specified date.}
 
-\item{year}{Year and month as integers. If date, year and month left blank, return today's values.}
-
-\item{month}{Year and month as integers. If date, year and month left blank, return today's values.}
+\item{year, month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
 Obtain daily trading prices

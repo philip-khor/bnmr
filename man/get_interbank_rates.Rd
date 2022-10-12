@@ -46,13 +46,13 @@ Islamic interbank deposit rate: Daily weighted average of Islamic interbank depo
 }
 \section{Functions}{
 \itemize{
-\item \code{get_islamic_interbank_rate}: Islamic interbank deposit rate
+\item \code{get_islamic_interbank_rate()}: Islamic interbank deposit rate
 
-\item \code{get_interest_volume}: Interbank money market volume
+\item \code{get_interest_volume()}: Interbank money market volume
 
-\item \code{get_interest_rate}: Interbank money market rate
+\item \code{get_interest_rate()}: Interbank money market rate
+
 }}
-
 \examples{
 \dontrun{get_interest_rate()}
 get_interest_rate(date = "2018-01-01")
