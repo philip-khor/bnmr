@@ -24,13 +24,13 @@ library(lubridate)
 ```
 
 ```{r}
-base_rate() %>% 
-  gather(key, val, -bank_code, -bank_name) %>% 
+get_base_rate() |> 
+  gather(key, val, -bank_code, -bank_name) |> 
   mutate(key = factor(key, 
                       levels = c("base_rate", 
                                  "indicative_eff_lending_rate", 
                                  "base_lending_rate", 
-                                 "base_financing_rate"))) %>% 
+                                 "base_financing_rate"))) |> 
   ggplot() + 
     geom_beeswarm(aes(x = key, y = val / 100, color = key)) + 
     scale_color_discrete(guide = FALSE) + 
@@ -43,8 +43,8 @@ base_rate() %>%
 
 ```{r}
 # TODO: make sure output from added_date column is date
-consumer_alert() %>% 
-  mutate(added_date = ymd(added_date)) %>% 
+get_consumer_alert() |> 
+  mutate(added_date = ymd(added_date)) |> 
   ggplot(aes(x = added_date)) + geom_histogram()
 ```
 

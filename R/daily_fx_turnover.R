@@ -3,7 +3,7 @@
 #' This function allows you to obtain daily foreign exchange
 #' turnover for all currencies including interbank and customer deals
 #' from the BNM API.
-#' @keywords api
+#' @keywords rates_and_volumes api
 #' @examples
 #' get_daily_fx_turnover()
 #' @export
@@ -11,15 +11,3 @@
 #'
 #'
 get_daily_fx_turnover <- function() get_bnm_tbl("/fx-turn-over")
-
-# EXCLUDE COVERAGE START
-#' Daily Foreign Exchange Turnover
-#'
-#' Deprecated. Use \code{\link{get_daily_fx_turnover}}
-#'
-#' @export
-daily_fx_turnover <- function() {
-  .Deprecated("get_daily_fx_turnover")
-  get_daily_fx_turnover()
-}
-# EXCLUDE COVERAGE END

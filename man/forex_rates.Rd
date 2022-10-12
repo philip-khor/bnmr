@@ -18,9 +18,7 @@ get_kl_usd_reference_rate(date = NULL, year = NULL, month = NULL)
 (YYYY-MM-DD).
 If specified, return values for the specified date.}
 
-\item{year}{Year and month as integers. If date, year and month left blank, return today's values.}
-
-\item{month}{Year and month as integers. If date, year and month left blank, return today's values.}
+\item{year, month}{Year and month as integers. If date, year and month left blank, return today's values.}
 }
 \description{
 Interbank forex rates
@@ -37,11 +35,11 @@ daily at 3:30 p.m from the BNM API.
 }
 \section{Functions}{
 \itemize{
-\item \code{get_usd_interbank_intraday_rate}: USD Interbank Intraday Rate
+\item \code{get_usd_interbank_intraday_rate()}: USD Interbank Intraday Rate
 
-\item \code{get_kl_usd_reference_rate}: KL USD Reference Rate
+\item \code{get_kl_usd_reference_rate()}: KL USD Reference Rate
+
 }}
-
 \examples{
 \dontrun{get_usd_interbank_intraday_rate()}
 get_usd_interbank_intraday_rate(date = "2018-01-03")

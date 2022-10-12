@@ -73,44 +73,44 @@ Monetary and banking system: conventional loans and Islamic financing
 }
 \section{Functions}{
 \itemize{
-\item \code{get_sys_loans_appl_purpose}: 1.10 Banking System: Loans Applied by Purpose
+\item \code{get_sys_loans_appl_purpose()}: 1.10 Banking System: Loans Applied by Purpose
 
-\item \code{get_sys_loans_appl_sector}: 1.11 Banking System: Loans Applied by Sector
+\item \code{get_sys_loans_appl_sector()}: 1.11 Banking System: Loans Applied by Sector
 
-\item \code{get_sys_loans_apprv_purpose}: 1.12 Banking System: Loans Approved by Purpose
+\item \code{get_sys_loans_apprv_purpose()}: 1.12 Banking System: Loans Approved by Purpose
 
-\item \code{get_sys_loans_apprv_sector}: 1.13 Banking System: Loans Approved by Sector
+\item \code{get_sys_loans_apprv_sector()}: 1.13 Banking System: Loans Approved by Sector
 
-\item \code{get_sys_loans_disb_purpose}: 1.14 Banking System: Loans Disbursed by Purpose
+\item \code{get_sys_loans_disb_purpose()}: 1.14 Banking System: Loans Disbursed by Purpose
 
-\item \code{get_sys_loans_disb_sector}: 1.15 Banking System: Loans Disbursed by Sector
+\item \code{get_sys_loans_disb_sector()}: 1.15 Banking System: Loans Disbursed by Sector
 
-\item \code{get_sys_loans_repay_purpose}: 1.16 Banking System: Loans Repaid by Purpose
+\item \code{get_sys_loans_repay_purpose()}: 1.16 Banking System: Loans Repaid by Purpose
 
-\item \code{get_sys_loans_repay_sector}: 1.17 Banking System: Loans Repaid by Sector
+\item \code{get_sys_loans_repay_sector()}: 1.17 Banking System: Loans Repaid by Sector
 
-\item \code{get_sys_loans_class_type}: 1.18 Banking System: Classification of Loans by Type
+\item \code{get_sys_loans_class_type()}: 1.18 Banking System: Classification of Loans by Type
 
-\item \code{get_islm_fin_class_type}: 1.18.1: Islamic Banking System: Financing by Type
+\item \code{get_islm_fin_class_type()}: 1.18.1: Islamic Banking System: Financing by Type
 
-\item \code{get_islm_fin_class_concept}: 1.18.2: Islamic Banking System: Financing by Concept
+\item \code{get_islm_fin_class_concept()}: 1.18.2: Islamic Banking System: Financing by Concept
 
-\item \code{get_sys_loans_class_purpose}: 1.19 Banking System: Classification of Loans by Purpose
+\item \code{get_sys_loans_class_purpose()}: 1.19 Banking System: Classification of Loans by Purpose
 
-\item \code{get_islm_fin_purpose_sector}: 1.19.1 Islamic Banking System: Financing by Purpose and Sectors
+\item \code{get_islm_fin_purpose_sector()}: 1.19.1 Islamic Banking System: Financing by Purpose and Sectors
 
-\item \code{get_sys_loans_class_sector}: 1.20 Banking System: Classification of Loans by Sector
+\item \code{get_sys_loans_class_sector()}: 1.20 Banking System: Classification of Loans by Sector
 
-\item \code{get_sys_npl_provisions}: 1.21 Banking System: Non-Performing Loans/Impaired Loans and Impairment Provisions
+\item \code{get_sys_npl_provisions()}: 1.21 Banking System: Non-Performing Loans/Impaired Loans and Impairment Provisions
 
-\item \code{get_sys_imp_fin_provisions}: 1.21a Banking System: Impaired Loans and Impairment Provisions
+\item \code{get_sys_imp_fin_provisions()}: 1.21a Banking System: Impaired Loans and Impairment Provisions
 
-\item \code{get_sys_imp_fin_provisions}: 1.21b Banking System: Impaired Loan/Financing and Provisions
+\item \code{get_sys_imp_fin_provisions()}: 1.21b Banking System: Impaired Loan/Financing and Provisions
 
-\item \code{get_islm_imp_fin_provisions}: 1.21.1a Islamic Banking System: Impaired Financing and Impairment Provisions
+\item \code{get_islm_imp_fin_provisions()}: 1.21.1a Islamic Banking System: Impaired Financing and Impairment Provisions
 
-\item \code{get_sys_npl_purpose}: 1.22 Banking System: Non-Performing/Impaired Loans by Purpose
+\item \code{get_sys_npl_purpose()}: 1.22 Banking System: Non-Performing/Impaired Loans by Purpose
 
-\item \code{get_sys_npl_sector}: 1.23 Banking System: Non-Performing/Impaired Loans by Sector
+\item \code{get_sys_npl_sector()}: 1.23 Banking System: Non-Performing/Impaired Loans by Sector
+
 }}
-

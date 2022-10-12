@@ -23,3 +23,4 @@ from the BNM API.
 get_base_rate()
 }
 \keyword{api}
+\keyword{rates_and_volumes}

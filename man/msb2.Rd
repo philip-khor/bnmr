@@ -74,47 +74,47 @@ Financial and capital markets
 }
 \section{Functions}{
 \itemize{
-\item \code{get_rates_banking}: 2.1 Interest Rates: Banking Institutions
+\item \code{get_rates_banking()}: 2.1 Interest Rates: Banking Institutions
 
-\item \code{get_rates_islm_banking}: 2.2 Islamic Banking System: Financing Rate, Profit
+\item \code{get_rates_islm_banking()}: 2.2 Islamic Banking System: Financing Rate, Profit
 Rate to Depositors and Rate of Return to Investment Account Holders
 
-\item \code{get_rates_interbank_mm}: 2.3 Interest Rates: Interbank Money Market
+\item \code{get_rates_interbank_mm()}: 2.3 Interest Rates: Interbank Money Market
 
-\item \code{get_rates_tbills}: 2.4 Interest Rates: Treasury Bills and Bank Negara Bills
+\item \code{get_rates_tbills()}: 2.4 Interest Rates: Treasury Bills and Bank Negara Bills
 
-\item \code{get_tbills_tender}: 2.4.1 Treasury Bills, Bank Negara Bills, Malaysian Government 
+\item \code{get_tbills_tender()}: 2.4.1 Treasury Bills, Bank Negara Bills, Malaysian Government 
 Securities and Khazanah Bonds: Tender Results *
 
-\item \code{get_rates_mgs}: 2.5 Market Indicative Yield: Malaysian Government Securities
+\item \code{get_rates_mgs()}: 2.5 Market Indicative Yield: Malaysian Government Securities
 
-\item \code{get_rates_myr}: 2.6 Exchange Rates: Malaysian Ringgit
+\item \code{get_rates_myr()}: 2.6 Exchange Rates: Malaysian Ringgit
 
-\item \code{get_rates_myr_daily}: 2.6.1 Exchange Rates: the Malaysian Ringgit (Daily)
+\item \code{get_rates_myr_daily()}: 2.6.1 Exchange Rates: the Malaysian Ringgit (Daily)
 
-\item \code{get_volume_interbank_mm}: 2.7 Volume of Transaction in Interbank Money Market
+\item \code{get_volume_interbank_mm()}: 2.7 Volume of Transaction in Interbank Money Market
 
-\item \code{get_volume_interbank_forex}: 2.8 Volume of Interbank Transactions in the Kuala Lumpur Foreign Exchange Market
+\item \code{get_volume_interbank_forex()}: 2.8 Volume of Interbank Transactions in the Kuala Lumpur Foreign Exchange Market
 
-\item \code{get_cap_funds_public}: 2.9 Funds Raised in the Capital Market (by Public Sector)
+\item \code{get_cap_funds_public()}: 2.9 Funds Raised in the Capital Market (by Public Sector)
 
-\item \code{get_cap_funds_private}: 2.10 Funds Raised in the Capital Market (by Private Sector)
+\item \code{get_cap_funds_private()}: 2.10 Funds Raised in the Capital Market (by Private Sector)
 
-\item \code{get_bond_issues}: 2.11 New Issues of Corporate Bond and/or Sukuk
+\item \code{get_bond_issues()}: 2.11 New Issues of Corporate Bond and/or Sukuk
 
-\item \code{get_bursa_indicators}: 2.12 Bursa Malaysia Securities Berhad: Selected Indicators
+\item \code{get_bursa_indicators()}: 2.12 Bursa Malaysia Securities Berhad: Selected Indicators
 
-\item \code{get_futures_indicators}: 2.13 Futures and Options Markets: Selected Indicators
+\item \code{get_futures_indicators()}: 2.13 Futures and Options Markets: Selected Indicators
 
-\item \code{get_mm_turnover}: 2.14 Turnover of Conventional and Islamic Money Market
+\item \code{get_mm_turnover()}: 2.14 Turnover of Conventional and Islamic Money Market
 
-\item \code{get_deriv_turnover}: 2.15 Turnover of Derivatives Transactions
+\item \code{get_deriv_turnover()}: 2.15 Turnover of Derivatives Transactions
 
-\item \code{get_debt_turnover}: 2.16 Turnover of Debt Securities and Sukuk
+\item \code{get_debt_turnover()}: 2.16 Turnover of Debt Securities and Sukuk
 
-\item \code{get_forex_turnover}: 2.17 Turnover of Foreign Currency Market Transactions
+\item \code{get_forex_turnover()}: 2.17 Turnover of Foreign Currency Market Transactions
 
-\item \code{get_net_financing}: 2.18 Net Financing through the Banking System, Development 
+\item \code{get_net_financing()}: 2.18 Net Financing through the Banking System, Development 
 Financial Institutions (DFIs) and Corporate Bonds (CB)
-}}
 
+}}

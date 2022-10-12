@@ -18,3 +18,4 @@ from the BNM API.
 get_daily_fx_turnover()
 }
 \keyword{api}
+\keyword{rates_and_volumes}
