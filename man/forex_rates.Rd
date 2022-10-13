@@ -24,9 +24,9 @@ If specified, return values for the specified date.}
 Interbank forex rates
 }
 \details{
-USD Interbank Intraday Rate: Obtain USD/MYR interbank intraday highest and 
-lowest rate from the BNM API. Rates are obtained from the best U.S. dollar 
-against Malaysian ringgit interbank highest and lowest dealt rates by 
+USD Interbank Intraday Rate: Obtain USD/MYR interbank intraday highest and
+lowest rate from the BNM API. Rates are obtained from the best U.S. dollar
+against Malaysian ringgit interbank highest and lowest dealt rates by
 commercial banks on the specific date.
 KL USD Reference Rate: Obtain a reference rate that is computed based on weighted
 average volume of the interbank USD/MYR FX spot rate transacted by

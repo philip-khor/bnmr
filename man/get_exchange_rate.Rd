@@ -2,7 +2,7 @@
 % Please edit documentation in R/exchange_rate.R
 \name{get_exchange_rate}
 \alias{get_exchange_rate}
-\title{KL Interbank Foreign Exchange Market Exchange Rate}
+\title{Exchange Rates: KL Interbank Foreign Exchange Market}
 \source{
 https://apikijangportal.bnm.gov.my/
 }

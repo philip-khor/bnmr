@@ -2,7 +2,7 @@
 % Please edit documentation in R/consumer_alert.R
 \name{get_consumer_alert}
 \alias{get_consumer_alert}
-\title{Consumer Alert}
+\title{Financial Consumer Alert}
 \source{
 https://apikijangportal.bnm.gov.my/
 }
