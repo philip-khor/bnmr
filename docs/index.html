@@ -76,7 +76,6 @@
 <!-- badges: start -->
 
 <p>The goal of <strong>bnmr</strong> is to provide a set of convenient wrapper functions for the Central Bank of Malaysia’s API.</p>
-<p></p>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
@@ -92,20 +91,21 @@
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/philip-khor/bnmr" class="external-link">bnmr</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="reference/get_base_rate.html">get_base_rate</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; # A tibble: 35 x 6</span></span>
-<span><span class="co">#&gt;    bank_code   bank_name           base_rate base_lending_ra~ indicative_eff_le~</span></span>
-<span><span class="co">#&gt;    &lt;chr&gt;       &lt;chr&gt;                   &lt;dbl&gt;            &lt;dbl&gt;              &lt;dbl&gt;</span></span>
-<span><span class="co">#&gt;  1 "AFFINBANK" Affin Bank               2.7              5.56               3.3 </span></span>
-<span><span class="co">#&gt;  2 "ALLIANCEB" Alliance Bank            2.57             5.42               3.11</span></span>
-<span><span class="co">#&gt;  3 "AMBANK"    AmBank                   2.6              5.45               3.25</span></span>
-<span><span class="co">#&gt;  4 "BANGKOK"   Bangkok Bank Berhad      3.22             5.87               4.42</span></span>
-<span><span class="co">#&gt;  5 "BANKCHINA" Bank of China (Mal~      2.55             5.35               3.55</span></span>
-<span><span class="co">#&gt;  6 "CIMB BANK" CIMB Bank Berhad         2.75             5.6                3.5 </span></span>
-<span><span class="co">#&gt;  7 "CITIBANK"  Citibank Berhad          2.4              5.55               3.2 </span></span>
-<span><span class="co">#&gt;  8 ""          Hong Leong Bank Ma~      2.63             5.64               3.5 </span></span>
-<span><span class="co">#&gt;  9 ""          HSBC Bank Malaysia~      2.39             5.49               3.5 </span></span>
-<span><span class="co">#&gt; 10 ""          Industrial and Com~      2.52             5.45               3.47</span></span>
-<span><span class="co">#&gt; # ... with 25 more rows, and 1 more variable: base_financing_rate &lt;dbl&gt;</span></span></code></pre></div>
+<span><span class="co">#&gt; # A tibble: 35 × 6</span></span>
+<span><span class="co">#&gt;    bank_code   bank_name                         base_…¹ base_…² indic…³ base_…⁴</span></span>
+<span><span class="co">#&gt;    &lt;chr&gt;       &lt;chr&gt;                               &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;</span></span>
+<span><span class="co">#&gt;  1 "AFFINBANK" Affin Bank                           2.7     5.56    3.3       NA</span></span>
+<span><span class="co">#&gt;  2 "ALLIANCEB" Alliance Bank                        2.57    5.42    3.11      NA</span></span>
+<span><span class="co">#&gt;  3 "AMBANK"    AmBank                               2.6     5.45    3.25      NA</span></span>
+<span><span class="co">#&gt;  4 "BANGKOK"   Bangkok Bank Berhad                  3.22    5.87    4.42      NA</span></span>
+<span><span class="co">#&gt;  5 "BANKCHINA" Bank of China (Malaysia) Berhad      2.55    5.35    3.55      NA</span></span>
+<span><span class="co">#&gt;  6 "CIMB BANK" CIMB Bank Berhad                     2.75    5.6     3.5       NA</span></span>
+<span><span class="co">#&gt;  7 "CITIBANK"  Citibank Berhad                      2.4     5.55    3.2       NA</span></span>
+<span><span class="co">#&gt;  8 ""          Hong Leong Bank Malaysia Berhad      2.63    5.64    3.5       NA</span></span>
+<span><span class="co">#&gt;  9 ""          HSBC Bank Malaysia Berhad            2.39    5.49    3.5       NA</span></span>
+<span><span class="co">#&gt; 10 ""          Industrial and Commercial Bank o…    2.52    5.45    3.47      NA</span></span>
+<span><span class="co">#&gt; # … with 25 more rows, and abbreviated variable names ¹​base_rate,</span></span>
+<span><span class="co">#&gt; #   ²​base_lending_rate, ³​indicative_eff_lending_rate, ⁴​base_financing_rate</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="license">License<a class="anchor" aria-label="anchor" href="#license"></a>
@@ -156,6 +156,7 @@
 <ul class="list-unstyled">
 <li><a href="https://codecov.io/gh/philip-khor/bnmr?branch=master" class="external-link"><img src="https://codecov.io/gh/philip-khor/bnmr/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://github.com/philip-khor/bnmr/actions" class="external-link"><img src="https://github.com/philip-khor/bnmr/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
+<li><a href="https://github.com/philip-khor/bnmr/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/philip-khor/bnmr/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
 
