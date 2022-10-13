@@ -76,9 +76,19 @@ from the BNM API as a tidy tibble.</p>
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="fu">renminbi</span><span class="op">(</span>type <span class="op">=</span> <span class="st">"dar"</span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="fu">renminbi</span><span class="op">(</span>type <span class="op">=</span> <span class="st">"fx_forward"</span><span class="op">)</span></span></span>
-<span class="r-err co"><span class="r-pr">#&gt;</span> <span class="error">Error in renminbi(type = "fx_forward"):</span> could not find function "renminbi"</span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="fu">get_renminbi</span><span class="op">(</span>type <span class="op">=</span> <span class="st">"dar"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">get_renminbi</span><span class="op">(</span>type <span class="op">=</span> <span class="st">"fx_forward"</span><span class="op">)</span></span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 8 × 4</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   date       period    buying selling</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 2020-12-29 spot       0.620   0.620</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 2020-12-29 2_weeks   -<span style="color: #BB0000;">9.6</span>    -<span style="color: #BB0000;">9</span>    </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> 2020-12-29 1_month  -<span style="color: #BB0000;">10.1</span>    -<span style="color: #BB0000;">8.5</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> 2020-12-29 2_months -<span style="color: #BB0000;">18.9</span>   -<span style="color: #BB0000;">16.6</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> 2020-12-29 3_months -<span style="color: #BB0000;">22.2</span>   -<span style="color: #BB0000;">19.8</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> 2020-12-29 4_months -<span style="color: #BB0000;">29.5</span>   -<span style="color: #BB0000;">24.3</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">7</span> 2020-12-29 5_months -<span style="color: #BB0000;">37.5</span>   -<span style="color: #BB0000;">29.3</span>  </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">8</span> 2020-12-29 6_months -<span style="color: #BB0000;">41.3</span>   -<span style="color: #BB0000;">38.1</span>  </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

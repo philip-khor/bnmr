@@ -21,8 +21,7 @@ Malaysia Overnight Rate - I
 }
 \examples{
 \dontrun{get_overnight_rate()}
-get_overnight_rate(date = "2018-01-01")
-get_overnight_rate(year = 2016, month = 2)
-get_overnight_rate(product = "overall", year = 2016, month = 2)
+get_overnight_rate(date = "2022-05-05")
+get_overnight_rate(year = 2022, month = 5)
 }
 \keyword{rates_and_volumes}

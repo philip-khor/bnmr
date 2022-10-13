@@ -18,7 +18,7 @@ forward prices for trade settlement and RMB deposit acceptance rates
 from the BNM API as a tidy tibble.
 }
 \examples{
-\dontrun{renminbi(type = "dar")}
-renminbi(type = "fx_forward")
+\dontrun{get_renminbi(type = "dar")}
+get_renminbi(type = "fx_forward")
 }
 \keyword{rates_and_volumes}

@@ -50,8 +50,8 @@ get_exchange_rate <- function(currency = NULL,
 #' @importFrom purrr map_dbl
 #' @importFrom rlang .data
 #' @examples
-#' \dontrun{renminbi(type = "dar")}
-#' renminbi(type = "fx_forward")
+#' \dontrun{get_renminbi(type = "dar")}
+#' get_renminbi(type = "fx_forward")
 #' @source https://apikijangportal.bnm.gov.my/
 #' @export
 

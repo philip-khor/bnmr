@@ -1,27 +1,32 @@
+#' Get monthly data from endpoints with year/month/date params
+#'
 #' @importFrom purrr map_dfr
 #' @importFrom jsonlite flatten
 #' @importFrom rlang list2 qq_show is_scalar_integerish
-
+#' @keywords internal
+#' @param reverse TRUE if month comes before year in API
 .get_monthly_data <- function(stub,
                               date = NULL,
                               year = NULL,
                               month = NULL,
+                              reverse = FALSE,
                               ...) {
   # function should consider length 1 for arguments?
   args <- list(...)
 
-
+  year_month_stubby <- if (isTRUE(reverse)) {
+    "{stub}/month/{month}/year/{year}"
+  } else {
+    "{stub}/year/{year}/month/{month}"
+  }
   if (is_null(date)) {
     if (is_null(month)) {
       if (is_null(year)) {
         get_bnm_data(glue("{stub}"), query = args)
       } else {
-        map_dfr(1:12, function(x) {
+        map_dfr(1:12, function(month) {
           Sys.sleep(1)
-          flatten(get_bnm_tbl(glue(
-            "{stub}/year/{year}/month/{x}"
-          ),
-          query = args))
+          flatten(get_bnm_tbl(glue(year_month_stubby), query = args))
         })
       }
 
@@ -29,8 +34,7 @@
     } else if (!is_null(year)) {
       stopifnot(is_scalar_integerish(year) && is_scalar_integerish(month))
 
-      get_bnm_tbl(glue("{stub}/year/{year}/month/{month}"),
-                  query = args)
+      get_bnm_tbl(glue(year_month_stubby), query = args)
     } else {
       stop("Please provide the year")
     }
@@ -208,9 +212,8 @@ get_kl_usd_reference_rate <- function(date = NULL,
 #' @export
 #' @examples
 #' \dontrun{get_overnight_rate()}
-#' get_overnight_rate(date = "2018-01-01")
-#' get_overnight_rate(year = 2016, month = 2)
-#' get_overnight_rate(product = "overall", year = 2016, month = 2)
+#' get_overnight_rate(date = "2022-05-05")
+#' get_overnight_rate(year = 2022, month = 5)
 #' @source https://apikijangportal.bnm.gov.my/
 get_overnight_rate <- function(date = NULL,
                                year = NULL,
@@ -219,7 +222,8 @@ get_overnight_rate <- function(date = NULL,
     stub = "/my-overnight-rate-i",
     date = date,
     year = year,
-    month = month
+    month = month,
+    reverse = TRUE
   )
 }
 
