@@ -7,11 +7,11 @@
 
 <!-- badges: start -->
 
-[![Codecov test
-coverage](https://codecov.io/gh/philip-khor/bnmr/branch/master/graph/badge.svg)](https://codecov.io/gh/philip-khor/bnmr?branch=master)
-[![R build
-status](https://github.com/philip-khor/bnmr/workflows/R-CMD-check/badge.svg)](https://github.com/philip-khor/bnmr/actions)
+[![codecov](https://codecov.io/gh/philip-khor/bnmr/branch/main/graph/badge.svg?token=4Z9KFCZpGa)](https://codecov.io/gh/philip-khor/bnmr)
 [![R-CMD-check](https://github.com/philip-khor/bnmr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/philip-khor/bnmr/actions/workflows/R-CMD-check.yaml)
+[![pages-build-deployment](https://github.com/philip-khor/bnmr/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/philip-khor/bnmr/actions/workflows/pages/pages-build-deployment)
+[![test-coverage](https://github.com/philip-khor/bnmr/actions/workflows/test-coverage-pak.yaml/badge.svg)](https://github.com/philip-khor/bnmr/actions/workflows/test-coverage-pak.yaml)
+
 <!-- badges: end -->
 
 The goal of **bnmr** is to provide a set of convenient wrapper functions
