@@ -1,4 +1,4 @@
-#' Consumer Alert
+#' Financial Consumer Alert
 #'
 #' This function allows you to obtain a list of known companies
 #' and websites which are neither authorised nor approved

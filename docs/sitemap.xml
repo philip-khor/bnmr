@@ -91,7 +91,13 @@
     <loc>https://bnmr.philipscurve.com/reference/get_opr.html</loc>
   </url>
   <url>
+    <loc>https://bnmr.philipscurve.com/reference/get_overnight_rate.html</loc>
+  </url>
+  <url>
     <loc>https://bnmr.philipscurve.com/reference/get_rates.html</loc>
+  </url>
+  <url>
+    <loc>https://bnmr.philipscurve.com/reference/get_renminbi.html</loc>
   </url>
   <url>
     <loc>https://bnmr.philipscurve.com/reference/index.html</loc>

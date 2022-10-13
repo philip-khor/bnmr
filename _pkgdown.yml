@@ -30,11 +30,15 @@ reference:
 - title: Other statistics
   contents: has_keyword("others")
 
+- title: Payment statistics
+- title: Government Securities
+- title: Islamic Interbank Money Market (IIMM)
+- title: Bond Info Hub (BIH)
+- title: Fully Automated System for Issuing/Tendering (FAST)
+
 template:
   bootstrap: 5
-  bootswatch: lux
-  bslib:
-    pkgdown-nav-height: 98.5px
+  bootswatch: darkly
 
 navbar:
   bg: dark

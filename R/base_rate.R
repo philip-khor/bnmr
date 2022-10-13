@@ -1,4 +1,4 @@
-#' Base Rate
+#' Base Rates/BLR/Effective LR
 #'
 #' This function allows you to obtain current Base Rates and
 #' Base Lending Rates for retail loans or financing facilities
@@ -36,3 +36,4 @@ get_base_rate <- function(bank_code = NULL) {
 }
 
 # TODO: write a print method that shows meta?
+

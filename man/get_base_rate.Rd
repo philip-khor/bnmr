@@ -2,7 +2,7 @@
 % Please edit documentation in R/base_rate.R
 \name{get_base_rate}
 \alias{get_base_rate}
-\title{Base Rate}
+\title{Base Rates/BLR/Effective LR}
 \source{
 https://apikijangportal.bnm.gov.my/
 }

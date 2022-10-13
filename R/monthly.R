@@ -5,8 +5,8 @@
 .get_monthly_data <- function(stub,
                               date = NULL,
                               year = NULL,
-                              month = NULL, ...) {
-
+                              month = NULL,
+                              ...) {
   # function should consider length 1 for arguments?
   args <- list(...)
 
@@ -18,10 +18,11 @@
       } else {
         map_dfr(1:12, function(x) {
           Sys.sleep(1)
-          flatten(get_bnm_tbl(glue("{stub}/year/{year}/month/{x}"),
-                              query = args))
-            }
-          )
+          flatten(get_bnm_tbl(glue(
+            "{stub}/year/{year}/month/{x}"
+          ),
+          query = args))
+        })
       }
 
 
@@ -29,15 +30,14 @@
       stopifnot(is_scalar_integerish(year) && is_scalar_integerish(month))
 
       get_bnm_tbl(glue("{stub}/year/{year}/month/{month}"),
-                   query = args
-      )
+                  query = args)
     } else {
       stop("Please provide the year")
     }
   } else {
     if (!is_null(year) || !is_null(month)) {
       warning("Date and year/month combination provided; querying based on date")
-      }
+    }
     get_bnm_tbl(glue("{stub}/date/{date}"), query = args)
   }
 }
@@ -51,10 +51,10 @@
 # EXCLUDE COVERAGE END
 
 #' Interbank money market/deposit rates and volume
-#'  
+#'
 #' @description Obtain daily interbank money market rates and volumes of transactions according
 #' to tenure (2015 - present) from the BNM API.
-#' 
+#'
 #' @name get_interbank_rates
 #' @param year,month Year and month as integers. If date, year and month left blank, return today's values.
 #' @param date Character string of date with format as defined by RFC 3339, section 5.6
@@ -62,7 +62,7 @@
 #' If specified, return values for the specified date.
 #' @param product One of "money_market_operations", "interbank" or "overall"
 #' @keywords rates_and_volumes
-#' @details 
+#' @details
 #' Interbank money market rate: Daily interbank money market rates and volumes of transactions according to tenure. (2015 - present)
 #' Interbank money market volume: Daily interbank money market rates and volumes of transactions according to tenure. (2015 - present)
 #' Islamic interbank deposit rate: Daily weighted average of Islamic interbank deposit rates for various tenures. (Jan 2015-present)
@@ -79,7 +79,7 @@
 #' get_islamic_interbank_rate(date = "2018-01-01")
 #' get_islamic_interbank_rate(year = 2016, month = 2)
 #' @source https://apikijangportal.bnm.gov.my/
-NULL 
+NULL
 
 #' @describeIn get_interbank_rates Islamic interbank deposit rate
 #' @export
@@ -88,7 +88,9 @@ get_islamic_interbank_rate <- function(date = NULL,
                                        month = NULL) {
   .get_monthly_data(
     stub = "/islamic-interbank-rate",
-    date = date, year = year, month = month
+    date = date,
+    year = year,
+    month = month
   )
 }
 
@@ -98,7 +100,6 @@ get_interest_volume <- function(product = "money_market_operations",
                                 date = NULL,
                                 year = NULL,
                                 month = NULL) {
-
   stopifnot(product %in% .products)
 
   .get_monthly_data(
@@ -112,11 +113,10 @@ get_interest_volume <- function(product = "money_market_operations",
 
 #' @describeIn get_interbank_rates Interbank money market rate
 #' @export
-get_interest_rate <- function(
-  product = "money_market_operations",
-  date = NULL,
-  year = NULL,
-  month = NULL) {
+get_interest_rate <- function(product = "money_market_operations",
+                              date = NULL,
+                              year = NULL,
+                              month = NULL) {
   stopifnot(product %in% .products)
   .get_monthly_data(
     stub = "/interest-rate",
@@ -152,15 +152,15 @@ get_kijang_emas <- function(date = NULL,
   )
 }
 
-#' Interbank forex rates 
-#' 
+#' Interbank forex rates
+#'
 #' @name forex_rates
 #' @inheritParams get_interbank_rates
 #' @keywords rates_and_volumes
-#' @details 
-#' USD Interbank Intraday Rate: Obtain USD/MYR interbank intraday highest and 
-#' lowest rate from the BNM API. Rates are obtained from the best U.S. dollar 
-#' against Malaysian ringgit interbank highest and lowest dealt rates by 
+#' @details
+#' USD Interbank Intraday Rate: Obtain USD/MYR interbank intraday highest and
+#' lowest rate from the BNM API. Rates are obtained from the best U.S. dollar
+#' against Malaysian ringgit interbank highest and lowest dealt rates by
 #' commercial banks on the specific date.
 #' KL USD Reference Rate: Obtain a reference rate that is computed based on weighted
 #' average volume of the interbank USD/MYR FX spot rate transacted by
@@ -176,11 +176,11 @@ get_kijang_emas <- function(date = NULL,
 #' @source https://apikijangportal.bnm.gov.my/
 NULL
 
-#' @describeIn forex_rates USD Interbank Intraday Rate 
+#' @describeIn forex_rates USD Interbank Intraday Rate
 #' @export
 get_usd_interbank_intraday_rate <- function(date = NULL,
-                                        year = NULL,
-                                        month = NULL) {
+                                            year = NULL,
+                                            month = NULL) {
   .get_monthly_data(
     stub = "/usd-interbank-intraday-rate",
     date = date,
@@ -192,10 +192,31 @@ get_usd_interbank_intraday_rate <- function(date = NULL,
 #' @describeIn forex_rates KL USD Reference Rate
 #' @export
 get_kl_usd_reference_rate <- function(date = NULL,
-                                  year = NULL,
-                                  month = NULL) {
+                                      year = NULL,
+                                      month = NULL) {
   .get_monthly_data(
     stub = "/kl-usd-reference-rate",
+    date = date,
+    year = year,
+    month = month
+  )
+}
+
+#' Malaysia Overnight Rate - I
+#' @inheritParams get_interbank_rates
+#' @keywords rates_and_volumes
+#' @export
+#' @examples
+#' \dontrun{get_overnight_rate()}
+#' get_overnight_rate(date = "2018-01-01")
+#' get_overnight_rate(year = 2016, month = 2)
+#' get_overnight_rate(product = "overall", year = 2016, month = 2)
+#' @source https://apikijangportal.bnm.gov.my/
+get_overnight_rate <- function(date = NULL,
+                               year = NULL,
+                               month = NULL) {
+  .get_monthly_data(
+    stub = "/my-overnight-rate-i",
     date = date,
     year = year,
     month = month
