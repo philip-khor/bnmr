@@ -26,6 +26,7 @@ reference:
 - subtitle: 5. Other indicators
 
 - title: Financial Inclusion
+  contents: has_keyword("financial_inclusion")
 
 - title: Other statistics
   contents: has_keyword("others")

@@ -76,6 +76,12 @@
     <loc>https://bnmr.philipscurve.com/reference/get_exchange_rate.html</loc>
   </url>
   <url>
+    <loc>https://bnmr.philipscurve.com/reference/get_financing_applied.html</loc>
+  </url>
+  <url>
+    <loc>https://bnmr.philipscurve.com/reference/get_financing_approved.html</loc>
+  </url>
+  <url>
     <loc>https://bnmr.philipscurve.com/reference/get_interbank_rates.html</loc>
   </url>
   <url>
