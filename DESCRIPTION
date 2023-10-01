@@ -22,7 +22,7 @@ Imports: httr,
   rlang,
   lubridate, 
   assertthat
-RoxygenNote: 7.2.1
+RoxygenNote: 7.2.3
 Suggests: 
     testthat,
     covr,
