@@ -1,13 +1,17 @@
-#' Financing Applied
+#' Financial Inclusion
 #'
-
+#' @name financial_inclusion
 #' @keywords financial_inclusion api
 #' @examples
 #' get_financing_applied()
-#' @export
+#' get_financing_approved()
+#' @param year year
 #' @source https://apikijangportal.bnm.gov.my/
 #'
-#'
+NULL
+
+#' @describeIn financial_inclusion Financing Applied
+#' @export
 get_financing_applied <- function(year = NULL) {
   path <- "/financial_inclusion/1.11"
   if (!is_null(year)) {
@@ -17,16 +21,8 @@ get_financing_applied <- function(year = NULL) {
   get_bnm_tbl(path)
 }
 
-#' Financing Approved
-#'
-
-#' @keywords financial_inclusion api
-#' @examples
-#' get_financing_approved()
+#' @describeIn financial_inclusion Financing Approved
 #' @export
-#' @source https://apikijangportal.bnm.gov.my/
-#'
-#'
 get_financing_approved <- function(year = NULL) {
   path <- "/financial_inclusion/1.12"
   if (!is_null(year)) {
