@@ -13,7 +13,7 @@
 #'
 NULL
 
-get_payment_statistic <- function(sub_path, year = NULL) {
+.get_payment_statistic <- function(sub_path, year = NULL) {
   path <- glue("/payment-statistic/{sub_path}")
   if (!is_null(year)) {
     assertthat::is.count(year)
@@ -25,19 +25,19 @@ get_payment_statistic <- function(sub_path, year = NULL) {
 #' @describeIn payments Basic Payments Indicators
 #' @export
 get_basic_payments <- function(year = NULL) {
-  get_payment_statistic("01-basic-payments-indicator", year = year)
+  .get_payment_statistic("01-basic-payments-indicator", year = year)
 }
 
 #' @describeIn payments Electronic Payments Volume and Value of Transactions
 #' @export
 get_epayment <- function(year = NULL) {
-  get_payment_statistic("02-epayment", year = year)
+  .get_payment_statistic("02-epayment", year = year)
 }
 
 #' @describeIn payments Number of Cards and Users of Payment Instruments
 #' @export
 get_cards <- function(year = NULL) {
-  get_payment_statistic("03-cards", year = year)
+  .get_payment_statistic("03-cards", year = year)
 }
 
 #' @describeIn payments Internet Banking and Mobile Banking Subscribers

@@ -28,15 +28,15 @@ reference:
 - title: Financial Inclusion
   contents: has_keyword("financial_inclusion")
 
-- title: Other statistics
-  contents: has_keyword("others")
-
 - title: Payment statistics
   contents: has_keyword("payments")
 
 - title: Government Securities
 - title: Islamic Interbank Money Market (IIMM)
+
 - title: Bond Info Hub (BIH)
+  contents: has_keyword("bonds")
+
 - title: Fully Automated System for Issuing/Tendering (FAST)
 
 template:
