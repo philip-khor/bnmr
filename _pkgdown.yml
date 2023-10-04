@@ -32,6 +32,8 @@ reference:
   contents: has_keyword("others")
 
 - title: Payment statistics
+  contents: has_keyword("payments")
+
 - title: Government Securities
 - title: Islamic Interbank Money Market (IIMM)
 - title: Bond Info Hub (BIH)
