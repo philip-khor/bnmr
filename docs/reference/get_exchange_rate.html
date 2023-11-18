@@ -86,16 +86,600 @@ A snapshot of the exchange rate daily at 0900, 1130, 1200 and 1700 intervals</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_exchange_rate</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 7 × 3</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   currency_code  unit rate$date  $buying_rate $selling_rate $middle_rate</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>       </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> USD               1 2023-10-04         4.70          4.73 <span style="color: #BB0000;">NA</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> SGD               1 2023-10-04         3.41          3.46 <span style="color: #BB0000;">NA</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">3</span> JPY             100 2023-10-04         3.14          3.18 <span style="color: #BB0000;">NA</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">4</span> GBP               1 2023-10-04         5.67          5.72 <span style="color: #BB0000;">NA</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">5</span> EUR               1 2023-10-04         4.92          4.96 <span style="color: #BB0000;">NA</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">6</span> CAD               1 2023-10-04         3.42          3.46 <span style="color: #BB0000;">NA</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">7</span> AUD               1 2023-10-04         2.95          3.00 <span style="color: #BB0000;">NA</span>          </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CHF"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.2697</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.2755</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.2726</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CAD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.4037</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.4068</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.4052</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "BND"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.4747</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.4782</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.4764</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "AUD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.0301</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.0344</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.0323</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "AED"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 127.3891</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 127.4777</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 127.4334</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "CNY"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.6462</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.6467</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.6465</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NPR"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.512</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.5145</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.5132</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "SDR"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> NULL</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 6.1997</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "VND"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0193</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0193</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0193</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "USD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 4.679</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 4.682</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 4.6805</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "TWD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 14.7064</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 14.7205</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 14.7135</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "THB"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 13.3172</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 13.3352</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 13.3262</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "SGD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.4744</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.4785</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.4764</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "SAR"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 124.76</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 124.8467</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 124.8034</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "PKR"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.6317</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.6356</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1.6337</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "PHP"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 8.4064</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 8.4148</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 8.4106</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "NZD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2.791</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2.7947</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2.7929</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "MMK"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2235</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2236</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.2235</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[19]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[19]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "KRW"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[19]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[19]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[19]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[19]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3612</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[19]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3616</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[19]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.3614</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[20]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[20]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "KHR"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[20]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[20]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[20]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[20]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.1126</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[20]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.1139</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[20]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.1133</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[21]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[21]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "JPY"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[21]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[21]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[21]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[21]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.1235</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[21]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.1261</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[21]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 3.1248</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[22]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[22]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "INR"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[22]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[22]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[22]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[22]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.6166</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[22]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.624</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[22]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.6203</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[23]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[23]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "IDR"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[23]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[23]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[23]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[23]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0302</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[23]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0302</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[23]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.0302</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[24]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[24]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "HKD"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[24]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 100</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[24]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[24]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[24]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 59.9979</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[24]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 60.0387</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[24]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 60.0183</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[25]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[25]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "GBP"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[25]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[25]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[25]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[25]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.7926</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[25]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.7982</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[25]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.7954</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[26]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[26]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "EUR"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[26]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[26]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[26]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[26]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.0748</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[26]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.08</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[26]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 5.0774</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[27]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[27]]$currency_code</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "EGP"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[27]]$unit</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[27]]$rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[27]]$rate$date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2023-11-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[27]]$rate$buying_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.1512</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[27]]$rate$selling_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.1515</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[27]]$rate$middle_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 0.1514</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

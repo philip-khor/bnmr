@@ -18,7 +18,7 @@ get_financing_applied <- function(year = NULL) {
     assertthat::is.count(year)
     path <- paste0(path, "/", as.character(year))
   }
-  get_bnm_tbl(path)
+  get_bnm_data(path)
 }
 
 #' @describeIn financial_inclusion Financing Approved
@@ -29,5 +29,5 @@ get_financing_approved <- function(year = NULL) {
     assertthat::is.count(year)
     path <- paste0(path, "/", as.character(year))
   }
-  get_bnm_tbl(path)
+  get_bnm_data(path)
 }

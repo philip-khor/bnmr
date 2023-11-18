@@ -9,5 +9,5 @@
 #' @source https://apikijangportal.bnm.gov.my/
 #'
 #'
-get_interbank_swap <- function() get_bnm_tbl("/interbank-swap")
+get_interbank_swap <- function() get_bnm_data("/interbank-swap")
 

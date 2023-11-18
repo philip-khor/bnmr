@@ -78,32 +78,216 @@ If specified, return values for the specified date.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="fu">get_overnight_rate</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">get_overnight_rate</span><span class="op">(</span>date <span class="op">=</span> <span class="st">"2022-05-05"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 3</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   reference_date reference_rate aggregate_volume</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 2022-05-05     1.74           23642.90        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-05"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.74"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "23642.90"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="fu">get_overnight_rate</span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2022</span>, month <span class="op">=</span> <span class="fl">5</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 18 × 3</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    reference_date reference_rate aggregate_volume</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 1</span> 2022-05-05     1.74           23642.90        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 2</span> 2022-05-06     1.75           23977.60        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 3</span> 2022-05-09     1.73           21970.30        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 4</span> 2022-05-10     1.69           25134.10        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 5</span> 2022-05-11     1.94           26474.70        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 6</span> 2022-05-12     1.99           21897.30        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 7</span> 2022-05-13     1.96           24911.10        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 8</span> 2022-05-17     1.92           19829.00        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;"> 9</span> 2022-05-18     1.95           20096.50        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">10</span> 2022-05-19     1.96           21513.40        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">11</span> 2022-05-20     1.96           23137.70        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">12</span> 2022-05-23     1.96           26742.90        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">13</span> 2022-05-24     1.99           29034.20        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">14</span> 2022-05-25     1.99           26342.60        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">15</span> 2022-05-26     2.00           25301.60        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">16</span> 2022-05-27     2.00           21929.30        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">17</span> 2022-05-30     2.00           23067.94        </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">18</span> 2022-05-31     2.00           20133.90        </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-05"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.74"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[1]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "23642.90"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-06"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.75"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[2]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "23977.60"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-09"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.73"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[3]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "21970.30"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-10"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.69"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[4]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "25134.10"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-11"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.94"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[5]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "26474.70"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-12"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.99"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[6]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "21897.30"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-13"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.96"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[7]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "24911.10"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-17"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.92"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[8]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "19829.00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-18"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.95"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[9]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20096.50"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-19"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.96"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[10]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "21513.40"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-20"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.96"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[11]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "23137.70"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-23"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.96"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[12]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "26742.90"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-24"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.99"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[13]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "29034.20"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-25"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1.99"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[14]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "26342.60"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-26"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2.00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[15]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "25301.60"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-27"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2.00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[16]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "21929.30"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-30"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2.00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[17]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "23067.94"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]$reference_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2022-05-31"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]$reference_rate</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2.00"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [[18]]$aggregate_volume</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "20133.90"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

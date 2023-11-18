@@ -79,23 +79,97 @@
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">get_financing_applied</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 15</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   year_dt month_dt sector         pri_agr            min_and_qua man_inc_agr_bas</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>    <span style="text-decoration: underline;">2</span>020        8 Jumlah / Total 404478.6900000000… 50233.0000… 2183620.250000…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 9 more variables: ele_gas_and_wat_sup &lt;chr&gt;, construction &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   who_ret_tra_and_res_hot &lt;chr&gt;, tra_sto_and_com &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   fin_ins_rea_est_and_bus_act &lt;chr&gt;, edu_hea_oth &lt;chr&gt;, hou_sec &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   oth_sec_nec &lt;chr&gt;, tot_loa_fin_app &lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $year_dt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2020</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $month_dt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $sector</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Jumlah / Total"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pri_agr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "404478.690000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $min_and_qua</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "50233.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $man_inc_agr_bas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2183620.250000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ele_gas_and_wat_sup</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "121393.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $construction</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1967183.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $who_ret_tra_and_res_hot</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "4549497.846000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $tra_sto_and_com</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "573571.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $fin_ins_rea_est_and_bus_act</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "3058661.439000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $edu_hea_oth</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "608906.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $hou_sec</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "33294.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $oth_sec_nec</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "63898.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $tot_loa_fin_app</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "13614736.225000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="fu">get_financing_approved</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 1 × 15</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   year_dt month_dt sector         pri_agr            min_and_qua man_inc_agr_bas</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>              <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span>    <span style="text-decoration: underline;">2</span>020        8 Jumlah / Total 339179.8700000000… 26818.0000… 714443.6400000…</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># ℹ 9 more variables: ele_gas_and_wat_sup &lt;chr&gt;, construction &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   who_ret_tra_and_res_hot &lt;chr&gt;, tra_sto_and_com &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   fin_ins_rea_est_and_bus_act &lt;chr&gt;, edu_hea_oth &lt;chr&gt;, hou_sec &lt;chr&gt;,</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;">#   oth_sec_nec &lt;chr&gt;, tot_loa_fin_app &lt;chr&gt;</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $year_dt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2020</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $month_dt</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 8</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $sector</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "Jumlah / Total"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $pri_agr</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "339179.870000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $min_and_qua</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "26818.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $man_inc_agr_bas</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "714443.640000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $ele_gas_and_wat_sup</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "16963.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $construction</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "840035.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $who_ret_tra_and_res_hot</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1498340.716000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $tra_sto_and_com</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "376285.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $fin_ins_rea_est_and_bus_act</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1208932.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $edu_hea_oth</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "100838.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $hou_sec</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "13268.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $oth_sec_nec</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "1210.000000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $tot_loa_fin_app</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "5136313.226000000000"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

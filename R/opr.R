@@ -9,7 +9,7 @@
 #' @param year Optional. Integer value above 2000. Series of
 #' integer values also supported (experimental).
 #' @keywords rates_and_volumes
-#' @importFrom purrr map_dfr
+#' @importFrom purrr map list_rbind
 #' @importFrom rlang is_integerish
 #' @export
 #' @examples
@@ -19,6 +19,7 @@
 #'
 #'
 get_opr <- function(year = NULL) {
+
   if (is_null(year)) {
     as_tibble(get_bnm_data("/opr"))
   } else {
@@ -28,10 +29,11 @@ get_opr <- function(year = NULL) {
     if (length(year) == 1) {
       get_bnm_tbl(glue("/opr/year/{year}"))
     } else {
-      map_dfr(glue("/opr/year/{year}"), function(x) {
+      map(glue("/opr/year/{year}"), function(x) {
         Sys.sleep(1)
         get_bnm_tbl(x)
-      })
+      }) |>
+        list_rbind()
     }
   }
 }

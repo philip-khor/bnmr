@@ -81,13 +81,35 @@ If specified, return values for the specified date.</p></dd>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="fu">get_kijang_emas</span><span class="op">(</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu">get_kijang_emas</span><span class="op">(</span>date <span class="op">=</span> <span class="st">"2020-09-01"</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 2 × 4</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   effective_date one_oz       half_oz      quarter_oz  </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;named list&gt;</span> <span style="color: #949494; font-style: italic;">&lt;named list&gt;</span> <span style="color: #949494; font-style: italic;">&lt;named list&gt;</span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">1</span> 2020-09-01     <span style="color: #949494;">&lt;int [1]&gt;</span>    <span style="color: #949494;">&lt;int [1]&gt;</span>    <span style="color: #949494;">&lt;int [1]&gt;</span>   </span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #BCBCBC;">2</span> 2020-09-01     <span style="color: #949494;">&lt;int [1]&gt;</span>    <span style="color: #949494;">&lt;int [1]&gt;</span>    <span style="color: #949494;">&lt;int [1]&gt;</span>   </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $effective_date</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "2020-09-01"</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $one_oz</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $one_oz$buying</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 8352</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $one_oz$selling</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 8700</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $half_oz</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $half_oz$buying</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 4176</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $half_oz$selling</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 4432</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $quarter_oz</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $quarter_oz$buying</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2088</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> $quarter_oz$selling</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> [1] 2257</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> </span>
 <span class="r-in"><span><span class="fu">get_kijang_emas</span><span class="op">(</span>year <span class="op">=</span> <span class="fl">2016</span>, month <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> <span style="color: #949494;"># A tibble: 0 × 0</span></span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> list()</span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>

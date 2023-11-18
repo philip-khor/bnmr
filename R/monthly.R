@@ -1,6 +1,6 @@
 #' Get monthly data from endpoints with year/month/date params
 #'
-#' @importFrom purrr map_dfr
+#' @importFrom purrr map list_rbind
 #' @importFrom jsonlite flatten
 #' @importFrom rlang list2 qq_show is_scalar_integerish
 #' @keywords internal
@@ -24,17 +24,18 @@
       if (is_null(year)) {
         get_bnm_data(glue("{stub}"), query = args)
       } else {
-        map_dfr(1:12, function(month) {
+        map(1:12, function(month) {
           Sys.sleep(1)
-          flatten(get_bnm_tbl(glue(year_month_stubby), query = args))
-        })
+          flatten(get_bnm_data(glue(year_month_stubby), query = args))
+        }) |>
+          list_rbind()
       }
 
 
     } else if (!is_null(year)) {
       stopifnot(is_scalar_integerish(year) && is_scalar_integerish(month))
 
-      get_bnm_tbl(glue(year_month_stubby), query = args)
+      get_bnm_data(glue(year_month_stubby), query = args)
     } else {
       stop("Please provide the year")
     }
@@ -42,7 +43,7 @@
     if (!is_null(year) || !is_null(month)) {
       warning("Date and year/month combination provided; querying based on date")
     }
-    get_bnm_tbl(glue("{stub}/date/{date}"), query = args)
+    get_bnm_data(glue("{stub}/date/{date}"), query = args)
   }
 }
 

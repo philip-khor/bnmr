@@ -12,10 +12,11 @@ BugReports: https://github.com/philip-khor/bnmr/issues
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
+Depends: R (>= 4.1.0)
 Imports: httr, 
   glue, 
   jsonlite, 
-  purrr, 
+  purrr (>= 1.0.0), 
   ISOcodes, 
   tibble, 
   tidyr, 

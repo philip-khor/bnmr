@@ -30,7 +30,7 @@ get_exchange_rate <- function(currency = NULL,
     quote %in% c("rm", "fx")
   )
 
-  get_bnm_tbl(path,
+  get_bnm_data(path,
               query = list(
                 session = session,
                 quote = quote
@@ -64,7 +64,7 @@ get_renminbi <- function(type = "dar") {
 
 
   if (type == "dar") {
-    rmb_tibble <- get_bnm_tbl(paths[[type]])
+    rmb_tibble <- get_bnm_data(paths[[type]])
     rmb_tibble[["term"]] <- names(rmb_tibble[["deposit"]])
     spread(unnest(rmb_tibble, cols = c(.data[["deposit"]])), "term", "deposit")
   }
