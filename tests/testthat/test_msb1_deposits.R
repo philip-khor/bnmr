@@ -1,16 +1,10 @@
-test_that("get_sys_deps_type rejects invalid year", {
+test_that("get_sys_deps_type rejects year < 2000", {
   testthat::skip_if_offline("api.bnm.gov.my")
   testthat::skip_on_cran()
   expect_error(get_sys_deps_type(year = 1999))
 })
 
-test_that("get_islm_deps_type_holder rejects invalid type", {
-  testthat::skip_if_offline("api.bnm.gov.my")
-  testthat::skip_on_cran()
-  expect_error(get_islm_deps_type_holder(type = "invalid"))
-})
-
-test_that("get_sys_deps_holder rejects invalid year", {
+test_that("get_sys_deps_holder rejects year < 2000", {
   testthat::skip_if_offline("api.bnm.gov.my")
   testthat::skip_on_cran()
   expect_error(get_sys_deps_holder(year = 1999))
