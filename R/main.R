@@ -6,20 +6,24 @@
 #' @examples
 #' bnm_api("/welcome")
 #' @noRd
-#' @importFrom httr2 request req_url_path req_user_agent req_headers req_perform resp_check_content_type
+#' @importFrom httr2 request req_url_path req_url_query req_user_agent req_headers req_perform resp_check_content_type
 #' resp_is_error resp_status resp_status_desc resp_body_json
 #' @importFrom glue glue
 #' @source https://apikijangportal.bnm.gov.my/, https://cran.r-project.org/web/packages/httr/vignettes/api-packages.html
 #'
-bnm_api_req <- function(path, ...) {
-  request("https://api.bnm.gov.my") |>
+bnm_api_req <- function(path, ..., query = NULL) {
+  req <- request("https://api.bnm.gov.my") |>
     req_url_path(glue("public{path}")) |>
     req_user_agent("http://github.com/philip-khor/bnmr/") |>
-    req_headers(Accept = "application/vnd.BNM.API.v1+json", ...)
+    req_headers(Accept = "application/vnd.BNM.API.v1+json")
+  if (!is.null(query)) {
+    req <- req_url_query(req, !!!query)
+  }
+  req
 }
 
-bnm_api <- function(path, ...) {
-  bnm_api_req(path, ...) |>
+bnm_api <- function(path, ..., query = NULL) {
+  bnm_api_req(path, query = query) |>
     req_perform() -> resp
 
   try(resp_check_content_type(resp, "application/json"))
@@ -55,8 +59,8 @@ bnm_api <- function(path, ...) {
 #' @importFrom tidyr unnest_wider
 #' @importFrom vctrs vec_size
 #' @noRd
-get_bnm_tbl <- function(path, ...) {
-  get_bnm_data(path, ...) |>
+get_bnm_tbl <- function(path, ..., query = NULL) {
+  get_bnm_data(path, query = query) |>
     discard(is.null) -> dat
   if (vec_size(dat) == 1) {
     tibble(dat)
@@ -76,6 +80,6 @@ get_bnm_tbl <- function(path, ...) {
 #' @noRd
 #' @source https://apikijangportal.bnm.gov.my/
 
-get_bnm_data <- function(path, ...) {
-  bnm_api(path, ...)[["content"]][["data"]]
+get_bnm_data <- function(path, ..., query = NULL) {
+  bnm_api(path, query = query)[["content"]][["data"]]
 }
