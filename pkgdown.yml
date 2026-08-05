@@ -1,0 +1,9 @@
+pandoc: 3.8.3
+pkgdown: 2.2.1
+pkgdown_sha: ~
+articles:
+  using-bnmr: using-bnmr.html
+last_built: 2026-08-05T18:04Z
+urls:
+  reference: https://bnmr.philipscurve.com/reference
+  article: https://bnmr.philipscurve.com/articles
