@@ -43,11 +43,11 @@ get_cards <- function(year = NULL) {
 #' @describeIn payments Internet Banking and Mobile Banking Subscribers
 #' @export
 get_internet_banking <- function(year = NULL) {
-  get_payment_statistic("04-internet-mobile-banking", year = year)
+  .get_payment_statistic("04-internet-mobile-banking", year = year)
 }
 
 #' @describeIn payments Number of Electronic Fund Transfer at Point-of-Sale (EFTPOS) Terminals
 #' @export
 get_eftpos <- function(year = NULL) {
-  get_payment_statistic("05-eftpos-terminals", year = year)
+  .get_payment_statistic("05-eftpos-terminals", year = year)
 }

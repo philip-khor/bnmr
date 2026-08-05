@@ -618,6 +618,7 @@ get_rentas_foreign_debt_holdings <- function(year = NULL) {
 #' @return nested list with "amt" and "change". Different base rates are 
 #' nested within. 
 #' @examples 
+#' \dontrun{
 #' # we retrieve GDP by expenditure by default 
 #' res <- get_aggregate_output()
 #' 
@@ -626,6 +627,7 @@ get_rentas_foreign_debt_holdings <- function(year = NULL) {
 #' 
 #' # to get change at 2000 prices run the following: 
 #' res$change$base_2000 
+#' }
 #' @name msb3_output
 get_aggregate_output <- function(year = NULL, metric = "gdp", output_by = "expenditure") {
   assert_that(metric %in% c("gdp", "gni"))
