@@ -1,183 +1,58 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://bnmr.philipscurve.com/404.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/articles/index.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/articles/using-bnmr.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/authors.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/CODE_OF_CONDUCT.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/CONTRIBUTING.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/index.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/LICENSE-text.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/LICENSE.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/base_rate.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/bnmr-deprecated.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/bnmr-package.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/bnm_api.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/consumer_alert.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/daily_fx_turnover.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/dot-get_monthly_data.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/exchange_rate.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/financial_inclusion.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/forex_rates.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_base_rate.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_bnm_data.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_bnm_tbl.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_bnm_tibble.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_consumer_alert.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_daily_fx_turnover.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_exchange_rate.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_financing_applied.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_financing_approved.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_interbank_rates.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_interbank_swap.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_interest_rate.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_interest_volume.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_islamic_interbank_rate.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_kijang_emas.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_market_highlights.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_opr.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_overnight_rate.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_rates.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/get_renminbi.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/index.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/interbank_swap.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/interest_rate.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/interest_volume.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/islamic_interbank_rate.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/kijang_emas.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/kl_usd_reference_rate.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/msb.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/msb1.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/msb1_deposits.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/msb1_loans.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/msb2.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/msb3.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/msb3_output.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/msb_deposits.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/msb_loans.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/opr.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/payments.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/renminbi.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/renminbi_tbl.html</loc>
-  </url>
-  <url>
-    <loc>https://bnmr.philipscurve.com/reference/usd_interbank_intraday_rate.html</loc>
-  </url>
+<urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
+<url><loc>https://bnmr.philipscurve.com/404.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/articles/index.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/articles/using-bnmr.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/authors.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/CODE_OF_CONDUCT.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/CONTRIBUTING.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/index.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/LICENSE-text.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/LICENSE.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/base_rate.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/bnmr-deprecated.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/bnmr-package.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/bnm_api.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/consumer_alert.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/daily_fx_turnover.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/dot-get_monthly_data.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/exchange_rate.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/financial_inclusion.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/forex_rates.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_base_rate.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_bnm_data.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_bnm_tbl.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_bnm_tibble.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_consumer_alert.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_daily_fx_turnover.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_exchange_rate.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_interbank_rates.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_interbank_swap.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_kijang_emas.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_market_highlights.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_opr.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_overnight_rate.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_rates.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/get_renminbi.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/index.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/interbank_swap.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/interest_rate.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/interest_volume.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/islamic_interbank_rate.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/kijang_emas.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/kl_usd_reference_rate.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/msb.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/msb1.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/msb1_deposits.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/msb1_loans.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/msb2.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/msb3.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/msb3_output.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/msb_deposits.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/msb_loans.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/opr.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/payments.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/renminbi.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/renminbi_tbl.html</loc></url>
+<url><loc>https://bnmr.philipscurve.com/reference/usd_interbank_intraday_rate.html</loc></url>
 </urlset>
+
