@@ -13,15 +13,16 @@ License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 4.1.0)
-Imports: httr, 
-  glue, 
-  jsonlite, 
-  purrr (>= 1.0.0), 
-  ISOcodes, 
-  tibble, 
-  tidyr, 
+Imports: httr2,
+  glue,
+  jsonlite,
+  purrr (>= 1.0.0),
+  vctrs,
+  ISOcodes,
+  tibble,
+  tidyr,
   rlang,
-  lubridate, 
+  lubridate,
   assertthat
 RoxygenNote: 7.2.3
 Suggests: 
